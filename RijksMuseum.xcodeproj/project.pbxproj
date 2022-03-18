@@ -16,6 +16,26 @@
 		04E101EC27E4D18B00966779 /* RijksMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101EB27E4D18B00966779 /* RijksMuseumTests.swift */; };
 		04E101F627E4D18B00966779 /* RijksMuseumUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101F527E4D18B00966779 /* RijksMuseumUITests.swift */; };
 		04E101F827E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101F727E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift */; };
+		04E1020C27E4D1D700966779 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1020527E4D1D700966779 /* APIClient.swift */; };
+		04E1020D27E4D1D700966779 /* RijksMuseumError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1020727E4D1D700966779 /* RijksMuseumError.swift */; };
+		04E1020E27E4D1D700966779 /* WebArtObjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1020927E4D1D700966779 /* WebArtObjectsRepository.swift */; };
+		04E1020F27E4D1D700966779 /* ArtObjectsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1020A27E4D1D700966779 /* ArtObjectsRepository.swift */; };
+		04E1021027E4D1D700966779 /* APILinksFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1020B27E4D1D700966779 /* APILinksFactory.swift */; };
+		04E1021427E4D23400966779 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1021227E4D23400966779 /* Strings.swift */; };
+		04E1021527E4D23400966779 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04E1021327E4D23400966779 /* Localizable.strings */; };
+		04E1021727E4D8C800966779 /* CollectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1021627E4D8C800966779 /* CollectionType.swift */; };
+		04E1022127E4E9C000966779 /* ArtObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1021B27E4E9C000966779 /* ArtObject.swift */; };
+		04E1022327E4E9C000966779 /* CollectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1021D27E4E9C000966779 /* CollectionResult.swift */; };
+		04E1022627E4F4DD00966779 /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022527E4F4DD00966779 /* AppConstant.swift */; };
+		04E1023027E4F7B100966779 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022827E4F7B000966779 /* NetworkMock.swift */; };
+		04E1023127E4F7B100966779 /* MockReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022927E4F7B000966779 /* MockReachability.swift */; };
+		04E1023227E4F7B100966779 /* WebArtObjectsRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022A27E4F7B100966779 /* WebArtObjectsRepositoryTests.swift */; };
+		04E1023327E4F7B100966779 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022B27E4F7B100966779 /* NetworkTests.swift */; };
+		04E1023427E4F7B100966779 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E1022D27E4F7B100966779 /* data.json */; };
+		04E1023527E4F7B100966779 /* noData.json in Resources */ = {isa = PBXBuildFile; fileRef = 04E1022E27E4F7B100966779 /* noData.json */; };
+		04E1023627E4F7B100966779 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022F27E4F7B100966779 /* DataLoader.swift */; };
+		04E1023927E4FAA300966779 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1023827E4FAA300966779 /* Reachability.swift */; };
+		04E1023B27E4FB3B00966779 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1023A27E4FB3A00966779 /* NotificationName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +69,26 @@
 		04E101F127E4D18B00966779 /* RijksMuseumUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RijksMuseumUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E101F527E4D18B00966779 /* RijksMuseumUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksMuseumUITests.swift; sourceTree = "<group>"; };
 		04E101F727E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijksMuseumUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04E1020527E4D1D700966779 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		04E1020727E4D1D700966779 /* RijksMuseumError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RijksMuseumError.swift; sourceTree = "<group>"; };
+		04E1020927E4D1D700966779 /* WebArtObjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebArtObjectsRepository.swift; sourceTree = "<group>"; };
+		04E1020A27E4D1D700966779 /* ArtObjectsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtObjectsRepository.swift; sourceTree = "<group>"; };
+		04E1020B27E4D1D700966779 /* APILinksFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APILinksFactory.swift; sourceTree = "<group>"; };
+		04E1021227E4D23400966779 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		04E1021327E4D23400966779 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		04E1021627E4D8C800966779 /* CollectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionType.swift; sourceTree = "<group>"; };
+		04E1021B27E4E9C000966779 /* ArtObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtObject.swift; sourceTree = "<group>"; };
+		04E1021D27E4E9C000966779 /* CollectionResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionResult.swift; sourceTree = "<group>"; };
+		04E1022527E4F4DD00966779 /* AppConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
+		04E1022827E4F7B000966779 /* NetworkMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMock.swift; sourceTree = "<group>"; };
+		04E1022927E4F7B000966779 /* MockReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockReachability.swift; sourceTree = "<group>"; };
+		04E1022A27E4F7B100966779 /* WebArtObjectsRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebArtObjectsRepositoryTests.swift; sourceTree = "<group>"; };
+		04E1022B27E4F7B100966779 /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		04E1022D27E4F7B100966779 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
+		04E1022E27E4F7B100966779 /* noData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noData.json; sourceTree = "<group>"; };
+		04E1022F27E4F7B100966779 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
+		04E1023827E4FAA300966779 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		04E1023A27E4FB3A00966779 /* NotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +143,12 @@
 				04E101D627E4D18800966779 /* SceneDelegate.swift */,
 				04E101D827E4D18800966779 /* ViewController.swift */,
 				04E101DA27E4D18800966779 /* Main.storyboard */,
+				04E1022527E4F4DD00966779 /* AppConstant.swift */,
+				04E1020727E4D1D700966779 /* RijksMuseumError.swift */,
+				04E1023727E4FA8900966779 /* Extension */,
+				04E1021827E4E9C000966779 /* Models */,
+				04E1021127E4D23400966779 /* Strings */,
+				04E1020427E4D1D700966779 /* DataAccessLayer */,
 				04E101DD27E4D18B00966779 /* Assets.xcassets */,
 				04E101DF27E4D18B00966779 /* LaunchScreen.storyboard */,
 				04E101E227E4D18B00966779 /* Info.plist */,
@@ -113,6 +159,10 @@
 		04E101EA27E4D18B00966779 /* RijksMuseumTests */ = {
 			isa = PBXGroup;
 			children = (
+				04E1022C27E4F7B100966779 /* DataLoader */,
+				04E1022727E4F7B000966779 /* Mocker */,
+				04E1022B27E4F7B100966779 /* NetworkTests.swift */,
+				04E1022A27E4F7B100966779 /* WebArtObjectsRepositoryTests.swift */,
 				04E101EB27E4D18B00966779 /* RijksMuseumTests.swift */,
 			);
 			path = RijksMuseumTests;
@@ -125,6 +175,72 @@
 				04E101F727E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift */,
 			);
 			path = RijksMuseumUITests;
+			sourceTree = "<group>";
+		};
+		04E1020427E4D1D700966779 /* DataAccessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				04E1020527E4D1D700966779 /* APIClient.swift */,
+				04E1021627E4D8C800966779 /* CollectionType.swift */,
+				04E1020827E4D1D700966779 /* ArtObjectsRepository */,
+				04E1020B27E4D1D700966779 /* APILinksFactory.swift */,
+			);
+			path = DataAccessLayer;
+			sourceTree = "<group>";
+		};
+		04E1020827E4D1D700966779 /* ArtObjectsRepository */ = {
+			isa = PBXGroup;
+			children = (
+				04E1020927E4D1D700966779 /* WebArtObjectsRepository.swift */,
+				04E1020A27E4D1D700966779 /* ArtObjectsRepository.swift */,
+			);
+			path = ArtObjectsRepository;
+			sourceTree = "<group>";
+		};
+		04E1021127E4D23400966779 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				04E1021227E4D23400966779 /* Strings.swift */,
+				04E1021327E4D23400966779 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		04E1021827E4E9C000966779 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				04E1021B27E4E9C000966779 /* ArtObject.swift */,
+				04E1021D27E4E9C000966779 /* CollectionResult.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		04E1022727E4F7B000966779 /* Mocker */ = {
+			isa = PBXGroup;
+			children = (
+				04E1022827E4F7B000966779 /* NetworkMock.swift */,
+				04E1022927E4F7B000966779 /* MockReachability.swift */,
+			);
+			path = Mocker;
+			sourceTree = "<group>";
+		};
+		04E1022C27E4F7B100966779 /* DataLoader */ = {
+			isa = PBXGroup;
+			children = (
+				04E1022D27E4F7B100966779 /* data.json */,
+				04E1022E27E4F7B100966779 /* noData.json */,
+				04E1022F27E4F7B100966779 /* DataLoader.swift */,
+			);
+			path = DataLoader;
+			sourceTree = "<group>";
+		};
+		04E1023727E4FA8900966779 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04E1023827E4FAA300966779 /* Reachability.swift */,
+				04E1023A27E4FB3A00966779 /* NotificationName.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E101E127E4D18B00966779 /* LaunchScreen.storyboard in Resources */,
+				04E1021527E4D23400966779 /* Localizable.strings in Resources */,
 				04E101DE27E4D18B00966779 /* Assets.xcassets in Resources */,
 				04E101DC27E4D18800966779 /* Main.storyboard in Resources */,
 			);
@@ -241,6 +358,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1023527E4F7B100966779 /* noData.json in Resources */,
+				04E1023427E4F7B100966779 /* data.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +377,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1023927E4FAA300966779 /* Reachability.swift in Sources */,
 				04E101D927E4D18800966779 /* ViewController.swift in Sources */,
+				04E1021427E4D23400966779 /* Strings.swift in Sources */,
 				04E101D527E4D18800966779 /* AppDelegate.swift in Sources */,
 				04E101D727E4D18800966779 /* SceneDelegate.swift in Sources */,
+				04E1022627E4F4DD00966779 /* AppConstant.swift in Sources */,
+				04E1021027E4D1D700966779 /* APILinksFactory.swift in Sources */,
+				04E1022327E4E9C000966779 /* CollectionResult.swift in Sources */,
+				04E1021727E4D8C800966779 /* CollectionType.swift in Sources */,
+				04E1020E27E4D1D700966779 /* WebArtObjectsRepository.swift in Sources */,
+				04E1020D27E4D1D700966779 /* RijksMuseumError.swift in Sources */,
+				04E1022127E4E9C000966779 /* ArtObject.swift in Sources */,
+				04E1020C27E4D1D700966779 /* APIClient.swift in Sources */,
+				04E1023B27E4FB3B00966779 /* NotificationName.swift in Sources */,
+				04E1020F27E4D1D700966779 /* ArtObjectsRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +399,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1023127E4F7B100966779 /* MockReachability.swift in Sources */,
+				04E1023027E4F7B100966779 /* NetworkMock.swift in Sources */,
+				04E1023627E4F7B100966779 /* DataLoader.swift in Sources */,
+				04E1023327E4F7B100966779 /* NetworkTests.swift in Sources */,
 				04E101EC27E4D18B00966779 /* RijksMuseumTests.swift in Sources */,
+				04E1023227E4F7B100966779 /* WebArtObjectsRepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

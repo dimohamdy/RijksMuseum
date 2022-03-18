@@ -1,0 +1,12 @@
+//
+//  Localizable.strings
+//  RijksMuseum
+//
+//  Created by BinaryBoy on 3/18/22.
+//
+
+// MARK: Errors
+"Common_GeneralError" = "There was an error";
+"Common_InternetError" = "No internet connection";
+
+
