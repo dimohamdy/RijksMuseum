@@ -12,8 +12,8 @@ struct APILinksFactory {
     #warning("Replace your API Key in API_KEY ")
     #warning("I used to use Cocoakeys to save secret keys")
     
-    static let apiKey: String = "API_KEY"
-    private static let baseURL = "https://www.rijksmuseum.nl/api/en/collection?key=\(apiKey)"
+    static let apiKey: String = "0fiuZFh4"//"API_KEY"
+    private static let baseURL = "https://www.rijksmuseum.nl/api/en/collection?key=\(apiKey)&imgonly=true"
 
     enum API {
         case search(type: String, perPage: Int, page: Int)

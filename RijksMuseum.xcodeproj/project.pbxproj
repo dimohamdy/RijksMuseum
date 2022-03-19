@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		04E101D527E4D18800966779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101D427E4D18800966779 /* AppDelegate.swift */; };
 		04E101D727E4D18800966779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101D627E4D18800966779 /* SceneDelegate.swift */; };
-		04E101D927E4D18800966779 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101D827E4D18800966779 /* ViewController.swift */; };
-		04E101DC27E4D18800966779 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E101DA27E4D18800966779 /* Main.storyboard */; };
 		04E101DE27E4D18B00966779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E101DD27E4D18B00966779 /* Assets.xcassets */; };
 		04E101E127E4D18B00966779 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04E101DF27E4D18B00966779 /* LaunchScreen.storyboard */; };
 		04E101EC27E4D18B00966779 /* RijksMuseumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101EB27E4D18B00966779 /* RijksMuseumTests.swift */; };
@@ -36,6 +34,22 @@
 		04E1023627E4F7B100966779 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1022F27E4F7B100966779 /* DataLoader.swift */; };
 		04E1023927E4FAA300966779 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1023827E4FAA300966779 /* Reachability.swift */; };
 		04E1023B27E4FB3B00966779 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1023A27E4FB3A00966779 /* NotificationName.swift */; };
+		04E1024827E5093200966779 /* ItemCollectionViewCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1023F27E5093200966779 /* ItemCollectionViewCellType.swift */; };
+		04E1024927E5093200966779 /* PhotosCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1024027E5093200966779 /* PhotosCollectionViewDataSource.swift */; };
+		04E1024C27E5093200966779 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1024427E5093200966779 /* PhotoCollectionCell.swift */; };
+		04E1024D27E5093200966779 /* PhotosListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1024527E5093200966779 /* PhotosListBuilder.swift */; };
+		04E1024E27E5093200966779 /* PhotosListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1024627E5093200966779 /* PhotosListPresenter.swift */; };
+		04E1024F27E5093200966779 /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1024727E5093200966779 /* PhotosListViewController.swift */; };
+		04E1025127E5199C00966779 /* UICollectionView+ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025027E5199C00966779 /* UICollectionView+ReusableCell.swift */; };
+		04E1025527E51CFC00966779 /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025227E51CFC00966779 /* UIImageView+DownloadImage.swift */; };
+		04E1025627E51CFC00966779 /* UIView+Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025327E51CFC00966779 /* UIView+Loading.swift */; };
+		04E1025727E51CFC00966779 /* UICollectionView+EmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025427E51CFC00966779 /* UICollectionView+EmptyState.swift */; };
+		04E1025A27E5244000966779 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 04E1025927E5244000966779 /* Kingfisher */; };
+		04E1025E27E5266600966779 /* BasePresenterIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025C27E5266600966779 /* BasePresenterIO.swift */; };
+		04E1025F27E5266600966779 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1025D27E5266600966779 /* CellReusable.swift */; };
+		04E1026227E526A700966779 /* EmptyPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */; };
+		04E1026427E531E100966779 /* WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026327E531E100966779 /* WebImage.swift */; };
+		04E1026627E54DFF00966779 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026527E54DFF00966779 /* EntryPoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +73,6 @@
 		04E101D127E4D18800966779 /* RijksMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RijksMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E101D427E4D18800966779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E101D627E4D18800966779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		04E101D827E4D18800966779 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04E101DB27E4D18800966779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04E101DD27E4D18B00966779 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04E101E027E4D18B00966779 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04E101E227E4D18B00966779 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +101,21 @@
 		04E1022F27E4F7B100966779 /* DataLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		04E1023827E4FAA300966779 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		04E1023A27E4FB3A00966779 /* NotificationName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		04E1023F27E5093200966779 /* ItemCollectionViewCellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCellType.swift; sourceTree = "<group>"; };
+		04E1024027E5093200966779 /* PhotosCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		04E1024427E5093200966779 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
+		04E1024527E5093200966779 /* PhotosListBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListBuilder.swift; sourceTree = "<group>"; };
+		04E1024627E5093200966779 /* PhotosListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListPresenter.swift; sourceTree = "<group>"; };
+		04E1024727E5093200966779 /* PhotosListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
+		04E1025027E5199C00966779 /* UICollectionView+ReusableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+ReusableCell.swift"; sourceTree = "<group>"; };
+		04E1025227E51CFC00966779 /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		04E1025327E51CFC00966779 /* UIView+Loading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Loading.swift"; sourceTree = "<group>"; };
+		04E1025427E51CFC00966779 /* UICollectionView+EmptyState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+EmptyState.swift"; sourceTree = "<group>"; };
+		04E1025C27E5266600966779 /* BasePresenterIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterIO.swift; sourceTree = "<group>"; };
+		04E1025D27E5266600966779 /* CellReusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPlaceHolderView.swift; sourceTree = "<group>"; };
+		04E1026327E531E100966779 /* WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImage.swift; sourceTree = "<group>"; };
+		04E1026527E54DFF00966779 /* EntryPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1025A27E5244000966779 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,14 +169,16 @@
 			children = (
 				04E101D427E4D18800966779 /* AppDelegate.swift */,
 				04E101D627E4D18800966779 /* SceneDelegate.swift */,
-				04E101D827E4D18800966779 /* ViewController.swift */,
-				04E101DA27E4D18800966779 /* Main.storyboard */,
+				04E1026527E54DFF00966779 /* EntryPoint.swift */,
 				04E1022527E4F4DD00966779 /* AppConstant.swift */,
 				04E1020727E4D1D700966779 /* RijksMuseumError.swift */,
 				04E1023727E4FA8900966779 /* Extension */,
 				04E1021827E4E9C000966779 /* Models */,
+				04E1026027E526A700966779 /* SharedViews */,
+				04E1025B27E5266600966779 /* Protocol */,
 				04E1021127E4D23400966779 /* Strings */,
 				04E1020427E4D1D700966779 /* DataAccessLayer */,
+				04E1023C27E5093200966779 /* Scene */,
 				04E101DD27E4D18B00966779 /* Assets.xcassets */,
 				04E101DF27E4D18B00966779 /* LaunchScreen.storyboard */,
 				04E101E227E4D18B00966779 /* Info.plist */,
@@ -181,9 +211,9 @@
 			isa = PBXGroup;
 			children = (
 				04E1020527E4D1D700966779 /* APIClient.swift */,
-				04E1021627E4D8C800966779 /* CollectionType.swift */,
-				04E1020827E4D1D700966779 /* ArtObjectsRepository */,
 				04E1020B27E4D1D700966779 /* APILinksFactory.swift */,
+				04E1020827E4D1D700966779 /* ArtObjectsRepository */,
+				04E1021627E4D8C800966779 /* CollectionType.swift */,
 			);
 			path = DataAccessLayer;
 			sourceTree = "<group>";
@@ -210,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				04E1021B27E4E9C000966779 /* ArtObject.swift */,
+				04E1026327E531E100966779 /* WebImage.swift */,
 				04E1021D27E4E9C000966779 /* CollectionResult.swift */,
 			);
 			path = Models;
@@ -239,8 +270,66 @@
 			children = (
 				04E1023827E4FAA300966779 /* Reachability.swift */,
 				04E1023A27E4FB3A00966779 /* NotificationName.swift */,
+				04E1025027E5199C00966779 /* UICollectionView+ReusableCell.swift */,
+				04E1025427E51CFC00966779 /* UICollectionView+EmptyState.swift */,
+				04E1025227E51CFC00966779 /* UIImageView+DownloadImage.swift */,
+				04E1025327E51CFC00966779 /* UIView+Loading.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		04E1023C27E5093200966779 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				04E1023D27E5093200966779 /* PhotosList */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		04E1023D27E5093200966779 /* PhotosList */ = {
+			isa = PBXGroup;
+			children = (
+				04E1023E27E5093200966779 /* DataSource */,
+				04E1024127E5093200966779 /* Cells */,
+				04E1024527E5093200966779 /* PhotosListBuilder.swift */,
+				04E1024627E5093200966779 /* PhotosListPresenter.swift */,
+				04E1024727E5093200966779 /* PhotosListViewController.swift */,
+			);
+			path = PhotosList;
+			sourceTree = "<group>";
+		};
+		04E1023E27E5093200966779 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				04E1023F27E5093200966779 /* ItemCollectionViewCellType.swift */,
+				04E1024027E5093200966779 /* PhotosCollectionViewDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		04E1024127E5093200966779 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04E1024427E5093200966779 /* PhotoCollectionCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		04E1025B27E5266600966779 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04E1025C27E5266600966779 /* BasePresenterIO.swift */,
+				04E1025D27E5266600966779 /* CellReusable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		04E1026027E526A700966779 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +348,9 @@
 			dependencies = (
 			);
 			name = RijksMuseum;
+			packageProductDependencies = (
+				04E1025927E5244000966779 /* Kingfisher */,
+			);
 			productName = RijksMuseum;
 			productReference = 04E101D127E4D18800966779 /* RijksMuseum.app */;
 			productType = "com.apple.product-type.application";
@@ -331,6 +423,9 @@
 				Base,
 			);
 			mainGroup = 04E101C827E4D18800966779;
+			packageReferences = (
+				04E1025827E5244000966779 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 04E101D227E4D18800966779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,7 +445,6 @@
 				04E101E127E4D18B00966779 /* LaunchScreen.storyboard in Resources */,
 				04E1021527E4D23400966779 /* Localizable.strings in Resources */,
 				04E101DE27E4D18B00966779 /* Assets.xcassets in Resources */,
-				04E101DC27E4D18800966779 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,21 +471,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04E1026627E54DFF00966779 /* EntryPoint.swift in Sources */,
 				04E1023927E4FAA300966779 /* Reachability.swift in Sources */,
-				04E101D927E4D18800966779 /* ViewController.swift in Sources */,
+				04E1024E27E5093200966779 /* PhotosListPresenter.swift in Sources */,
+				04E1025E27E5266600966779 /* BasePresenterIO.swift in Sources */,
 				04E1021427E4D23400966779 /* Strings.swift in Sources */,
+				04E1026427E531E100966779 /* WebImage.swift in Sources */,
+				04E1025527E51CFC00966779 /* UIImageView+DownloadImage.swift in Sources */,
 				04E101D527E4D18800966779 /* AppDelegate.swift in Sources */,
 				04E101D727E4D18800966779 /* SceneDelegate.swift in Sources */,
 				04E1022627E4F4DD00966779 /* AppConstant.swift in Sources */,
+				04E1024827E5093200966779 /* ItemCollectionViewCellType.swift in Sources */,
 				04E1021027E4D1D700966779 /* APILinksFactory.swift in Sources */,
 				04E1022327E4E9C000966779 /* CollectionResult.swift in Sources */,
 				04E1021727E4D8C800966779 /* CollectionType.swift in Sources */,
 				04E1020E27E4D1D700966779 /* WebArtObjectsRepository.swift in Sources */,
 				04E1020D27E4D1D700966779 /* RijksMuseumError.swift in Sources */,
 				04E1022127E4E9C000966779 /* ArtObject.swift in Sources */,
+				04E1024C27E5093200966779 /* PhotoCollectionCell.swift in Sources */,
+				04E1025F27E5266600966779 /* CellReusable.swift in Sources */,
 				04E1020C27E4D1D700966779 /* APIClient.swift in Sources */,
+				04E1025127E5199C00966779 /* UICollectionView+ReusableCell.swift in Sources */,
+				04E1024F27E5093200966779 /* PhotosListViewController.swift in Sources */,
+				04E1024927E5093200966779 /* PhotosCollectionViewDataSource.swift in Sources */,
+				04E1026227E526A700966779 /* EmptyPlaceHolderView.swift in Sources */,
 				04E1023B27E4FB3B00966779 /* NotificationName.swift in Sources */,
+				04E1025627E51CFC00966779 /* UIView+Loading.swift in Sources */,
 				04E1020F27E4D1D700966779 /* ArtObjectsRepository.swift in Sources */,
+				04E1024D27E5093200966779 /* PhotosListBuilder.swift in Sources */,
+				04E1025727E51CFC00966779 /* UICollectionView+EmptyState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,14 +541,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04E101DA27E4D18800966779 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04E101DB27E4D18800966779 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04E101DF27E4D18B00966779 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -578,7 +678,6 @@
 				INFOPLIST_FILE = RijksMuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -606,7 +705,6 @@
 				INFOPLIST_FILE = RijksMuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,6 +836,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		04E1025827E5244000966779 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		04E1025927E5244000966779 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04E1025827E5244000966779 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04E101C927E4D18800966779 /* Project object */;
 }
