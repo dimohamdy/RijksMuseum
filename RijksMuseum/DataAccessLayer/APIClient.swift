@@ -34,6 +34,7 @@ final class APIClient {
 
     func loadData<T: Decodable>(from url: URL,
                                 completion: @escaping (Result<T, RijksMuseumError>) -> Void) {
+        print(url)
         let dataTask =  session.dataTask(with: url, completionHandler: { data, _, _ in
             do {
                 guard let data = data else {

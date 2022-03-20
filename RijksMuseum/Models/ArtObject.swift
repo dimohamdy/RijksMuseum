@@ -7,12 +7,14 @@
 
 import Foundation
 
+// TODO: Use inheritance
 struct ArtObject: Decodable {
 
-	let id: String
 	let longTitle: String
 	let objectNumber: String
 	let principalOrFirstMaker: String
 	let title: String
     let webImage: WebImage
 }
+
+

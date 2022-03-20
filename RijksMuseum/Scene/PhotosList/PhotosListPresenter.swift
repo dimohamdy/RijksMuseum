@@ -2,7 +2,7 @@
 //  PhotosListPresenter.swift
 //  RijksMuseum
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by BinaryBoy on 3/20/22.
 //
 
 import Foundation
@@ -25,8 +25,10 @@ final class PhotosListPresenter {
     
     // MARK: Injections
     private weak var output: PhotosListPresenterOutput?
-    let photosRepository: WebArtObjectsRepository
-    
+    private let photosRepository: WebArtObjectsRepository
+
+    var router: PhotoListRouter?
+
     fileprivate var page: Int = 1
     fileprivate var canLoadMore = true
     // internal
@@ -70,6 +72,7 @@ extension PhotosListPresenter: PhotosListPresenterInput {
 
     func showDetails(artObject: ArtObject) {
         // show ArtObject
+        router?.show(artObject: artObject)
     }
     
     @objc

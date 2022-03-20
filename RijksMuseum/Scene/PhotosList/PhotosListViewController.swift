@@ -2,7 +2,7 @@
 //  PhotosListViewController.swift
 //  RijksMuseum
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by BinaryBoy on 3/20/22.
 //
 
 import UIKit
@@ -82,7 +82,6 @@ final class PhotosListViewController: UIViewController {
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.hidesBarsOnSwipe = true
     }
 }
 

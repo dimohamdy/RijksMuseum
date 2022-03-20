@@ -29,4 +29,20 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
             }
         }
     }
+
+    func artObjectDetails(for artObjectId: String, completion: @escaping (Result< ArtObjectDetailsResult, RijksMuseumError>) -> Void) {
+        let path = APILinksFactory.API.details(artObjectId: artObjectId).path
+        guard let url = URL(string: path) else {
+            completion(.failure(.wrongURL))
+            return
+        }
+        client.loadData(from: url) { (result: Result<ArtObjectDetailsResult, RijksMuseumError>) in
+            switch result {
+            case .success(let data):
+                completion(.success(data))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
 }
