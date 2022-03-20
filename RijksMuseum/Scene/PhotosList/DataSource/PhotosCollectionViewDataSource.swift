@@ -14,8 +14,6 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
     
     private struct CellHeightConstant {
         static let heightOfPhotoCell: CGFloat = 120
-        static let heightOfSearchTermCell: CGFloat = 50
-        static let heightOfHistoryHeader: CGFloat = 120
     }
     
     init(presenterInput: PhotosListPresenterInput?, itemsForCollection: [ItemCollectionViewCellType?]) {
@@ -82,9 +80,5 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
             let pageToGet = Int(indexPath.row / Constant.pageSize) + 1
             presenterInput?.loadMoreData(pageToGet)
         }
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 30)
     }
 }

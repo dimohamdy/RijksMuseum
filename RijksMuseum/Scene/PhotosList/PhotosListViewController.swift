@@ -11,7 +11,7 @@ final class PhotosListViewController: UIViewController {
 
     private(set) var collectionDataSource: PhotosCollectionViewDataSource?
     
-    // MARK: Outlets
+    // MARK: Views
     private let photosCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
@@ -29,6 +29,13 @@ final class PhotosListViewController: UIViewController {
         return collectionView
     }()
 
+
+    private let collectionTypeTabBar: CollectionTypeTabBar = {
+        let collectionTypeTabBar = CollectionTypeTabBar(collectionTypes: CollectionType.allCases)
+        collectionTypeTabBar.translatesAutoresizingMaskIntoConstraints = false
+        return collectionTypeTabBar
+    }()
+    
     var presenter: PhotosListPresenterInput?
     
     // MARK: View lifeCycle
@@ -41,14 +48,24 @@ final class PhotosListViewController: UIViewController {
     
     // MARK: - Setup UI
     private func setupUI() {
-        view.backgroundColor = .systemBackground
         view.addSubview(photosCollectionView)
+        view.addSubview(collectionTypeTabBar)
+
         NSLayoutConstraint.activate([
+            collectionTypeTabBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionTypeTabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            collectionTypeTabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionTypeTabBar.heightAnchor.constraint(equalToConstant: 50)
+        ])
+
+        NSLayoutConstraint.activate([
+            photosCollectionView.topAnchor.constraint(equalTo: collectionTypeTabBar.bottomAnchor),
             photosCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             photosCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            photosCollectionView.topAnchor.constraint(equalTo: view.topAnchor),
             photosCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+
+        collectionTypeTabBar.delegate = self
     }
 
     private func configureNavigationBar() {
@@ -130,5 +147,12 @@ extension PhotosListViewController: PhotosListPresenterOutput {
 
         }
         
+    }
+}
+
+extension PhotosListViewController: CollectionTypeTabBarDelegate {
+
+    func collectionTypeTabBar(_ tabBar: CollectionTypeTabBar, didSelectItem collectionType: CollectionType, at index: Int) {
+        presenter?.collectionType = collectionType
     }
 }

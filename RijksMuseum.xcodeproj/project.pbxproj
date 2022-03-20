@@ -50,6 +50,8 @@
 		04E1026227E526A700966779 /* EmptyPlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */; };
 		04E1026427E531E100966779 /* WebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026327E531E100966779 /* WebImage.swift */; };
 		04E1026627E54DFF00966779 /* EntryPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1026527E54DFF00966779 /* EntryPoint.swift */; };
+		04E1027427E6951700966779 /* CollectionTypeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1027227E6951700966779 /* CollectionTypeTabBar.swift */; };
+		04E1027527E6951700966779 /* CollectionTypeItemBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E1027327E6951700966779 /* CollectionTypeItemBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +118,8 @@
 		04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyPlaceHolderView.swift; sourceTree = "<group>"; };
 		04E1026327E531E100966779 /* WebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImage.swift; sourceTree = "<group>"; };
 		04E1026527E54DFF00966779 /* EntryPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryPoint.swift; sourceTree = "<group>"; };
+		04E1027227E6951700966779 /* CollectionTypeTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeTabBar.swift; sourceTree = "<group>"; };
+		04E1027327E6951700966779 /* CollectionTypeItemBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionTypeItemBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +293,7 @@
 		04E1023D27E5093200966779 /* PhotosList */ = {
 			isa = PBXGroup;
 			children = (
+				04E1026B27E5E84A00966779 /* New Group */,
 				04E1023E27E5093200966779 /* DataSource */,
 				04E1024127E5093200966779 /* Cells */,
 				04E1024527E5093200966779 /* PhotosListBuilder.swift */,
@@ -330,6 +335,15 @@
 				04E1026127E526A700966779 /* EmptyPlaceHolderView.swift */,
 			);
 			path = SharedViews;
+			sourceTree = "<group>";
+		};
+		04E1026B27E5E84A00966779 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				04E1027227E6951700966779 /* CollectionTypeTabBar.swift */,
+				04E1027327E6951700966779 /* CollectionTypeItemBar.swift */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +487,7 @@
 			files = (
 				04E1026627E54DFF00966779 /* EntryPoint.swift in Sources */,
 				04E1023927E4FAA300966779 /* Reachability.swift in Sources */,
+				04E1027527E6951700966779 /* CollectionTypeItemBar.swift in Sources */,
 				04E1024E27E5093200966779 /* PhotosListPresenter.swift in Sources */,
 				04E1025E27E5266600966779 /* BasePresenterIO.swift in Sources */,
 				04E1021427E4D23400966779 /* Strings.swift in Sources */,
@@ -485,6 +500,7 @@
 				04E1021027E4D1D700966779 /* APILinksFactory.swift in Sources */,
 				04E1022327E4E9C000966779 /* CollectionResult.swift in Sources */,
 				04E1021727E4D8C800966779 /* CollectionType.swift in Sources */,
+				04E1027427E6951700966779 /* CollectionTypeTabBar.swift in Sources */,
 				04E1020E27E4D1D700966779 /* WebArtObjectsRepository.swift in Sources */,
 				04E1020D27E4D1D700966779 /* RijksMuseumError.swift in Sources */,
 				04E1022127E4E9C000966779 /* ArtObject.swift in Sources */,

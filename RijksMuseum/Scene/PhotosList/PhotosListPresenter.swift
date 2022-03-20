@@ -32,7 +32,11 @@ final class PhotosListPresenter {
     // internal
     private var itemsForCollection: [ItemCollectionViewCellType] = [ItemCollectionViewCellType]()
     
-    var collectionType: CollectionType = .print
+    var collectionType: CollectionType = .print {
+        didSet {
+            search()
+        }
+    }
     
     // MARK: LifeCycle
     init(output: PhotosListPresenterOutput, photosRepository: WebArtObjectsRepository = WebArtObjectsRepository()) {
@@ -51,6 +55,7 @@ extension PhotosListPresenter: PhotosListPresenterInput {
 
     func search() {
         itemsForCollection = []
+        output?.clearCollection()
         self.page = 1
         self.canLoadMore = true
         getData(collectionType: collectionType)
@@ -72,8 +77,6 @@ extension PhotosListPresenter: PhotosListPresenterInput {
         if notification.name == Notifications.Reachability.notConnected.name {
             output?.showError(title: Strings.noInternetConnectionTitle.localized(), subtitle: Strings.noInternetConnectionSubtitle.localized())
             output?.updateData(error: RijksMuseumError.noInternetConnection)
-        } else {
-            // output?.emptyState(emptyPlaceHolderType: .readyToSearch)
         }
     }
 }

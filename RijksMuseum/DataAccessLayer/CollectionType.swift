@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CollectionType: String {
+enum CollectionType: String, CaseIterable {
 
     case print
 
@@ -186,7 +186,7 @@ enum CollectionType: String {
     case printed = "printed matter"
 
     case necklace
-    
+
     case part
 
     case tea = "tea service"
