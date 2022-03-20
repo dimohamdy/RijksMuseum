@@ -293,7 +293,7 @@
 		04E1023D27E5093200966779 /* PhotosList */ = {
 			isa = PBXGroup;
 			children = (
-				04E1026B27E5E84A00966779 /* New Group */,
+				04E1026B27E5E84A00966779 /* CollectionTypeTabBar */,
 				04E1023E27E5093200966779 /* DataSource */,
 				04E1024127E5093200966779 /* Cells */,
 				04E1024527E5093200966779 /* PhotosListBuilder.swift */,
@@ -337,13 +337,13 @@
 			path = SharedViews;
 			sourceTree = "<group>";
 		};
-		04E1026B27E5E84A00966779 /* New Group */ = {
+		04E1026B27E5E84A00966779 /* CollectionTypeTabBar */ = {
 			isa = PBXGroup;
 			children = (
 				04E1027227E6951700966779 /* CollectionTypeTabBar.swift */,
 				04E1027327E6951700966779 /* CollectionTypeItemBar.swift */,
 			);
-			path = "New Group";
+			path = CollectionTypeTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
