@@ -21,7 +21,7 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12, weight: .bold)
+        label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .label
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -34,14 +34,11 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
 
     private let subtitleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 10, weight: .bold)
+        label.font = .systemFont(ofSize: 12, weight: .regular)
         label.textColor = .label
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 20)
-        ])
-        label.tag = 2
+        label.tag = 3
         return label
     }()
 
@@ -50,7 +47,7 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         view.backgroundColor = .secondarySystemBackground
         view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            view.heightAnchor.constraint(equalToConstant: 70)
+            view.heightAnchor.constraint(equalToConstant: 50)
         ])
         view.tag = 3
         return view
@@ -93,8 +90,8 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
 
         NSLayoutConstraint.activate([
             titleStackView.topAnchor.constraint(equalTo: titlesBackgroundView.topAnchor),
-            titleStackView.leadingAnchor.constraint(equalTo: titlesBackgroundView.leadingAnchor),
-            titleStackView.trailingAnchor.constraint(equalTo: titlesBackgroundView.trailingAnchor),
+            titleStackView.leadingAnchor.constraint(equalTo: titlesBackgroundView.leadingAnchor, constant: UIView.padding10),
+            titleStackView.trailingAnchor.constraint(equalTo: titlesBackgroundView.trailingAnchor, constant: -UIView.padding10),
             titleStackView.bottomAnchor.constraint(equalTo: titlesBackgroundView.bottomAnchor),
         ])
 
@@ -110,6 +107,9 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
             titlesBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
             titlesBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
+
+        layer.cornerRadius = 5
+        layer.masksToBounds = true
     }
 
     func configCell(photo: ArtObject) {

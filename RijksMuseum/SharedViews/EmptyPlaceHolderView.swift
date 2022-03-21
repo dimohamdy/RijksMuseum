@@ -51,9 +51,35 @@ final class EmptyPlaceHolderView: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             imageView.heightAnchor.constraint(equalToConstant: 40),
-            imageView.widthAnchor.constraint(equalToConstant: 60)
+            imageView.widthAnchor.constraint(equalToConstant: 40)
         ])
+        imageView.tag = 2
         return imageView
+    }()
+
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 16, weight: .bold)
+        label.textColor = .label
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            label.heightAnchor.constraint(equalToConstant: 20)
+        ])
+        label.tag = 3
+        return label
+    }()
+
+    private let detailsLabel: UILabel = {
+        let label = UILabel()
+        label.font = .systemFont(ofSize: 13, weight: .regular)
+        label.textColor = .secondaryLabel
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.setContentCompressionResistancePriority(.required, for: .vertical)
+        label.numberOfLines = 0
+        label.tag = 4
+        return label
     }()
 
     private lazy var contentStackView: UIStackView = {
@@ -68,33 +94,8 @@ final class EmptyPlaceHolderView: UIView {
         stackView.addArrangedSubview(detailsLabel)
         stackView.setCustomSpacing(30, after: detailsLabel)
         stackView.addArrangedSubview(actionButton)
+        stackView.setContentCompressionResistancePriority(.required, for: .vertical)
         return stackView
-    }()
-
-    private let titleLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 16, weight: .bold)
-        label.textColor = .label
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 20)
-        ])
-        label.tag = 2
-        return label
-    }()
-
-    private let detailsLabel: UILabel = {
-        let label = UILabel()
-        label.font = .systemFont(ofSize: 13, weight: .regular)
-        label.textColor = .secondaryLabel
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            label.heightAnchor.constraint(equalToConstant: 20)
-        ])
-        label.tag = 3
-        return label
     }()
 
     var completionBlock: (() -> Void)? {
@@ -120,10 +121,10 @@ final class EmptyPlaceHolderView: UIView {
 
     private func setupConstraints() {
         NSLayoutConstraint.activate([
-            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: 5),
+            contentStackView.topAnchor.constraint(equalTo: topAnchor, constant: UIView.padding10),
             contentStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor)
+            contentStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: UIView.padding10),
+            contentStackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -UIView.padding10)
         ])
     }
 

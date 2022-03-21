@@ -18,7 +18,8 @@ extension UIView {
     private var loadingIndicatorView: UIActivityIndicatorView {
         let style: UIActivityIndicatorView.Style = .medium
         let indicatorView = UIActivityIndicatorView(style: style)
-        indicatorView.color = .black
+        indicatorView.color = .label
+        indicatorView.backgroundColor = .secondarySystemBackground
         indicatorView.translatesAutoresizingMaskIntoConstraints = false
         return indicatorView
     }

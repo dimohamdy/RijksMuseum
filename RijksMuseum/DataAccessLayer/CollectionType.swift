@@ -7,8 +7,12 @@
 
 import Foundation
 
-enum CollectionType: String, CaseIterable {
+enum CollectionType: String, CaseIterable, Comparable {
 
+    static func < (lhs: CollectionType, rhs: CollectionType) -> Bool {
+        lhs.rawValue < rhs.rawValue
+    }
+    
     case print
 
     case photograph

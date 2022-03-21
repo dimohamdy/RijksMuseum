@@ -34,7 +34,6 @@ final class APIClient {
 
     func loadData<T: Decodable>(from url: URL,
                                 completion: @escaping (Result<T, RijksMuseumError>) -> Void) {
-        print(url)
         let dataTask =  session.dataTask(with: url, completionHandler: { data, _, _ in
             do {
                 guard let data = data else {
@@ -46,9 +45,8 @@ final class APIClient {
                 let result = try decoder.decode(T.self, from: data)
                 completion(.success(result))
 
-            } catch let error {
-                completion(.failure(.runtimeError(error.localizedDescription)))
-
+            } catch {
+                completion(.failure(.parseError))
             }
         })
 

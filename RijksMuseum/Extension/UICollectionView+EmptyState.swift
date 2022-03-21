@@ -22,7 +22,6 @@ extension UICollectionView {
                 emptyPlaceHolderView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
                 emptyPlaceHolderView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
                 emptyPlaceHolderView.widthAnchor.constraint(equalTo: self.widthAnchor),
-                emptyPlaceHolderView.heightAnchor.constraint(equalToConstant: 200)
             ])
         }
     }

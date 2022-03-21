@@ -25,7 +25,6 @@ final class PhotosListViewController: UIViewController {
         collectionView.register(PhotoCollectionCell.self, forCellWithReuseIdentifier: PhotoCollectionCell.identifier)
         collectionView.tag = 1
         collectionView.backgroundColor = .systemBackground
-        collectionView.keyboardDismissMode = .onDrag
         return collectionView
     }()
 
@@ -53,16 +52,16 @@ final class PhotosListViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             collectionTypeTabBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionTypeTabBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionTypeTabBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            collectionTypeTabBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionTypeTabBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionTypeTabBar.heightAnchor.constraint(equalToConstant: 50)
         ])
 
         NSLayoutConstraint.activate([
             photosCollectionView.topAnchor.constraint(equalTo: collectionTypeTabBar.bottomAnchor),
-            photosCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            photosCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            photosCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            photosCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            photosCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            photosCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
         collectionTypeTabBar.delegate = self

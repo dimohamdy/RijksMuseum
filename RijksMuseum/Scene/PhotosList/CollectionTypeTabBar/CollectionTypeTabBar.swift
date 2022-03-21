@@ -14,7 +14,6 @@ protocol CollectionTypeTabBarDelegate: AnyObject {
 class CollectionTypeTabBar: UIView {
 
     private struct CellHeightConstant {
-        static let widthOfCell: CGFloat = 100
         static let heightOfCell: CGFloat = 50
     }
 
@@ -23,6 +22,7 @@ class CollectionTypeTabBar: UIView {
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
@@ -79,7 +79,6 @@ extension CollectionTypeTabBar: UICollectionViewDataSource {
             cell.configCell(collectionType: collectionType)
             return cell
         }
-        print("❤️")
         return UICollectionViewCell()
     }
 }
@@ -89,14 +88,5 @@ extension CollectionTypeTabBar: UICollectionViewDelegate, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let collectionType = collectionTypes[indexPath.row]
         delegate?.collectionTypeTabBar(self, didSelectItem: collectionType, at: indexPath.row)
-    }
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: CellHeightConstant.widthOfCell, height: CellHeightConstant.heightOfCell)
-    }
-
-
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
     }
 }
