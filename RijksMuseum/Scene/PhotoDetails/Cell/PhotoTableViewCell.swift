@@ -56,6 +56,6 @@ final class PhotoTableViewCell: UITableViewCell, CellReusable {
 
 extension PhotoTableViewCell {
     struct UIModel {
-        var photoURL: String
+        let photoURL: String
     }
 }

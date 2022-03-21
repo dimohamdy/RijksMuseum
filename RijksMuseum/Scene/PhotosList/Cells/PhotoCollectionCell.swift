@@ -112,11 +112,17 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         layer.masksToBounds = true
     }
 
-    func configCell(photo: ArtObject) {
-        let imagePath = photo.webImage.url.replacingOccurrences(of: "=s0", with: "=w200")
-        photoImageView.download(from: imagePath, contentMode: .scaleAspectFit)
+    func configCell(model: UIModel) {
+        photoImageView.download(from: model.imagePath, contentMode: .scaleAspectFit)
+        titleLabel.text = model.title
+        subtitleLabel.text = model.principalOrFirstMaker
+    }
+}
 
-        titleLabel.text = photo.title
-        subtitleLabel.text = photo.principalOrFirstMaker
+extension PhotoCollectionCell {
+    struct UIModel {
+        let imagePath: String
+        let title: String
+        let principalOrFirstMaker: String
     }
 }

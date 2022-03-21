@@ -79,7 +79,7 @@ final class DetailsTableViewCell: UITableViewCell, CellReusable {
 
 extension DetailsTableViewCell {
     struct UIModel {
-        var title: String
-        var subTitle: String
+        let title: String
+        let subTitle: String
     }
 }

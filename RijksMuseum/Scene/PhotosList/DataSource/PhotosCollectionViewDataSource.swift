@@ -39,7 +39,9 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
         switch item {
         case .photo(let photo):
             if let cell: PhotoCollectionCell = collectionView.dequeueReusableCell(for: indexPath) {
-                cell.configCell(photo: photo)
+                let imagePath = photo.webImage.url.replacingOccurrences(of: "=s0", with: "=w200")
+                let model = PhotoCollectionCell.UIModel(imagePath: imagePath, title: photo.title, principalOrFirstMaker: photo.principalOrFirstMaker)
+                cell.configCell(model: model)
                 return cell
             }
         case .none:
