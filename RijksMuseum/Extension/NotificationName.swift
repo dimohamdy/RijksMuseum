@@ -1,9 +1,9 @@
 //
 //
 //  NotificationName.swift
-//  FlickrApp
+//  RijksMuseum
 //
-//  Copyright © 2021 BinaryBoy. All rights reserved.
+//  Created by BinaryBoy on 3/20/22.
 //
 
 import Foundation
