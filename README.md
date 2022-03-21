@@ -1,7 +1,7 @@
 # RijksMuseum
 
 # Install
-* Add API_Key in APILinksFactory
+* Add **API_Key** in APILinksFactory.swift
 
 
 # App Structure
@@ -22,20 +22,28 @@
 
 * I used create UI with code.
 
-* I used SPM.
+* I used **SPM** (Swift Package Manager).
 
+* Support Dark-Light Mode
+
+* Support Oriantation
+
+![](ScreenShots/Screen1.png)
+![](ScreenShots/Screen2.png)
 
 
 # UnitTest
 * I apply  **Arrange, Act and Assert (AAA) Pattern** in Unit Testing.
 * I use mocking to Test get data from  NetworkManager, I use the same JSON file to mock data.
 * Test get data from API and From Local JSON.
+* Code coverage +80%
+![](ScreenShots/Screen3.png)
 
 ## Demo
 ![](Demo.gif)
 
 ## Info
 
-Name: Ahmed Hamdy
+Name: Dimo Hamdy
 
 Email: dimo.hamdy@gmail.com
