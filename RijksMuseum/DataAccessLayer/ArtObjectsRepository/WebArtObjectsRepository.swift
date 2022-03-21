@@ -15,7 +15,11 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
     }
     
     func artObjects(for type: String, page: Int, completion: @escaping (Result<CollectionResult, RijksMuseumError>) -> Void) {
-        let path = APILinksFactory.API.search(type: type, perPage: Constant.pageSize, page: page).path
+        guard let encodedText = type.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
+            completion(.failure(.wrongURL))
+            return
+        }
+        let path = APILinksFactory.API.search(type: encodedText, perPage: Constant.pageSize, page: page).path
         guard let url = URL(string: path) else {
             completion(.failure(.wrongURL))
             return
@@ -30,7 +34,7 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
         }
     }
 
-    func artObjectDetails(for artObjectId: String, completion: @escaping (Result< ArtObjectDetailsResult, RijksMuseumError>) -> Void) {
+    func artObjectDetails(for artObjectId: String, completion: @escaping (Result<ArtObjectDetailsResult, RijksMuseumError>) -> Void) {
         let path = APILinksFactory.API.details(artObjectId: artObjectId).path
         guard let url = URL(string: path) else {
             completion(.failure(.wrongURL))
