@@ -1,0 +1,248 @@
+{
+       "links": {
+           "search": "http://www.rijksmuseum.nl/api/nl/collection"
+       },
+       "id": "en-RP-P-1908-5609",
+       "priref": "110242",
+       "objectNumber": "RP-P-1908-5609",
+       "language": "en",
+       "title": "Gezicht op de kerk van Moulineux",
+       "copyrightHolder": null,
+       "webImage": {
+           "guid": "0fe0d0ef-d062-44e6-a58c-84f3138db0b3",
+           "offsetPercentageX": 50,
+           "offsetPercentageY": 50,
+           "width": 2500,
+           "height": 1456,
+           "url": "https://lh5.ggpht.com/cCbXCT492kqBYGCrK1pvdJ-nGIGzXluy6po3w0UzL8vLl6OR-MYhUcXOZGlfJW-7GFflBuQewQnDbKYxyEFKi-fN1Hk=s0"
+       },
+       "colors": [
+           {
+               "percentage": 36,
+               "hex": "#EFEBD8"
+           },
+           {
+               "percentage": 15,
+               "hex": " #D2CDBA"
+           },
+           {
+               "percentage": 10,
+               "hex": " #B9B4A4"
+           },
+           {
+               "percentage": 19,
+               "hex": " #989385"
+           },
+           {
+               "percentage": 15,
+               "hex": " #6B685C"
+           },
+           {
+               "percentage": 2,
+               "hex": " #3D3B34"
+           }
+       ],
+       "colorsWithNormalization": [
+           {
+               "originalHex": "#EFEBD8",
+               "normalizedHex": "#FBF6E1"
+           },
+           {
+               "originalHex": " #D2CDBA",
+               "normalizedHex": "#FBF6E1"
+           },
+           {
+               "originalHex": " #B9B4A4",
+               "normalizedHex": "#FBF6E1"
+           },
+           {
+               "originalHex": " #989385",
+               "normalizedHex": "#737C84"
+           },
+           {
+               "originalHex": " #6B685C",
+               "normalizedHex": "#737C84"
+           },
+           {
+               "originalHex": " #3D3B34",
+               "normalizedHex": "#2F4F4F"
+           }
+       ],
+       "normalizedColors": [
+           {
+               "percentage": 36,
+               "hex": "#F5F5DC"
+           },
+           {
+               "percentage": 19,
+               "hex": " #808080"
+           },
+           {
+               "percentage": 17,
+               "hex": " #696969"
+           },
+           {
+               "percentage": 15,
+               "hex": " #FAEBD7"
+           },
+           {
+               "percentage": 10,
+               "hex": " #A9A9A9"
+           }
+       ],
+       "normalized32Colors": [
+           {
+               "percentage": 62,
+               "hex": "#FBF6E1"
+           },
+           {
+               "percentage": 34,
+               "hex": " #737C84"
+           },
+           {
+               "percentage": 2,
+               "hex": " #2F4F4F"
+           }
+       ],
+       "titles": [
+           "Gezicht op de kerk van Moulineux",
+           "Veuë de l'Eglise de Moulineux et Commanderie de Chalo",
+           "Gezichten op kasteel Longuetoise en omgeving"
+       ],
+       "description": "Landschap met uitzicht op de kerk en de daken van de huizen van Chalou-Moulineux. Op de voorgrond twee ruiters en een jager met twee honden.",
+       "labelText": null,
+       "objectTypes": [
+           "print"
+       ],
+       "objectCollection": [
+           "prints"
+       ],
+       "makers": [
+           {
+               "name": "Lodewijk XIV (koning van Frankrijk)",
+               "unFixedName": "Lodewijk XIV (koning van Frankrijk)",
+               "placeOfBirth": "Saint-Germain-en-Laye",
+               "dateOfBirth": "1638-09-05",
+               "dateOfBirthPrecision": null,
+               "dateOfDeath": "1715-09-01",
+               "dateOfDeathPrecision": null,
+               "placeOfDeath": "Versailles",
+               "occupation": [],
+               "roles": [],
+               "nationality": null,
+               "biography": null,
+               "productionPlaces": [
+                   "France"
+               ],
+               "qualification": null,
+               "labelDesc": "Lodewijk XIV (koning van Frankrijk) (05-sep-1638 - 01-sep-1715), France"
+           }
+       ],
+       "principalMakers": [
+           {
+               "name": "Albert Flamen",
+               "unFixedName": "Flamen, Albert",
+               "placeOfBirth": null,
+               "dateOfBirth": "1620",
+               "dateOfBirthPrecision": "c.",
+               "dateOfDeath": "1691",
+               "dateOfDeathPrecision": "after",
+               "placeOfDeath": null,
+               "occupation": [
+                   "print maker",
+                   "draughtsman"
+               ],
+               "roles": [
+                   "print maker"
+               ],
+               "nationality": null,
+               "biography": null,
+               "productionPlaces": [
+                   "Paris"
+               ],
+               "qualification": null,
+               "labelDesc": "Albert Flamen (c. 1620 - after 1691), Paris"
+           }
+       ],
+       "plaqueDescriptionDutch": null,
+       "plaqueDescriptionEnglish": null,
+       "principalMaker": "Albert Flamen",
+       "artistRole": null,
+       "associations": [],
+       "acquisition": {
+           "method": "purchase",
+           "date": "1908-01-01T00:00:00",
+           "creditLine": null
+       },
+       "exhibitions": [],
+       "materials": [
+           "paper"
+       ],
+       "techniques": [
+           "etching"
+       ],
+       "productionPlaces": [
+           "Paris",
+           "Paris",
+           "France"
+       ],
+       "dating": {
+           "presentingDate": "1648 - 1672",
+           "sortingDate": 1648,
+           "period": 17,
+           "yearEarly": 1648,
+           "yearLate": 1672
+       },
+       "classification": {
+           "iconClassIdentifier": [],
+           "iconClassDescription": [],
+           "motifs": [],
+           "events": [],
+           "periods": [],
+           "places": [
+               "Chalou-Moulineux"
+           ],
+           "people": [],
+           "objectNumbers": [
+               "RP-P-1908-5609"
+           ]
+       },
+       "hasImage": true,
+       "historicalPersons": [],
+       "inscriptions": [],
+       "documentation": [],
+       "catRefRPK": [
+           "Robert-Dumesnil 535",
+           "535",
+           "Collectie Rijksmuseum"
+       ],
+       "principalOrFirstMaker": "Albert Flamen",
+       "dimensions": [
+           {
+               "unit": "mm",
+               "type": "height",
+               "part": null,
+               "value": "120"
+           },
+           {
+               "unit": "mm",
+               "type": "width",
+               "part": null,
+               "value": "208"
+           }
+       ],
+       "physicalProperties": [],
+       "physicalMedium": "etching",
+       "longTitle": "Gezicht op de kerk van Moulineux, Albert Flamen, 1648 - 1672",
+       "subTitle": "h 120mm × w 208mm",
+       "scLabelLine": "Albert Flamen, 1648 - 1672, etching",
+       "label": {
+           "title": null,
+           "makerLine": null,
+           "description": null,
+           "notes": null,
+           "date": null
+       },
+       "showImage": true,
+       "location": null
+   }

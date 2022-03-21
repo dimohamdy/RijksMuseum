@@ -22,11 +22,11 @@ final class WebArtObjectsRepositoryTests: XCTestCase {
     func test_GetItems_FromAPI() {
         let expectation = XCTestExpectation()
 
-        let mockSession = MockURLSession.createMockSession(fromJsonFile: "data", andStatusCode: 200, andError: nil)
+        let mockSession = MockURLSession.createMockSession(fromJsonFile: "data_collection", andStatusCode: 200, andError: nil)
         let mockAPIClient =  APIClient(withSession: mockSession)
         webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
         // Act: get data from API .
-        webArtObjectsRepository.artObjects(for: "Car", page: 1) { (result) in
+        webArtObjectsRepository.artObjects(for: CollectionType.print.rawValue, page: 1) { (result) in
             switch result {
             case .success(let data):
                 let artObjects = data.artObjects
@@ -45,11 +45,11 @@ final class WebArtObjectsRepositoryTests: XCTestCase {
     func test_NoResult_FromAPI() {
         let expectation = XCTestExpectation()
 
-        let mockSession = MockURLSession.createMockSession(fromJsonFile: "noData", andStatusCode: 200, andError: nil)
+        let mockSession = MockURLSession.createMockSession(fromJsonFile: "noData_collection", andStatusCode: 200, andError: nil)
         let mockAPIClient =  APIClient(withSession: mockSession)
         webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
         // Act: get data from API .
-        webArtObjectsRepository.artObjects(for: "AnyTextToTest", page: 1) { (result) in
+        webArtObjectsRepository.artObjects(for: CollectionType.print.rawValue, page: 1) { (result) in
             switch result {
             case .success(let data):
                 let artObjects = data.artObjects

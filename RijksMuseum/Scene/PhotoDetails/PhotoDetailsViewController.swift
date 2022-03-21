@@ -11,7 +11,7 @@ final class PhotoDetailsViewController: UIViewController {
 
     private var presenter: PhotoDetailsPresenterInput?
 
-    private var tableViewDataSource: PhotoDetailsTableViewDataSource!
+    private(set) var tableViewDataSource: PhotoDetailsTableViewDataSource!
 
     private let resultTableView: UITableView = {
         let tableView = UITableView()

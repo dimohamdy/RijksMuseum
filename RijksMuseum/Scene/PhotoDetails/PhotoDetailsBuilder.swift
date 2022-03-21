@@ -9,7 +9,7 @@ import UIKit
 
 struct PhotoDetailsBuilder {
 
-    static func viewController(photo: ArtObject) -> UIViewController {
+    static func viewController(photo: ArtObject) -> PhotoDetailsViewController {
         let presenter = PhotoDetailsPresenter(artObject: photo)
         let viewController = PhotoDetailsViewController(presenter: presenter)
         presenter.photoDetailsPresenterOutput = viewController

@@ -31,17 +31,16 @@ final class PhotoDetailsPresenter {
     private let photosRepository: WebArtObjectsRepository
 
     // output
-    weak var photoDetailsPresenterOutput: PhotoDetailsPresenterOutput?
+    weak var photoDetailsPresenterOutput: PhotoDetailsPresenterOutput? {
+        didSet {
+            let cells = self.getActivePhotoCell(photo: detailsArtObject)
+            photoDetailsPresenterOutput?.updateData(photoTableViewCellTypes: cells)
+        }
+    }
 
     init(artObject: ArtObject, photosRepository: WebArtObjectsRepository = WebArtObjectsRepository()) {
         self.detailsArtObject = ArtObjectDetails(artObject: artObject)
         self.photosRepository = photosRepository
-        updateUI()
-    }
-
-    private func updateUI() {
-        let cells = self.getActivePhotoCell(photo: detailsArtObject)
-        photoDetailsPresenterOutput?.updateData(photoTableViewCellTypes: cells)
     }
 
     // MARK: - Mapping to PhotoTableViewCellType

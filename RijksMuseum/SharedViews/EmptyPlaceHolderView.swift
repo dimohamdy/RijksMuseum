@@ -34,17 +34,6 @@ final class EmptyPlaceHolderView: UIView {
         }
     }
 
-    private let actionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .clear
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(Strings.tryAction.localized(), for: .normal)
-        button.setTitleColor(.secondaryLabel, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        button.tag = 1
-        return button
-    }()
-
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -53,7 +42,7 @@ final class EmptyPlaceHolderView: UIView {
             imageView.heightAnchor.constraint(equalToConstant: 40),
             imageView.widthAnchor.constraint(equalToConstant: 40)
         ])
-        imageView.tag = 2
+        imageView.tag = 1
         return imageView
     }()
 
@@ -66,7 +55,7 @@ final class EmptyPlaceHolderView: UIView {
         NSLayoutConstraint.activate([
             label.heightAnchor.constraint(equalToConstant: 20)
         ])
-        label.tag = 3
+        label.tag = 2
         return label
     }()
 
@@ -78,8 +67,19 @@ final class EmptyPlaceHolderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.setContentCompressionResistancePriority(.required, for: .vertical)
         label.numberOfLines = 0
-        label.tag = 4
+        label.tag = 3
         return label
+    }()
+
+    private let actionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(Strings.tryAction.localized(), for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        button.tag = 4
+        return button
     }()
 
     private lazy var contentStackView: UIStackView = {
