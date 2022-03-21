@@ -62,11 +62,11 @@ final class PhotoDetailsPresenter {
 
         let formatter = ListFormatter()
 
-        if let materials = photo.materials,let materialsString = formatter.string(from: materials) {
+        if let materials = photo.materials, let materialsString = formatter.string(from: materials) {
             cellTypes.append(detailsModel(title: "Materials", subTitle: materialsString))
         }
 
-        if let techniques = photo.techniques,let techniquesString = formatter.string(from: techniques) {
+        if let techniques = photo.techniques, let techniquesString = formatter.string(from: techniques) {
             cellTypes.append(detailsModel(title: "Techniques", subTitle: techniquesString))
         }
 
@@ -76,7 +76,7 @@ final class PhotoDetailsPresenter {
         return cellTypes
     }
 
-    private func detailsModel(title: String, subTitle: String)-> PhotoTableViewCellType {
+    private func detailsModel(title: String, subTitle: String) -> PhotoTableViewCellType {
         return PhotoTableViewCellType.detailsCell(model: DetailsCell.UIModel(title: title, subTitle: subTitle))
     }
 }

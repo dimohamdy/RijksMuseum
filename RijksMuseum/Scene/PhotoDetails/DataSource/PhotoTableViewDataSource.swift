@@ -8,7 +8,7 @@
 import UIKit
 
 final class PhotoTableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
- 
+
     var photoTableViewCellTypes: [PhotoTableViewCellType]
 
     init(photoTableViewCellTypes: [PhotoTableViewCellType]) {

@@ -21,7 +21,7 @@ extension UICollectionView {
             NSLayoutConstraint.activate([
                 emptyPlaceHolderView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
                 emptyPlaceHolderView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-                emptyPlaceHolderView.widthAnchor.constraint(equalTo: self.widthAnchor),
+                emptyPlaceHolderView.widthAnchor.constraint(equalTo: self.widthAnchor)
             ])
         }
     }

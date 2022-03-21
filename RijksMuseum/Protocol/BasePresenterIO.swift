@@ -35,11 +35,11 @@ extension BaseDisplayLogic where Self: UIViewController {
     func handle(error: RijksMuseumError) {
         showError(error: error)
     }
-    
+
     func showError(error: Error) {
         showError(title: Strings.commonGeneralError.localized(), subtitle: error.localizedDescription)
     }
-    
+
     func showError(title: String, subtitle: String?) {
 //        showAlert(title: title, subtitle: subtitle, theme: .error)
     }

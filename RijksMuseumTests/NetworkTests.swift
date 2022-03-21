@@ -5,12 +5,11 @@
 //  Created by BinaryBoy on 3/18/22.
 //
 
-
 import XCTest
 @testable import RijksMuseum
 
 final class NetworkTests: XCTestCase {
-    
+
     func test_GetItems_Success() throws {
 
         let mockAPIClient =  getMockAPIClient(fromJsonFile: "data")

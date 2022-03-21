@@ -36,7 +36,6 @@ final class CollectionTypeItemBar: UICollectionViewCell, CellReusable {
         return view
     }()
 
-
     private let selectionTintColor: UIColor = .systemYellow
     private let  defaultTintColor: UIColor = .clear
 

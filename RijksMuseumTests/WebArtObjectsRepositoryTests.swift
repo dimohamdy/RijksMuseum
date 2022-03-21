@@ -5,13 +5,12 @@
 //  Created by BinaryBoy on 3/18/22.
 //
 
-
 import XCTest
 @testable import RijksMuseum
 
 final class WebArtObjectsRepositoryTests: XCTestCase {
     var webArtObjectsRepository: WebArtObjectsRepository!
-    
+
     override func setUp() {
         webArtObjectsRepository = WebArtObjectsRepository()
     }
@@ -19,7 +18,7 @@ final class WebArtObjectsRepositoryTests: XCTestCase {
     override func tearDown() {
         webArtObjectsRepository = nil
     }
-    
+
     func test_GetItems_FromAPI() {
         let expectation = XCTestExpectation()
 

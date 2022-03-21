@@ -10,7 +10,7 @@ import UIKit
 final class PhotosListViewController: UIViewController {
 
     private(set) var collectionDataSource: PhotosCollectionViewDataSource?
-    
+
     // MARK: Views
     private let photosCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -28,15 +28,14 @@ final class PhotosListViewController: UIViewController {
         return collectionView
     }()
 
-
     private let collectionTypeTabBar: CollectionTypeTabBar = {
         let collectionTypeTabBar = CollectionTypeTabBar(collectionTypes: CollectionType.allCases)
         collectionTypeTabBar.translatesAutoresizingMaskIntoConstraints = false
         return collectionTypeTabBar
     }()
-    
+
     var presenter: PhotosListPresenterInput?
-    
+
     // MARK: View lifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +43,7 @@ final class PhotosListViewController: UIViewController {
         configureNavigationBar()
         presenter?.search()
     }
-    
+
     // MARK: - Setup UI
     private func setupUI() {
         view.addSubview(photosCollectionView)
@@ -145,7 +144,7 @@ extension PhotosListViewController: PhotosListPresenterOutput {
             }
 
         }
-        
+
     }
 }
 

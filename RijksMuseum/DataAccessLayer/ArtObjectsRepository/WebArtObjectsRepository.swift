@@ -8,12 +8,12 @@
 import Foundation
 
 final class WebArtObjectsRepository: ArtObjectsRepository {
-    
+
     let client: APIClient
     init(client: APIClient = APIClient()) {
         self.client =  client
     }
-    
+
     func artObjects(for type: String, page: Int, completion: @escaping (Result<CollectionResult, RijksMuseumError>) -> Void) {
         guard let encodedText = type.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
             completion(.failure(.wrongURL))

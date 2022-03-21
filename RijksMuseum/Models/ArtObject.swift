@@ -16,5 +16,3 @@ struct ArtObject: Decodable {
 	let title: String
     let webImage: WebImage
 }
-
-

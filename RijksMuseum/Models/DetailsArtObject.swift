@@ -10,7 +10,7 @@ import Foundation
 struct DetailsArtObject: Decodable {
     let objectNumber: String
     let title: String
-    let longTitle:String
+    let longTitle: String
     let principalOrFirstMaker: String
     let webImage: WebImage
 

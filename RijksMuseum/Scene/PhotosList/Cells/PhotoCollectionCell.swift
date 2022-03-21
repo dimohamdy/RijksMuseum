@@ -69,17 +69,17 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         photoImageView.kf.cancelDownloadTask()
         photoImageView.image = nil
     }
-    
+
     @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
     }
-    
+
     private func setupViews() {
         titleStackView.addArrangedSubview(titleLabel)
         titleStackView.addArrangedSubview(subtitleLabel)
@@ -92,7 +92,7 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
             titleStackView.topAnchor.constraint(equalTo: titlesBackgroundView.topAnchor),
             titleStackView.leadingAnchor.constraint(equalTo: titlesBackgroundView.leadingAnchor, constant: UIView.padding10),
             titleStackView.trailingAnchor.constraint(equalTo: titlesBackgroundView.trailingAnchor, constant: -UIView.padding10),
-            titleStackView.bottomAnchor.constraint(equalTo: titlesBackgroundView.bottomAnchor),
+            titleStackView.bottomAnchor.constraint(equalTo: titlesBackgroundView.bottomAnchor)
         ])
 
         NSLayoutConstraint.activate([

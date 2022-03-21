@@ -411,6 +411,7 @@
 			buildConfigurationList = 04E101FB27E4D18B00966779 /* Build configuration list for PBXNativeTarget "RijksMuseum" */;
 			buildPhases = (
 				04E101CD27E4D18800966779 /* Sources */,
+				04E103A227E80DB700966779 /* SwiftLint */,
 				04E101CE27E4D18800966779 /* Frameworks */,
 				04E101CF27E4D18800966779 /* Resources */,
 			);
@@ -536,6 +537,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04E103A227E80DB700966779 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04E101CD27E4D18800966779 /* Sources */ = {
