@@ -26,6 +26,8 @@ enum Strings: String {
 
     case tryAction = "Try_Action"
 
+    case okAction = "Ok_Action"
+
     // MARK: Details Screen
     case title = "Title"
     case longTile = "Long_Title"

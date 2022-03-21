@@ -98,11 +98,9 @@ extension PhotoDetailsPresenter: PhotoDetailsPresenterInput {
                 self.photoDetailsPresenterOutput?.updateData(photoTableViewCellTypes: cells)
 
             case .failure(let error):
-                print(error.localizedDescription)
-                //                self.photoDetailsPresenterOutput?.updateData(error: RijksMuseumError.noResults)
+                self.photoDetailsPresenterOutput?.showError(error: error)
 
             }
-
         }
     }
 }

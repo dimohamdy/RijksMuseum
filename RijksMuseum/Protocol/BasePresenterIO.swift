@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import SwiftMessages
 
 protocol BasePresenterInput: AnyObject {
     func viewDidLoad()
@@ -20,7 +19,6 @@ protocol BaseDisplayLogic: AnyObject {
     func handle(error: RijksMuseumError)
     func showError(error: Error)
     func showError(title: String, subtitle: String?)
-    func showSuccess(title: String, subtitle: String?)
 }
 
 protocol Loading {
@@ -41,29 +39,19 @@ extension BaseDisplayLogic where Self: UIViewController {
     }
 
     func showError(title: String, subtitle: String?) {
-//        showAlert(title: title, subtitle: subtitle, theme: .error)
+        showAlert(title: title, subtitle: subtitle)
     }
 
-    func showSuccess(title: String, subtitle: String?) {
-//        showAlert(title: title, subtitle: subtitle, theme: .success)
-    }
+    func showAlert(title: String, subtitle: String?) {
+        DispatchQueue.main.async {
 
-//    func showAlert(title: String, subtitle: String?, theme: Theme) {
-//        DispatchQueue.main.async {
-//
-//            let view = MessageView.viewFromNib(layout: .cardView)
-//            view.configureTheme(theme)
-//            view.button?.isHidden = true
-//            view.configureContent(title: title, body: subtitle ?? "")
-//
-//            var successConfig = SwiftMessages.defaultConfig
-//            successConfig.presentationStyle = .center
-//            successConfig.preferredStatusBarStyle = .lightContent
-//            successConfig.presentationContext = .window(windowLevel: UIWindow.Level.normal)
-//
-//            SwiftMessages.show(config: successConfig, view: view)
-//        }
-//    }
+            let alert = UIAlertController(title: title, message: subtitle,
+                                          preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: Strings.okAction.localized(), style: .default))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
 }
 
 extension UIViewController: BasePresenterOutput {
