@@ -90,6 +90,7 @@ extension PhotosListViewController: PhotosListPresenterOutput {
     func clearCollection() {
         DispatchQueue.main.async {
             self.collectionDataSource = nil
+            self.photosCollectionView.setContentOffset(.zero, animated: false)
             self.photosCollectionView.dataSource = nil
             self.photosCollectionView.dataSource = nil
             self.photosCollectionView.reloadData()
