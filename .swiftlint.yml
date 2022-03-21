@@ -1,6 +1,9 @@
+excluded:
+  - RijksMuseumTests
 disabled_rules:
 - closure_parameter_position
 - switch_case_alignment
+- no_space_in_method_call
 opt_in_rules:
 - empty_count
 - empty_string
