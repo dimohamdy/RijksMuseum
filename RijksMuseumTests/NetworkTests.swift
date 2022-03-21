@@ -13,7 +13,7 @@ final class NetworkTests: XCTestCase {
     func test_GetItems_Success() throws {
 
         let mockAPIClient =  getMockAPIClient(fromJsonFile: "data")
-        loadData(mockAPIClient: mockAPIClient) { (result: Result<CollectionResult, RijksMuseumError>) in
+        loadData(mockAPIClient: mockAPIClient) { (result: Result<ArtObjectCollectionResult, RijksMuseumError>) in
             switch result {
             case .success(let data):
                 XCTAssertGreaterThan(data.artObjects.count, 0)
@@ -25,7 +25,7 @@ final class NetworkTests: XCTestCase {
 
     func test_NotGetData_Fail() throws {
         let mockAPIClient =  getMockAPIClient(fromJsonFile: "noData")
-        loadData(mockAPIClient: mockAPIClient) { (result: Result<CollectionResult, RijksMuseumError>) in
+        loadData(mockAPIClient: mockAPIClient) { (result: Result<ArtObjectCollectionResult, RijksMuseumError>) in
             switch result {
             case .success(let data):
                 XCTAssertEqual(data.artObjects.count, 0)

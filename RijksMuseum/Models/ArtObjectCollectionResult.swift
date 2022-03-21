@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CollectionResult: Decodable {
+struct ArtObjectCollectionResult: Decodable {
 
     let artObjects: [ArtObject]
 }

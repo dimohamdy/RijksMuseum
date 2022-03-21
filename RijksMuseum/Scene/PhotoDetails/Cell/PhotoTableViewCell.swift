@@ -1,5 +1,5 @@
 //
-//  PhotoCell.swift
+//  PhotoTableViewCell.swift
 //  RijksMuseum
 //
 //  Created by BinaryBoy on 3/20/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PhotoCell: UITableViewCell, CellReusable {
+final class PhotoTableViewCell: UITableViewCell, CellReusable {
 
     private let photoImageView: UIImageView = {
         let imageView = UIImageView()
@@ -33,8 +33,6 @@ final class PhotoCell: UITableViewCell, CellReusable {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         selectionStyle = .none
-//        backgroundColor = .bgSurface
-//        contentView.backgroundColor = .bgSurface
         setupViews()
     }
 
@@ -56,7 +54,7 @@ final class PhotoCell: UITableViewCell, CellReusable {
     }
 }
 
-extension PhotoCell {
+extension PhotoTableViewCell {
     struct UIModel {
         var photoURL: String
     }

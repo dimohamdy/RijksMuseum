@@ -1,5 +1,5 @@
 //
-//  PhotoDetailsCell.swift
+//  DetailsTableViewCell.swift
 //  RijksMuseum
 //
 //  Created by BinaryBoy on 3/20/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class DetailsCell: UITableViewCell, CellReusable {
+final class DetailsTableViewCell: UITableViewCell, CellReusable {
 
     private let titleLabel: UILabel = {
         let label = UILabel()
@@ -77,7 +77,7 @@ final class DetailsCell: UITableViewCell, CellReusable {
     }
 }
 
-extension DetailsCell {
+extension DetailsTableViewCell {
     struct UIModel {
         var title: String
         var subTitle: String

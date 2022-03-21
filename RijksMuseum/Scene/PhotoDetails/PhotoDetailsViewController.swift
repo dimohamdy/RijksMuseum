@@ -11,7 +11,7 @@ final class PhotoDetailsViewController: UIViewController {
 
     private var presenter: PhotoDetailsPresenterInput?
 
-    private var tableViewDataSource: PhotoTableViewDataSource!
+    private var tableViewDataSource: PhotoDetailsTableViewDataSource!
 
     private let resultTableView: UITableView = {
         let tableView = UITableView()
@@ -19,8 +19,8 @@ final class PhotoDetailsViewController: UIViewController {
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.tableFooterView = UIView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.register(PhotoCell.self, forCellReuseIdentifier: PhotoCell.identifier)
-        tableView.register(DetailsCell.self, forCellReuseIdentifier: DetailsCell.identifier)
+        tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: PhotoTableViewCell.identifier)
+        tableView.register(DetailsTableViewCell.self, forCellReuseIdentifier: DetailsTableViewCell.identifier)
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableView.automaticDimension
         return tableView
@@ -68,7 +68,7 @@ final class PhotoDetailsViewController: UIViewController {
 extension PhotoDetailsViewController: PhotoDetailsPresenterOutput {
 
     func updateData(photoTableViewCellTypes: [PhotoTableViewCellType]) {
-        tableViewDataSource = PhotoTableViewDataSource(photoTableViewCellTypes: photoTableViewCellTypes)
+        tableViewDataSource = PhotoDetailsTableViewDataSource(photoTableViewCellTypes: photoTableViewCellTypes)
         DispatchQueue.main.async {
             self.resultTableView.dataSource = self.tableViewDataSource
             self.resultTableView.delegate = self.tableViewDataSource

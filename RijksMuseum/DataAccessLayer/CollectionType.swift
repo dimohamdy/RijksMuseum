@@ -10,7 +10,7 @@ import Foundation
 enum CollectionType: String, CaseIterable, Comparable {
 
     static func < (lhs: CollectionType, rhs: CollectionType) -> Bool {
-        lhs.rawValue < rhs.rawValue
+        lhs.rawValue.capitalized < rhs.rawValue.capitalized
     }
 
     case print

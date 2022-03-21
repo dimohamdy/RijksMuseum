@@ -14,7 +14,7 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
         self.client =  client
     }
 
-    func artObjects(for type: String, page: Int, completion: @escaping (Result<CollectionResult, RijksMuseumError>) -> Void) {
+    func artObjects(for type: String, page: Int, completion: @escaping (Result<ArtObjectCollectionResult, RijksMuseumError>) -> Void) {
         guard let encodedText = type.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
             completion(.failure(.wrongURL))
             return
@@ -24,7 +24,7 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
             completion(.failure(.wrongURL))
             return
         }
-        client.loadData(from: url) { (result: Result<CollectionResult, RijksMuseumError>) in
+        client.loadData(from: url) { (result: Result<ArtObjectCollectionResult, RijksMuseumError>) in
             switch result {
             case .success(let data):
                 completion(.success(data))

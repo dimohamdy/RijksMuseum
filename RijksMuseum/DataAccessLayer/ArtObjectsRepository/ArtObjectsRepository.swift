@@ -9,6 +9,6 @@ import Foundation
 
 protocol ArtObjectsRepository {
 
-    func artObjects(for type: String, page: Int, completion: @escaping (Result< CollectionResult, RijksMuseumError>) -> Void)
+    func artObjects(for type: String, page: Int, completion: @escaping (Result< ArtObjectCollectionResult, RijksMuseumError>) -> Void)
     func artObjectDetails(for id: String, completion: @escaping (Result<ArtObjectDetailsResult, RijksMuseumError>) -> Void)
 }

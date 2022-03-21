@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class PhotoTableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
+final class PhotoDetailsTableViewDataSource: NSObject, UITableViewDelegate, UITableViewDataSource {
 
     var photoTableViewCellTypes: [PhotoTableViewCellType]
 
@@ -25,12 +25,12 @@ final class PhotoTableViewDataSource: NSObject, UITableViewDelegate, UITableView
         let type = photoTableViewCellTypes[indexPath.row]
         switch type {
         case .photoCell(let model):
-            if let cell: PhotoCell = tableView.dequeueReusableCell(for: indexPath) {
+            if let cell: PhotoTableViewCell = tableView.dequeueReusableCell(for: indexPath) {
                 cell.configCell(photoModel: model)
                 return cell
             }
         case .detailsCell(let model):
-            if let cell: DetailsCell = tableView.dequeueReusableCell(for: indexPath) {
+            if let cell: DetailsTableViewCell = tableView.dequeueReusableCell(for: indexPath) {
                 cell.configCell(photoModel: model)
                 return cell
             }

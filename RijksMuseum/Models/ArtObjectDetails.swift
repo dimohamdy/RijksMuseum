@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DetailsArtObject: Decodable {
+struct ArtObjectDetails: Decodable {
     let objectNumber: String
     let title: String
     let principalOrFirstMaker: String

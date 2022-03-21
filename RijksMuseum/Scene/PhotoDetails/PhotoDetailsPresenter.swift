@@ -8,8 +8,8 @@
 import Foundation
 
 enum PhotoTableViewCellType {
-    case photoCell(model: PhotoCell.UIModel)
-    case detailsCell(model: DetailsCell.UIModel)
+    case photoCell(model: PhotoTableViewCell.UIModel)
+    case detailsCell(model: DetailsTableViewCell.UIModel)
 }
 
 // MARK: PhotoDetailsPresenterInput
@@ -27,14 +27,14 @@ protocol PhotoDetailsPresenterOutput: BasePresenterOutput {
 final class PhotoDetailsPresenter {
 
     // input
-    private let detailsArtObject: DetailsArtObject
+    private let detailsArtObject: ArtObjectDetails
     private let photosRepository: WebArtObjectsRepository
 
     // output
     weak var photoDetailsPresenterOutput: PhotoDetailsPresenterOutput?
 
     init(artObject: ArtObject, photosRepository: WebArtObjectsRepository = WebArtObjectsRepository()) {
-        self.detailsArtObject = DetailsArtObject(artObject: artObject)
+        self.detailsArtObject = ArtObjectDetails(artObject: artObject)
         self.photosRepository = photosRepository
         updateUI()
     }
@@ -46,9 +46,9 @@ final class PhotoDetailsPresenter {
 
     // MARK: - Mapping to PhotoTableViewCellType
 
-    private func getActivePhotoCell(photo: DetailsArtObject) -> [PhotoTableViewCellType] {
+    private func getActivePhotoCell(photo: ArtObjectDetails) -> [PhotoTableViewCellType] {
         var cellTypes: [PhotoTableViewCellType] = []
-        let photoCellType = PhotoTableViewCellType.photoCell(model: PhotoCell.UIModel(photoURL: photo.webImage.url))
+        let photoCellType = PhotoTableViewCellType.photoCell(model: PhotoTableViewCell.UIModel(photoURL: photo.webImage.url))
         cellTypes.append(photoCellType)
 
         cellTypes.append(detailsModel(title: Strings.title.localized(), subTitle: photo.title))
@@ -80,7 +80,7 @@ final class PhotoDetailsPresenter {
     }
 
     private func detailsModel(title: String, subTitle: String) -> PhotoTableViewCellType {
-        return PhotoTableViewCellType.detailsCell(model: DetailsCell.UIModel(title: title, subTitle: subTitle))
+        return PhotoTableViewCellType.detailsCell(model: DetailsTableViewCell.UIModel(title: title, subTitle: subTitle))
     }
 }
 

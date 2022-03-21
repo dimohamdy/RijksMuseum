@@ -11,7 +11,7 @@ protocol PhotoListRoutable {
     func show(artObject: ArtObject)
 }
 
-// MARK: - ProfileDetailsRoutable
+// MARK: - PhotoListRouter Routable
 struct PhotoListRouter: PhotoListRoutable {
     let viewController: UIViewController?
     func show(artObject: ArtObject) {

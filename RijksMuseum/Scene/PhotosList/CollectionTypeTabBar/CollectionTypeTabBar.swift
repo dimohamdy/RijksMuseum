@@ -11,11 +11,7 @@ protocol CollectionTypeTabBarDelegate: AnyObject {
     func collectionTypeTabBar(_ tabBar: CollectionTypeTabBar, didSelectItem collectionType: CollectionType, at index: Int)
 }
 
-class CollectionTypeTabBar: UIView {
-
-    private struct CellHeightConstant {
-        static let heightOfCell: CGFloat = 50
-    }
+final class CollectionTypeTabBar: UIView {
 
     weak var delegate: CollectionTypeTabBarDelegate?
 
@@ -37,7 +33,7 @@ class CollectionTypeTabBar: UIView {
     private var currentCollectionType: CollectionType = .print
 
     init(collectionTypes: [CollectionType] = CollectionType.allCases) {
-        self.collectionTypes = collectionTypes
+        self.collectionTypes = collectionTypes.sorted()
         super.init(frame: .zero)
         setupView()
     }

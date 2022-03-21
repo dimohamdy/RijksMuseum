@@ -9,5 +9,5 @@ import Foundation
 
 struct ArtObjectDetailsResult: Decodable {
 
-    let artObject: DetailsArtObject
+    let artObject: ArtObjectDetails
 }
