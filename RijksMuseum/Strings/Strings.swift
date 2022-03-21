@@ -26,6 +26,15 @@ enum Strings: String {
 
     case tryAction = "Try_Action"
 
+    // MARK: Details Screen
+    case title = "Title"
+    case longTile = "Long_Title"
+    case principalOrFirstMaker = "Principal_FirstMaker"
+    case description = "Description"
+    case materials = "Materials"
+    case techniques = "Techniques"
+    case subTitle = "SubTitle"
+
     func localized() -> String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

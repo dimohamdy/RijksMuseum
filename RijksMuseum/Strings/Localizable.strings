@@ -21,3 +21,13 @@
 "No_Photos_Error_Subtitle" = "Please, try again later";
 
 "Try_Action" = "Try again";
+
+// MARK: Details Screen
+
+"Title" = "Title";
+"Long_Title" = "Long title";
+"Principal_FirstMaker" = "Principal or First Maker";
+"Description" = "Description";
+"Materials" = "Materials";
+"Techniques" = "Techniques";
+"SubTitle" = "SubTitle";

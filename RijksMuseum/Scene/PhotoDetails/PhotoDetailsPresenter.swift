@@ -51,27 +51,27 @@ final class PhotoDetailsPresenter {
         let photoCellType = PhotoTableViewCellType.photoCell(model: PhotoCell.UIModel(photoURL: photo.webImage.url))
         cellTypes.append(photoCellType)
 
-        cellTypes.append(detailsModel(title: "Title", subTitle: photo.title))
-        cellTypes.append(detailsModel(title: "Long Title", subTitle: photo.longTitle))
+        cellTypes.append(detailsModel(title: Strings.title.localized(), subTitle: photo.title))
+        cellTypes.append(detailsModel(title: Strings.longTile.localized(), subTitle: photo.longTitle))
 
-        cellTypes.append(detailsModel(title: "Principal or First Maker", subTitle: photo.principalOrFirstMaker))
+        cellTypes.append(detailsModel(title: Strings.principalOrFirstMaker.localized(), subTitle: photo.principalOrFirstMaker))
 
         if let description = photo.description {
-            cellTypes.append(detailsModel(title: "Description", subTitle: description))
+            cellTypes.append(detailsModel(title: Strings.description.localized(), subTitle: description))
         }
 
         let formatter = ListFormatter()
 
         if let materials = photo.materials, let materialsString = formatter.string(from: materials) {
-            cellTypes.append(detailsModel(title: "Materials", subTitle: materialsString))
+            cellTypes.append(detailsModel(title: Strings.materials.localized(), subTitle: materialsString))
         }
 
         if let techniques = photo.techniques, let techniquesString = formatter.string(from: techniques) {
-            cellTypes.append(detailsModel(title: "Techniques", subTitle: techniquesString))
+            cellTypes.append(detailsModel(title: Strings.techniques.localized(), subTitle: techniquesString))
         }
 
         if let subTitle = photo.subTitle {
-            cellTypes.append(detailsModel(title: "SubTitle", subTitle: subTitle))
+            cellTypes.append(detailsModel(title: Strings.subTitle.localized(), subTitle: subTitle))
         }
         return cellTypes
     }
@@ -99,7 +99,7 @@ extension PhotoDetailsPresenter: PhotoDetailsPresenterInput {
 
             case .failure(let error):
                 print(error.localizedDescription)
-//                self.photoDetailsPresenterOutput?.updateData(error: RijksMuseumError.noResults)
+                //                self.photoDetailsPresenterOutput?.updateData(error: RijksMuseumError.noResults)
 
             }
 
