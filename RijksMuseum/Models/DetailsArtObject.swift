@@ -10,10 +10,10 @@ import Foundation
 struct DetailsArtObject: Decodable {
     let objectNumber: String
     let title: String
-    let longTitle: String
     let principalOrFirstMaker: String
     let webImage: WebImage
 
+    let longTitle: String?
     let description: String?
     let materials: [String]?
     let techniques: [String]?
@@ -22,10 +22,10 @@ struct DetailsArtObject: Decodable {
     init(artObject: ArtObject) {
         self.objectNumber = artObject.objectNumber
         self.title = artObject.title
-        self.longTitle = artObject.longTitle
         self.principalOrFirstMaker = artObject.principalOrFirstMaker
         self.webImage = artObject.webImage
 
+        self.longTitle = nil
         self.description = nil
         self.materials = nil
         self.techniques = nil

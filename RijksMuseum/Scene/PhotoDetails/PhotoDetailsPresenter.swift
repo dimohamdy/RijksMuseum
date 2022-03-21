@@ -52,9 +52,12 @@ final class PhotoDetailsPresenter {
         cellTypes.append(photoCellType)
 
         cellTypes.append(detailsModel(title: Strings.title.localized(), subTitle: photo.title))
-        cellTypes.append(detailsModel(title: Strings.longTile.localized(), subTitle: photo.longTitle))
 
         cellTypes.append(detailsModel(title: Strings.principalOrFirstMaker.localized(), subTitle: photo.principalOrFirstMaker))
+
+        if let longTitle = photo.longTitle {
+            cellTypes.append(detailsModel(title: Strings.longTile.localized(), subTitle: longTitle))
+        }
 
         if let description = photo.description {
             cellTypes.append(detailsModel(title: Strings.description.localized(), subTitle: description))

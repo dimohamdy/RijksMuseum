@@ -10,5 +10,4 @@ import Foundation
 struct CollectionResult: Decodable {
 
     let artObjects: [ArtObject]
-    let count: Int
 }
