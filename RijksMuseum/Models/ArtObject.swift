@@ -7,7 +7,6 @@
 
 import Foundation
 
-// TODO: Use inheritance
 struct ArtObject: Decodable {
 
     let objectNumber: String
