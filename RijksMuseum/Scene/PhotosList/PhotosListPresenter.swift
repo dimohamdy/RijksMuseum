@@ -25,7 +25,7 @@ final class PhotosListPresenter {
 
     // MARK: Injections
     private weak var output: PhotosListPresenterOutput?
-    private let photosRepository: WebArtObjectsRepository
+    private let photosRepository: ArtObjectsRepository
 
     var router: PhotoListRouter?
 
@@ -41,7 +41,7 @@ final class PhotosListPresenter {
     }
 
     // MARK: LifeCycle
-    init(output: PhotosListPresenterOutput, photosRepository: WebArtObjectsRepository = WebArtObjectsRepository()) {
+    init(output: PhotosListPresenterOutput, photosRepository: ArtObjectsRepository = WebArtObjectsRepository()) {
 
         self.output = output
         self.photosRepository = photosRepository

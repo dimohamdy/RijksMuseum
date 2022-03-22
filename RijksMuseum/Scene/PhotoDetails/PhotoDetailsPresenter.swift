@@ -28,7 +28,7 @@ final class PhotoDetailsPresenter {
 
     // input
     private let detailsArtObject: ArtObjectDetails
-    private let photosRepository: WebArtObjectsRepository
+    private let photosRepository: ArtObjectsRepository
 
     // output
     weak var photoDetailsPresenterOutput: PhotoDetailsPresenterOutput? {
@@ -38,7 +38,7 @@ final class PhotoDetailsPresenter {
         }
     }
 
-    init(artObject: ArtObject, photosRepository: WebArtObjectsRepository = WebArtObjectsRepository()) {
+    init(artObject: ArtObject, photosRepository: ArtObjectsRepository = WebArtObjectsRepository()) {
         self.detailsArtObject = ArtObjectDetails(artObject: artObject)
         self.photosRepository = photosRepository
     }
