@@ -12,6 +12,8 @@ enum Strings: String {
     // MARK: Home Screen
     case rijksMuseumTitle = "RijksMuseum_Title"
 
+    case noResult =  "No_Result"
+
     // MARK: Errors
     case commonGeneralError = "Common_GeneralError"
     case commonInternetError = "Common_InternetError"

@@ -19,11 +19,11 @@ enum RijksMuseumError: Error {
     var localizedDescription: String {
         switch self {
         case .noResults:
-            return "No result"
+            return Strings.noResult.localized()
         case .noInternetConnection:
-            return "No internet connection"
+            return Strings.noInternetConnectionTitle.localized()
         default:
-            return "some thing happen"
+            return Strings.commonGeneralError.localized()
         }
     }
 }

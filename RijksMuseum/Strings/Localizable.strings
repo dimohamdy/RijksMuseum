@@ -8,6 +8,8 @@
 // MARK: Home Screen
 "RijksMuseum_Title" = "RijksMuseum";
 
+"No_Result" =  "No Result";
+
 // MARK: Errors
 "Common_GeneralError" = "There was an error";
 "Common_InternetError" = "No internet connection";
