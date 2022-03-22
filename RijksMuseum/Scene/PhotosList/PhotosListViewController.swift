@@ -46,6 +46,7 @@ final class PhotosListViewController: UIViewController {
 
     // MARK: - Setup UI
     private func setupUI() {
+        view.backgroundColor = .systemBackground
         view.addSubview(photosCollectionView)
         view.addSubview(collectionTypeTabBar)
 
