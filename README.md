@@ -6,7 +6,7 @@
 
 # App Structure
 
-* App structure I use **MVP** with Input-Output approach **Delegate** to notify about updates. I selected **MVP** becasue the app is simpel only 2 screen.
+* App structure I use **MVP** with Input-Output approach **Delegate** to notify about updates. I selected **MVP** becasue the app is simpel only 2 screens.
 
 * I used the **Repository** design pattern to act as a Data source from API.
 
@@ -49,4 +49,3 @@
 Name: Dimo Hamdy
 
 Email: dabdelaziz@mobiquityinc.com
-
