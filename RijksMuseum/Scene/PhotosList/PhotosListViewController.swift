@@ -118,14 +118,14 @@ extension PhotosListViewController: PhotosListPresenterOutput {
         }
     }
 
-    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType]) {
+    func updateData(collectionViewCellType: ItemCollectionViewCellType) {
         DispatchQueue.main.async {
             //Clear any placeholder view from collectionView
             self.photosCollectionView.restore()
 
             // Reload the collectionView
             if self.collectionDataSource == nil {
-                self.collectionDataSource = PhotosCollectionViewDataSource(presenterInput: self.presenter, collectionViewCellTypes: collectionViewCellTypes)
+                self.collectionDataSource = PhotosCollectionViewDataSource(presenterInput: self.presenter, collectionViewCellTypes: [collectionViewCellType])
                 self.photosCollectionView.dataSource = self.collectionDataSource
                 self.photosCollectionView.delegate = self.collectionDataSource
                 self.photosCollectionView.reloadData()
@@ -137,7 +137,7 @@ extension PhotosListViewController: PhotosListPresenterOutput {
                 let fromIndex = self.collectionDataSource?.collectionViewCellTypes.count ?? 0
                 let indexSet = IndexSet(integer: fromIndex)
 
-                self.collectionDataSource?.collectionViewCellTypes = collectionViewCellTypes
+                self.collectionDataSource?.collectionViewCellTypes.append(collectionViewCellType)
                 self.photosCollectionView.performBatchUpdates {
                     self.photosCollectionView.insertSections(indexSet)
                 }

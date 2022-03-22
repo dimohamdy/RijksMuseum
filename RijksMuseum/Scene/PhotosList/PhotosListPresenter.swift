@@ -17,7 +17,7 @@ protocol PhotosListPresenterInput: BasePresenterInput {
 protocol PhotosListPresenterOutput: BasePresenterOutput {
     func clearCollection()
     func updateData(error: Error)
-    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType])
+    func updateData(collectionViewCellType: ItemCollectionViewCellType)
     func emptyState(emptyPlaceHolderType: EmptyPlaceHolderType)
 }
 
@@ -31,8 +31,9 @@ final class PhotosListPresenter {
 
     fileprivate var page: Int = 0
     fileprivate var canLoadMore = true
+
     // internal
-    private var collectionViewCellTypes: [ItemCollectionViewCellType] = [ItemCollectionViewCellType]()
+    private var haveData: Bool = false
 
     var collectionType: CollectionType = .print {
         didSet {
@@ -56,7 +57,7 @@ final class PhotosListPresenter {
 extension PhotosListPresenter: PhotosListPresenterInput {
 
     func search() {
-        collectionViewCellTypes = []
+        haveData = false
         output?.clearCollection()
         self.page = 0
         self.canLoadMore = true
@@ -110,9 +111,9 @@ extension PhotosListPresenter {
                     self.handleNoPhotos()
                     return
                 }
-                self.handleNewPhotos(photos: searchResult.artObjects)
                 self.canLoadMore = true
-
+                self.haveData = true
+                self.handleNewPhotos(photos: searchResult.artObjects)
             case .failure(let error):
                 self.output?.updateData(error: error)
             }
@@ -121,16 +122,15 @@ extension PhotosListPresenter {
 
     private func handleNewPhotos(photos: [ArtObject]) {
         let newSection: ItemCollectionViewCellType = createItemsForCollection(photosArray: photos)
-        collectionViewCellTypes.append(newSection)
-        if collectionViewCellTypes.isEmpty {
+        if !haveData {
             output?.updateData(error: RijksMuseumError.noResults)
         } else {
-            output?.updateData(collectionViewCellTypes: collectionViewCellTypes)
+            output?.updateData(collectionViewCellType: newSection)
         }
     }
 
     private func handleNoPhotos() {
-        if collectionViewCellTypes.isEmpty {
+        if !haveData {
             output?.updateData(error: RijksMuseumError.noResults)
         }
     }
