@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0432B03F27E9F7B400FB63D9 /* PageHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0432B03E27E9F7B400FB63D9 /* PageHeaderCollectionCell.swift */; };
 		04E101D527E4D18800966779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101D427E4D18800966779 /* AppDelegate.swift */; };
 		04E101D727E4D18800966779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E101D627E4D18800966779 /* SceneDelegate.swift */; };
 		04E101DE27E4D18B00966779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04E101DD27E4D18B00966779 /* Assets.xcassets */; };
@@ -92,6 +93,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0432B03E27E9F7B400FB63D9 /* PageHeaderCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageHeaderCollectionCell.swift; sourceTree = "<group>"; };
 		04E101D127E4D18800966779 /* RijksMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RijksMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E101D427E4D18800966779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E101D627E4D18800966779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 		04E1024127E5093200966779 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0432B03E27E9F7B400FB63D9 /* PageHeaderCollectionCell.swift */,
 				04E1024427E5093200966779 /* PhotoCollectionCell.swift */,
 			);
 			path = Cells;
@@ -663,6 +666,7 @@
 				04E1023B27E4FB3B00966779 /* NotificationName.swift in Sources */,
 				04E1028427E7404F00966779 /* PhotoDetailsViewController.swift in Sources */,
 				04E1025627E51CFC00966779 /* UIView+Loading.swift in Sources */,
+				0432B03F27E9F7B400FB63D9 /* PageHeaderCollectionCell.swift in Sources */,
 				04E1020F27E4D1D700966779 /* ArtObjectsRepository.swift in Sources */,
 				04E1024D27E5093200966779 /* PhotosListBuilder.swift in Sources */,
 				04E1025727E51CFC00966779 /* UICollectionView+EmptyState.swift in Sources */,
@@ -847,7 +851,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WV6JL844FV;
+				DEVELOPMENT_TEAM = 9529KY63CR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RijksMuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -859,7 +863,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.RijksMuseum;
+				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.RijksMuseum1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -874,7 +878,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WV6JL844FV;
+				DEVELOPMENT_TEAM = 9529KY63CR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RijksMuseum/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -886,7 +890,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.RijksMuseum;
+				PRODUCT_BUNDLE_IDENTIFIER = dimo.hamdy.RijksMuseum1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

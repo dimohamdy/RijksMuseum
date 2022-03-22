@@ -47,7 +47,10 @@ final class PhotosListViewControllerTests: XCTestCase {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertNotNil(self.photosListViewController.collectionDataSource)
             XCTAssertNotNil(self.photosListViewController.collectionDataSource?.presenterInput)
-            XCTAssertEqual(self.photosListViewController.collectionDataSource?.itemsForCollection.count, 10)
+            XCTAssertEqual(self.photosListViewController.collectionDataSource?.collectionViewCellTypes.count, 1)
+            if case let .section(_, photos) = self.photosListViewController.collectionDataSource?.collectionViewCellTypes.first {
+                XCTAssertEqual(photos.count, 10)
+            }
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 3)
