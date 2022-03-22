@@ -6,17 +6,17 @@
 
 # App Structure
 
-* App structure I use **MVP** with Input-Output approach **Delegate** to notify about updates.
+* App structure I use **MVP** with Input-Output approach **Delegate** to notify about updates. I selected **MVP** becasue the app is simpel only 2 screen.
 
-* I use the **Repository** design pattern to act as a Data source from API.
+* I used the **Repository** design pattern to act as a Data source from API.
 
-* Separate the data source of UITableView to other class **PhotosCollectionViewDataSource**.
+* I Separated the data source of UITableView to other class **PhotosCollectionViewDataSource**.
 
 * I use **CellReusable** protocol and create 2 extensions for UICollectionView to reduce code when reusing the cell.
 
-* Used Reachability.swift to check the internet connection state.
+* Used `Reachability.swift` to check the internet connection state.
 
-* Use DataLoader.swift to get data from local JSON.
+* Use `DataLoader.swift` to get data from local JSON.
 
 * I created Extension for UIImageView to download the image from the link.
 
