@@ -39,8 +39,7 @@ final class EmptyPlaceHolderView: UIView {
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 40),
-            imageView.widthAnchor.constraint(equalToConstant: 40)
+            imageView.heightAnchor.constraint(equalToConstant: 40)
         ])
         imageView.tag = 1
         return imageView
@@ -79,6 +78,9 @@ final class EmptyPlaceHolderView: UIView {
         button.setTitleColor(.secondaryLabel, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
         button.tag = 4
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: 50)
+        ])
         return button
     }()
 
