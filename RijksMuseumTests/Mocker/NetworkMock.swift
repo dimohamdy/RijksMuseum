@@ -15,7 +15,7 @@ final class MockURLSessionDataTask: URLSessionDataTaskProtocol {
 final class MockURLSession: URLSessionProtocol {
     var dataTask = MockURLSessionDataTask()
 
-    var completionHandler: (Data?, URLResponse?, Error?)
+    private let completionHandler: (Data?, URLResponse?, Error?)
 
     init(completionHandler: (Data?, URLResponse?, Error?)) {
         self.completionHandler = completionHandler
