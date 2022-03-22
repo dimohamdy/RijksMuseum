@@ -17,20 +17,18 @@ final class PhotosListPresenterTests: XCTestCase {
 
     override func tearDown() {
         mockPhotosListPresenterOutput = nil
-        Reachability.shared =  MockReachability(internetConnectionState: .satisfied)
+        Reachability.shared = MockReachability(internetConnectionState: .satisfied)
     }
 
     func test_search_success() {
         let presenter = getPhotosListPresenter(fromJsonFile: "data_collection")
         presenter.collectionType = .coin
-        presenter.search()
         XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 1)
     }
 
     func test_loadMore_success() {
         let presenter = getPhotosListPresenter(fromJsonFile: "data_collection")
         presenter.collectionType = .cup
-        presenter.search()
         presenter.loadMoreData(2)
         XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 2)
     }
@@ -73,6 +71,7 @@ final class PhotosListPresenterTests: XCTestCase {
     private func getPhotosListPresenter(fromJsonFile file: String) -> PhotosListPresenter {
         let mockSession = MockURLSession.createMockSession(fromJsonFile: file, andStatusCode: 200, andError: nil)
         let repository = getMockWebArtObjectsRepository(mockSession: mockSession)
+        mockPhotosListPresenterOutput.collectionViewCellTypes = []
         return PhotosListPresenter(output: mockPhotosListPresenterOutput, photosRepository: repository)
     }
 }
@@ -93,7 +92,8 @@ final class MockPhotosListPresenterOutput: UIViewController, PhotosListPresenter
         self.error = error
     }
 
-    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType]) {
-        self.collectionViewCellTypes = collectionViewCellTypes
+    func updateData(collectionViewCellType: ItemCollectionViewCellType) {
+        self.collectionViewCellTypes.append(collectionViewCellType)
+        print(collectionViewCellTypes.count)
     }
 }
