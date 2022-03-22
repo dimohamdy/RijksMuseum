@@ -8,5 +8,5 @@
 import Foundation
 
 enum ItemCollectionViewCellType {
-    case photo(photo: ArtObject)
+    case section(section: String, photos: [ArtObject])
 }

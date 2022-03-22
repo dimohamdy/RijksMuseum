@@ -124,5 +124,11 @@ extension PhotoCollectionCell {
         let imagePath: String
         let title: String
         let principalOrFirstMaker: String
+
+        init(artObject: ArtObject) {
+            self.imagePath = artObject.webImage.url.replacingOccurrences(of: "=s0", with: "=w200")
+            self.title = artObject.title
+            self.principalOrFirstMaker = artObject.principalOrFirstMaker
+        }
     }
 }

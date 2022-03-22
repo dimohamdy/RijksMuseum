@@ -39,6 +39,8 @@ enum Strings: String {
     case techniques = "Techniques"
     case subTitle = "SubTitle"
 
+    case page = "Page"
+
     func localized() -> String {
         return NSLocalizedString(self.rawValue, comment: "")
     }

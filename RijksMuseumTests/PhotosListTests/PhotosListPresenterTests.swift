@@ -24,7 +24,7 @@ final class PhotosListPresenterTests: XCTestCase {
         let presenter = getPhotosListPresenter(fromJsonFile: "data_collection")
         presenter.collectionType = .coin
         presenter.search()
-        XCTAssertEqual(mockPhotosListPresenterOutput.itemsForCollection.count, 10)
+        XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 1)
     }
 
     func test_loadMore_success() {
@@ -32,14 +32,14 @@ final class PhotosListPresenterTests: XCTestCase {
         presenter.collectionType = .cup
         presenter.search()
         presenter.loadMoreData(2)
-        XCTAssertEqual(mockPhotosListPresenterOutput.itemsForCollection.count, 20)
+        XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 2)
     }
 
     func test_search_noResult() {
         let presenter = getPhotosListPresenter(fromJsonFile: "noData_collection")
         presenter.collectionType = .print
         presenter.search()
-        XCTAssertEqual(mockPhotosListPresenterOutput.itemsForCollection.count, 0)
+        XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 0)
         if let error = mockPhotosListPresenterOutput.error as? RijksMuseumError {
             switch error {
             case .noResults:
@@ -54,7 +54,7 @@ final class PhotosListPresenterTests: XCTestCase {
         Reachability.shared =  MockReachability(internetConnectionState: .unsatisfied)
         let presenter = getPhotosListPresenter(fromJsonFile: "noData_collection")
         presenter.search()
-        XCTAssertEqual(mockPhotosListPresenterOutput.itemsForCollection.count, 0)
+        XCTAssertEqual(mockPhotosListPresenterOutput.collectionViewCellTypes.count, 0)
         if let error = mockPhotosListPresenterOutput.error as? RijksMuseumError {
             switch error {
             case .noInternetConnection:
@@ -86,14 +86,14 @@ final class MockPhotosListPresenterOutput: UIViewController, PhotosListPresenter
 
     }
 
-    var itemsForCollection: [ItemCollectionViewCellType] = []
+    var collectionViewCellTypes: [ItemCollectionViewCellType] = []
     var error: Error!
 
     func updateData(error: Error) {
         self.error = error
     }
 
-    func updateData(itemsForCollection: [ItemCollectionViewCellType]) {
-        self.itemsForCollection = itemsForCollection
+    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType]) {
+        self.collectionViewCellTypes = collectionViewCellTypes
     }
 }

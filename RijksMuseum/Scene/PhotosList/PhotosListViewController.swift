@@ -23,8 +23,11 @@ final class PhotosListViewController: UIViewController {
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.register(PhotoCollectionCell.self, forCellWithReuseIdentifier: PhotoCollectionCell.identifier)
-        collectionView.tag = 1
+        collectionView.register(PageHeaderCollectionCell.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: PageHeaderCollectionCell.identifier)
         collectionView.backgroundColor = .systemBackground
+        collectionView.tag = 1
         return collectionView
     }()
 
@@ -59,8 +62,8 @@ final class PhotosListViewController: UIViewController {
 
         NSLayoutConstraint.activate([
             photosCollectionView.topAnchor.constraint(equalTo: collectionTypeTabBar.bottomAnchor),
-            photosCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            photosCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            photosCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: UIView.padding10),
+            photosCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -UIView.padding10),
             photosCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
 
@@ -115,14 +118,14 @@ extension PhotosListViewController: PhotosListPresenterOutput {
         }
     }
 
-    func updateData(itemsForCollection: [ItemCollectionViewCellType]) {
+    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType]) {
         DispatchQueue.main.async {
             //Clear any placeholder view from collectionView
             self.photosCollectionView.restore()
 
             // Reload the collectionView
             if self.collectionDataSource == nil {
-                self.collectionDataSource = PhotosCollectionViewDataSource(presenterInput: self.presenter, itemsForCollection: itemsForCollection)
+                self.collectionDataSource = PhotosCollectionViewDataSource(presenterInput: self.presenter, collectionViewCellTypes: collectionViewCellTypes)
                 self.photosCollectionView.dataSource = self.collectionDataSource
                 self.photosCollectionView.delegate = self.collectionDataSource
                 self.photosCollectionView.reloadData()
@@ -130,17 +133,13 @@ extension PhotosListViewController: PhotosListPresenterOutput {
 
                 // Reload only the updated cells
 
-                //Get the inserted new cells
-                let fromIndex = self.collectionDataSource?.itemsForCollection.count ?? 0
-                let toIndex = itemsForCollection.count
+                //Get the inserted section
+                let fromIndex = self.collectionDataSource?.collectionViewCellTypes.count ?? 0
+                let indexSet = IndexSet(integer: fromIndex)
 
-                let indexes = (fromIndex ..< toIndex).map { row -> IndexPath in
-                    return IndexPath(row: row, section: 0)
-                }
-
-                self.collectionDataSource?.itemsForCollection = itemsForCollection
+                self.collectionDataSource?.collectionViewCellTypes = collectionViewCellTypes
                 self.photosCollectionView.performBatchUpdates {
-                    self.photosCollectionView.insertItems(at: indexes)
+                    self.photosCollectionView.insertSections(indexSet)
                 }
             }
 

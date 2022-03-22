@@ -17,7 +17,7 @@ protocol PhotosListPresenterInput: BasePresenterInput {
 protocol PhotosListPresenterOutput: BasePresenterOutput {
     func clearCollection()
     func updateData(error: Error)
-    func updateData(itemsForCollection: [ItemCollectionViewCellType])
+    func updateData(collectionViewCellTypes: [ItemCollectionViewCellType])
     func emptyState(emptyPlaceHolderType: EmptyPlaceHolderType)
 }
 
@@ -29,10 +29,10 @@ final class PhotosListPresenter {
 
     var router: PhotoListRouter?
 
-    fileprivate var page: Int = 1
+    fileprivate var page: Int = 0
     fileprivate var canLoadMore = true
     // internal
-    private var itemsForCollection: [ItemCollectionViewCellType] = [ItemCollectionViewCellType]()
+    private var collectionViewCellTypes: [ItemCollectionViewCellType] = [ItemCollectionViewCellType]()
 
     var collectionType: CollectionType = .print {
         didSet {
@@ -56,9 +56,9 @@ final class PhotosListPresenter {
 extension PhotosListPresenter: PhotosListPresenterInput {
 
     func search() {
-        itemsForCollection = []
+        collectionViewCellTypes = []
         output?.clearCollection()
-        self.page = 1
+        self.page = 0
         self.canLoadMore = true
         getData(collectionType: collectionType)
     }
@@ -120,24 +120,22 @@ extension PhotosListPresenter {
     }
 
     private func handleNewPhotos(photos: [ArtObject]) {
-        let newItems: [ItemCollectionViewCellType] = createItemsForCollection(photosArray: photos)
-        itemsForCollection.append(contentsOf: newItems)
-        if itemsForCollection.isEmpty {
+        let newSection: ItemCollectionViewCellType = createItemsForCollection(photosArray: photos)
+        collectionViewCellTypes.append(newSection)
+        if collectionViewCellTypes.isEmpty {
             output?.updateData(error: RijksMuseumError.noResults)
         } else {
-            output?.updateData(itemsForCollection: itemsForCollection)
+            output?.updateData(collectionViewCellTypes: collectionViewCellTypes)
         }
     }
 
     private func handleNoPhotos() {
-        if  itemsForCollection.isEmpty {
+        if collectionViewCellTypes.isEmpty {
             output?.updateData(error: RijksMuseumError.noResults)
         }
     }
 
-    private func createItemsForCollection(photosArray: [ArtObject]) -> [ItemCollectionViewCellType] {
-        return photosArray.map { photo -> ItemCollectionViewCellType  in
-                .photo(photo: photo)
-        }
+    private func createItemsForCollection(photosArray: [ArtObject]) -> ItemCollectionViewCellType {
+        return .section(section: Strings.page.localized() + " \(page + 1)", photos: photosArray)
     }
 }
