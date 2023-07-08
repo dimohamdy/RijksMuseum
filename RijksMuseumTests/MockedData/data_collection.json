@@ -1,888 +1,892 @@
 {
-    "elapsedMilliseconds": 0,
-    "count": 120,
-    "countFacets": {
-        "hasimage": 104,
-        "ondisplay": 41
+  "countFacets": {
+    "hasimage": 104,
+    "ondisplay": 41
+  },
+  "artObjects": [
+    {
+      "id": "en-NG-MC-1269",
+      "objectNumber": "NG-MC-1269",
+      "permitDownload": true,
+      "title": "Model of the Noordwachter lighthouse on Java",
+      "principalOrFirstMaker": "Grofsmederij Leiden",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-1269",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-1269"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh4.ggpht.com/xNlswk0-7W4Qrk3k2j5sRbBX9Gg9UaFv9GQS8ea49Kyl_orAkQLnir4mD4e2ED5c3-PxleSRyj02s0HdTFyapRwretM=s0",
+        "offsetPercentageX": 0,
+        "width": 1413,
+        "height": 2500,
+        "guid": "05a8b26f-949b-4af5-9de7-707bac859515"
+      },
+      "longTitle": "Model of the Noordwachter lighthouse on Java, Grofsmederij Leiden, c. 1867",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh6.ggpht.com/H80riRZ7K4MJit71l-Pz0XnQiAXmXTe907ctJG7ctwGWZfIi1GcPSvuxKIDOPz_TBOwUUGkCE4iSZYqhmfyCL3H-tQg=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "ab77ee85-3b16-4986-868f-b71ab57ed22d"
+      },
+      "productionPlaces": [
+        "Leiden"
+      ],
+      "hasImage": true
     },
-    "artObjects": [
+    {
+      "id": "en-NG-MC-1412",
+      "objectNumber": "NG-MC-1412",
+      "permitDownload": true,
+      "title": "Model of the Vlakkenhoek lighthouse on Sumatra",
+      "principalOrFirstMaker": "Enthoven & Co.",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-1412",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-1412"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh6.ggpht.com/3x8GHpkNsd5m40GcPAyGpKV7ThovTN6qklTak57iKHLDgzsDdNJty43rI7Xtjr_ajaxdjR1Iu6caD5V8FCBOnxmIB8rJ=s0",
+        "offsetPercentageX": 0,
+        "width": 1096,
+        "height": 2500,
+        "guid": "8a637fcc-bd27-4cb4-a7a4-9f0003e1c5e9"
+      },
+      "longTitle": "Model of the Vlakkenhoek lighthouse on Sumatra, Enthoven & Co., c. 1879",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh5.ggpht.com/wKaQdwZxcC0ImZ2Q3E48liFxGoZJwPaR0krtl-nR838a3huLlQCp9jUxOd6JkYEfYgaYSLUuPkuG-cxrqspesbQL1S7c=s0",
+        "offsetPercentageX": 0,
+        "width": 1096,
+        "height": 263,
+        "guid": "84599853-4b9c-400d-8a6d-7b2f18fa4163"
+      },
+      "productionPlaces": [
+        "The Hague"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-NG-NM-7454-1",
+      "objectNumber": "NG-NM-7454-1",
+      "permitDownload": true,
+      "title": "Model van de Heilige Grafkapel te Jeruzalem",
+      "principalOrFirstMaker": "",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-7454-1",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-7454-1"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/qrP3Fd6RbbQky-1aTsw-tAoeeqwMts2H0EzJu8d3qO77rx6o2b8zkuYtgcPRGFOtNMxz5I8SU8Axy58wjJOrlqP9useeHRbUBfCsAO43=s0",
+        "offsetPercentageX": 0,
+        "width": 2500,
+        "height": 1872,
+        "guid": "c3440877-cfd8-462b-940e-cb06ef7bb4d0"
+      },
+      "longTitle": "Model van de Heilige Grafkapel te Jeruzalem, , c. 1600 - c. 1800",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/2z3wYFKef41wRsX6eZwtCr9IEZIaE6Gst4OUup5DMPjECVZPLapwxIWS1WTDvIy92cBOrHbBDyzoW688CUSamN8nIc0XXJ9UE2f13_n3=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "a1f94c22-ef50-4124-943c-289327ee2aa1"
+      },
+      "productionPlaces": [
+
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-NG-NM-11409",
+      "objectNumber": "NG-NM-11409",
+      "permitDownload": true,
+      "title": "Model van een beding-stijl (?) met koperen confeitnagels",
+      "principalOrFirstMaker": "anonymous",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-11409",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-11409"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh5.ggpht.com/Kec9lIlTAS0ORw2vIGxRc2QLszD2zFBOUb-kyNBMI6Y-JBGswXmLIYGjURPy60vy0GtiYbh1aUzAU-2JSjRdkDv0gw=s0",
+        "offsetPercentageX": 0,
+        "width": 2500,
+        "height": 1867,
+        "guid": "e49748fd-38e7-4fd7-9a16-12c7b7e87a2b"
+      },
+      "longTitle": "Model van een beding-stijl (?) met koperen confeitnagels, anonymous, c. 1400 - c. 1950",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.ggpht.com/FfdElLL-gTXpY2WscfGx1kCHdc_0PHLGSbTRrKD6rOABBoGcgDgFRmyHH0jeReXmiH1kxGHE6XBU2EHDNdFlAg9LgM4=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "357f0de6-defb-49a4-9da1-b1f372b95d3a"
+      },
+      "productionPlaces": [
+        "unknown"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-BK-KOG-1386",
+      "objectNumber": "BK-KOG-1386",
+      "permitDownload": true,
+      "title": "Model van een wagen (mallejan) met plankje",
+      "principalOrFirstMaker": "H. Essen",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/BK-KOG-1386",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/BK-KOG-1386"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/804JnDUiEscP-TrcBsxqPWBfOs4g9kyU6oJeuy0MFh6T92EyGBZQHjASVzVoaZa2aBBpynt6QblW4x7s2lgZUmWE6w3PjP5DVirTPRo=s0",
+        "offsetPercentageX": 0,
+        "width": 2500,
+        "height": 1901,
+        "guid": "80c30a1e-7789-41ae-9827-859eea5df18c"
+      },
+      "longTitle": "Model van een wagen (mallejan) met plankje, H. Essen, 1845",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/aLN_3ALHof0dz8bSV2nyc9SaMRixZs9cnuKMDQmVOc_DCNrhL1gJyLSCdWfHuZ1KJmzKJQfjCHlCTliVaee8KkZdHjbQeiNLZ2sddRdl=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "92cab739-8a69-4c11-8103-f88d2621e192"
+      },
+      "productionPlaces": [
+        "? Northern Netherlands",
+        "? Netherlands"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-NG-NM-11410",
+      "objectNumber": "NG-NM-11410",
+      "permitDownload": true,
+      "title": "Model of a Windmill",
+      "principalOrFirstMaker": "anonymous",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-11410",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-11410"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.ggpht.com/VLHjJnIXMu6Ejdiwa058eKXE3PnakVovNqUYyJjpdBOZMfkqJXXi_YK6UaNnKnPm2Qp8Bikgtl1E3mx79htk7MvV3b0=s0",
+        "offsetPercentageX": 0,
+        "width": 2117,
+        "height": 2500,
+        "guid": "1079196d-62ca-4292-9607-99677db28ac8"
+      },
+      "longTitle": "Model of a Windmill, anonymous, 1700 - 1799",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.ggpht.com/qhg0S7qRJO57Io1QSyY2xmTgYalxlS_eGb2ZzuANrpHcwCdrnfeybTCkdp87ABvUjDLNNFBI5re_0QcdjKLFMqx1g246=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "f5819d8d-85b3-4b61-ad3c-064b8fdf9343"
+      },
+      "productionPlaces": [
+        "? Netherlands"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-NG-NM-7455",
+      "objectNumber": "NG-NM-7455",
+      "permitDownload": true,
+      "title": "Model van de Heilige Grafkapel te Jeruzalem",
+      "principalOrFirstMaker": "",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-7455",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-7455"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/NjN9AggDO5cBgewf15B0EKLbK5dzfTPmHbx0dKTFJK5s4TfG_9ZMBW_3lw3Tledv7LNuBaaVVhZbOgJYC2vj0mmi24YIa1VwDshlRh4=s0",
+        "offsetPercentageX": 0,
+        "width": 2500,
+        "height": 2033,
+        "guid": "1c60db67-fc02-4e08-b215-00eb49158221"
+      },
+      "longTitle": "Model van de Heilige Grafkapel te Jeruzalem, , 1600 - 1800",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.googleusercontent.com/i2OzlIrp7oropBBa8QfTtiDs0WyB52yQ1kOz72BVqU6OcYVDFVvrTlUEHJMAbLChmj40yIfDg-GQKP-fBUVhM7rm0lCYuzMxZ3rS22RA=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "c43d1273-fed0-4452-a657-09a25fc211a3"
+      },
+      "productionPlaces": [
+
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-BK-NM-8939",
+      "objectNumber": "BK-NM-8939",
+      "permitDownload": true,
+      "title": "Model van de koepel van de Lutherse Nieuwe- of Koepelkerk te Amsterdam",
+      "principalOrFirstMaker": "anonymous",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/BK-NM-8939",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/BK-NM-8939"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh5.ggpht.com/AYJO8Rv5lPWkEHeDW7sz40tNhApprHA2hbkR1GYqTcclbXetWbaYzsBH1spe1XdsFvfUYlD3f8yn_MZFjqrd4vZOJGw=s0",
+        "offsetPercentageX": 0,
+        "width": 1923,
+        "height": 3000,
+        "guid": "8ee0461f-a527-484c-a8a4-be5b35274150"
+      },
+      "longTitle": "Model van de koepel van de Lutherse Nieuwe- of Koepelkerk te Amsterdam, anonymous, c. 1700 - c. 1799",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.ggpht.com/8zhT1q6VaSq8-Z6hWwGsEZyP29Uj00qnmKprbvr_MT_5kFoYEoYubkGnziESMwBti_bflZTDYnKwNvFX97C2_zv7Jg=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "d787d7ef-d7fd-4039-a52c-1ee81fd7c9fa"
+      },
+      "productionPlaces": [
+        "Amsterdam"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-BK-16730",
+      "objectNumber": "BK-16730",
+      "permitDownload": true,
+      "title": "Model van postwagen Amsterdam-Gent",
+      "principalOrFirstMaker": "anonymous",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/BK-16730",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/BK-16730"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh6.ggpht.com/k3gb_Z8kXVMm6KYrO_aHzfrCq5o3yMwwvGlCKuxmWVerI5huPGNDs2GiYY1qqhvS6tAXejB55ox7VYV2uSESOCvpYI4=s0",
+        "offsetPercentageX": 0,
+        "width": 3000,
+        "height": 2214,
+        "guid": "124319bf-99fb-4a62-be75-ad69f8a70886"
+      },
+      "longTitle": "Model van postwagen Amsterdam-Gent, anonymous, 1800 - 1850",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh5.ggpht.com/HhXJSfWwjDv39ZTXuLFMpd6_We_mrhMfd4BPbRo_a-hFNRL-hIVk-hgbC35Rd2Nr9ucslcSylwZcT2mYkNUC_Bgs9yo=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "8abc7a1a-27f7-43ec-9197-8c74ae8fa487"
+      },
+      "productionPlaces": [
+        "Northern Netherlands"
+      ],
+      "hasImage": true
+    },
+    {
+      "id": "en-NG-MC-91",
+      "objectNumber": "NG-MC-91",
+      "permitDownload": true,
+      "title": "Half model of the stern of a 74-gun ship of the line",
+      "principalOrFirstMaker": "anonymous",
+      "showImage": true,
+      "links": {
+        "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-91",
+        "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-91"
+      },
+      "webImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh6.ggpht.com/PMJ5g0OdYiGSSlN1BH09boRFcgk9YSaLk1lBaRSbgSoLBU_DrB61kDYgx0zqHkru_VXl1-IXV7xZqofwjENseQEI-5Na=s0",
+        "offsetPercentageX": 0,
+        "width": 2500,
+        "height": 1837,
+        "guid": "cf6b8963-fa58-41ed-b665-1f73f1cc4edc"
+      },
+      "longTitle": "Half model of the stern of a 74-gun ship of the line, anonymous, c. 1795 - c. 1799",
+      "headerImage": {
+        "offsetPercentageY": 0,
+        "url": "https://lh3.ggpht.com/vjYvOOPh4DDOha2lo2DudihvtcIKWMPgPrH3lG3jb3_8w2SowgsRoNzikVJXPmZnnCXKHPHJfs-G01I7Ir680SfY_g=s0",
+        "offsetPercentageX": 0,
+        "width": 1920,
+        "height": 460,
+        "guid": "8ca800fc-33fe-4492-8881-5aac6dbb580f"
+      },
+      "productionPlaces": [
+        "? Amsterdam"
+      ],
+      "hasImage": true
+    }
+  ],
+  "count": 120,
+  "elapsedMilliseconds": 0,
+  "facets": [
+    {
+      "prettyName": 10,
+      "otherTerms": 120,
+      "name": "principalMaker",
+      "facets": [
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-1269",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-1269"
-            },
-            "id": "en-NG-MC-1269",
-            "objectNumber": "NG-MC-1269",
-            "title": "Model of the Noordwachter lighthouse on Java",
-            "hasImage": true,
-            "principalOrFirstMaker": "Grofsmederij Leiden",
-            "longTitle": "Model of the Noordwachter lighthouse on Java, Grofsmederij Leiden, c. 1867",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "05a8b26f-949b-4af5-9de7-707bac859515",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1413,
-                "height": 2500,
-                "url": "https://lh4.ggpht.com/xNlswk0-7W4Qrk3k2j5sRbBX9Gg9UaFv9GQS8ea49Kyl_orAkQLnir4mD4e2ED5c3-PxleSRyj02s0HdTFyapRwretM=s0"
-            },
-            "headerImage": {
-                "guid": "ab77ee85-3b16-4986-868f-b71ab57ed22d",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh6.ggpht.com/H80riRZ7K4MJit71l-Pz0XnQiAXmXTe907ctJG7ctwGWZfIi1GcPSvuxKIDOPz_TBOwUUGkCE4iSZYqhmfyCL3H-tQg=s0"
-            },
-            "productionPlaces": [
-                "Leiden"
-            ]
+          "key": "anonymous",
+          "value": 69
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-1412",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-1412"
-            },
-            "id": "en-NG-MC-1412",
-            "objectNumber": "NG-MC-1412",
-            "title": "Model of the Vlakkenhoek lighthouse on Sumatra",
-            "hasImage": true,
-            "principalOrFirstMaker": "Enthoven & Co.",
-            "longTitle": "Model of the Vlakkenhoek lighthouse on Sumatra, Enthoven & Co., c. 1879",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "8a637fcc-bd27-4cb4-a7a4-9f0003e1c5e9",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1096,
-                "height": 2500,
-                "url": "https://lh6.ggpht.com/3x8GHpkNsd5m40GcPAyGpKV7ThovTN6qklTak57iKHLDgzsDdNJty43rI7Xtjr_ajaxdjR1Iu6caD5V8FCBOnxmIB8rJ=s0"
-            },
-            "headerImage": {
-                "guid": "84599853-4b9c-400d-8a6d-7b2f18fa4163",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1096,
-                "height": 263,
-                "url": "https://lh5.ggpht.com/wKaQdwZxcC0ImZ2Q3E48liFxGoZJwPaR0krtl-nR838a3huLlQCp9jUxOd6JkYEfYgaYSLUuPkuG-cxrqspesbQL1S7c=s0"
-            },
-            "productionPlaces": [
-                "The Hague"
-            ]
+          "key": "Rijkswerf Vlissingen",
+          "value": 13
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-7454-1",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-7454-1"
-            },
-            "id": "en-NG-NM-7454-1",
-            "objectNumber": "NG-NM-7454-1",
-            "title": "Model van de Heilige Grafkapel te Jeruzalem",
-            "hasImage": true,
-            "principalOrFirstMaker": "",
-            "longTitle": "Model van de Heilige Grafkapel te Jeruzalem, , c. 1600 - c. 1800",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "c3440877-cfd8-462b-940e-cb06ef7bb4d0",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2500,
-                "height": 1872,
-                "url": "https://lh3.googleusercontent.com/qrP3Fd6RbbQky-1aTsw-tAoeeqwMts2H0EzJu8d3qO77rx6o2b8zkuYtgcPRGFOtNMxz5I8SU8Axy58wjJOrlqP9useeHRbUBfCsAO43=s0"
-            },
-            "headerImage": {
-                "guid": "a1f94c22-ef50-4124-943c-289327ee2aa1",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.googleusercontent.com/2z3wYFKef41wRsX6eZwtCr9IEZIaE6Gst4OUup5DMPjECVZPLapwxIWS1WTDvIy92cBOrHbBDyzoW688CUSamN8nIc0XXJ9UE2f13_n3=s0"
-            },
-            "productionPlaces": []
+          "key": "Rijkswerf Amsterdam",
+          "value": 4
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-11409",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-11409"
-            },
-            "id": "en-NG-NM-11409",
-            "objectNumber": "NG-NM-11409",
-            "title": "Model van een beding-stijl (?) met koperen confeitnagels",
-            "hasImage": true,
-            "principalOrFirstMaker": "anonymous",
-            "longTitle": "Model van een beding-stijl (?) met koperen confeitnagels, anonymous, c. 1400 - c. 1950",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "e49748fd-38e7-4fd7-9a16-12c7b7e87a2b",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2500,
-                "height": 1867,
-                "url": "https://lh5.ggpht.com/Kec9lIlTAS0ORw2vIGxRc2QLszD2zFBOUb-kyNBMI6Y-JBGswXmLIYGjURPy60vy0GtiYbh1aUzAU-2JSjRdkDv0gw=s0"
-            },
-            "headerImage": {
-                "guid": "357f0de6-defb-49a4-9da1-b1f372b95d3a",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.ggpht.com/FfdElLL-gTXpY2WscfGx1kCHdc_0PHLGSbTRrKD6rOABBoGcgDgFRmyHH0jeReXmiH1kxGHE6XBU2EHDNdFlAg9LgM4=s0"
-            },
-            "productionPlaces": [
-                "unknown"
-            ]
+          "key": "Willem van den Brink",
+          "value": 4
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/BK-KOG-1386",
-                "web": "http://www.rijksmuseum.nl/en/collection/BK-KOG-1386"
-            },
-            "id": "en-BK-KOG-1386",
-            "objectNumber": "BK-KOG-1386",
-            "title": "Model van een wagen (mallejan) met plankje",
-            "hasImage": true,
-            "principalOrFirstMaker": "H. Essen",
-            "longTitle": "Model van een wagen (mallejan) met plankje, H. Essen, 1845",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "80c30a1e-7789-41ae-9827-859eea5df18c",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2500,
-                "height": 1901,
-                "url": "https://lh3.googleusercontent.com/804JnDUiEscP-TrcBsxqPWBfOs4g9kyU6oJeuy0MFh6T92EyGBZQHjASVzVoaZa2aBBpynt6QblW4x7s2lgZUmWE6w3PjP5DVirTPRo=s0"
-            },
-            "headerImage": {
-                "guid": "92cab739-8a69-4c11-8103-f88d2621e192",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.googleusercontent.com/aLN_3ALHof0dz8bSV2nyc9SaMRixZs9cnuKMDQmVOc_DCNrhL1gJyLSCdWfHuZ1KJmzKJQfjCHlCTliVaee8KkZdHjbQeiNLZ2sddRdl=s0"
-            },
-            "productionPlaces": [
-                "? Northern Netherlands",
-                "? Netherlands"
-            ]
+          "key": "Grofsmederij Leiden",
+          "value": 2
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-11410",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-11410"
-            },
-            "id": "en-NG-NM-11410",
-            "objectNumber": "NG-NM-11410",
-            "title": "Model of a Windmill",
-            "hasImage": true,
-            "principalOrFirstMaker": "anonymous",
-            "longTitle": "Model of a Windmill, anonymous, 1700 - 1799",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "1079196d-62ca-4292-9607-99677db28ac8",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2117,
-                "height": 2500,
-                "url": "https://lh3.ggpht.com/VLHjJnIXMu6Ejdiwa058eKXE3PnakVovNqUYyJjpdBOZMfkqJXXi_YK6UaNnKnPm2Qp8Bikgtl1E3mx79htk7MvV3b0=s0"
-            },
-            "headerImage": {
-                "guid": "f5819d8d-85b3-4b61-ad3c-064b8fdf9343",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.ggpht.com/qhg0S7qRJO57Io1QSyY2xmTgYalxlS_eGb2ZzuANrpHcwCdrnfeybTCkdp87ABvUjDLNNFBI5re_0QcdjKLFMqx1g246=s0"
-            },
-            "productionPlaces": [
-                "? Netherlands"
-            ]
+          "key": "Yvonne Dröge-Wendel",
+          "value": 2
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-NM-7455",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-NM-7455"
-            },
-            "id": "en-NG-NM-7455",
-            "objectNumber": "NG-NM-7455",
-            "title": "Model van de Heilige Grafkapel te Jeruzalem",
-            "hasImage": true,
-            "principalOrFirstMaker": "",
-            "longTitle": "Model van de Heilige Grafkapel te Jeruzalem, , 1600 - 1800",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "1c60db67-fc02-4e08-b215-00eb49158221",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2500,
-                "height": 2033,
-                "url": "https://lh3.googleusercontent.com/NjN9AggDO5cBgewf15B0EKLbK5dzfTPmHbx0dKTFJK5s4TfG_9ZMBW_3lw3Tledv7LNuBaaVVhZbOgJYC2vj0mmi24YIa1VwDshlRh4=s0"
-            },
-            "headerImage": {
-                "guid": "c43d1273-fed0-4452-a657-09a25fc211a3",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.googleusercontent.com/i2OzlIrp7oropBBa8QfTtiDs0WyB52yQ1kOz72BVqU6OcYVDFVvrTlUEHJMAbLChmj40yIfDg-GQKP-fBUVhM7rm0lCYuzMxZ3rS22RA=s0"
-            },
-            "productionPlaces": []
+          "key": "'s Lands Werf Amsterdam",
+          "value": 1
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/BK-NM-8939",
-                "web": "http://www.rijksmuseum.nl/en/collection/BK-NM-8939"
-            },
-            "id": "en-BK-NM-8939",
-            "objectNumber": "BK-NM-8939",
-            "title": "Model van de koepel van de Lutherse Nieuwe- of Koepelkerk te Amsterdam",
-            "hasImage": true,
-            "principalOrFirstMaker": "anonymous",
-            "longTitle": "Model van de koepel van de Lutherse Nieuwe- of Koepelkerk te Amsterdam, anonymous, c. 1700 - c. 1799",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "8ee0461f-a527-484c-a8a4-be5b35274150",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1923,
-                "height": 3000,
-                "url": "https://lh5.ggpht.com/AYJO8Rv5lPWkEHeDW7sz40tNhApprHA2hbkR1GYqTcclbXetWbaYzsBH1spe1XdsFvfUYlD3f8yn_MZFjqrd4vZOJGw=s0"
-            },
-            "headerImage": {
-                "guid": "d787d7ef-d7fd-4039-a52c-1ee81fd7c9fa",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.ggpht.com/8zhT1q6VaSq8-Z6hWwGsEZyP29Uj00qnmKprbvr_MT_5kFoYEoYubkGnziESMwBti_bflZTDYnKwNvFX97C2_zv7Jg=s0"
-            },
-            "productionPlaces": [
-                "Amsterdam"
-            ]
+          "key": "'s Lands Werf Hellevoetsluis",
+          "value": 1
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/BK-16730",
-                "web": "http://www.rijksmuseum.nl/en/collection/BK-16730"
-            },
-            "id": "en-BK-16730",
-            "objectNumber": "BK-16730",
-            "title": "Model van postwagen Amsterdam-Gent",
-            "hasImage": true,
-            "principalOrFirstMaker": "anonymous",
-            "longTitle": "Model van postwagen Amsterdam-Gent, anonymous, 1800 - 1850",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "124319bf-99fb-4a62-be75-ad69f8a70886",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 3000,
-                "height": 2214,
-                "url": "https://lh6.ggpht.com/k3gb_Z8kXVMm6KYrO_aHzfrCq5o3yMwwvGlCKuxmWVerI5huPGNDs2GiYY1qqhvS6tAXejB55ox7VYV2uSESOCvpYI4=s0"
-            },
-            "headerImage": {
-                "guid": "8abc7a1a-27f7-43ec-9197-8c74ae8fa487",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh5.ggpht.com/HhXJSfWwjDv39ZTXuLFMpd6_We_mrhMfd4BPbRo_a-hFNRL-hIVk-hgbC35Rd2Nr9ucslcSylwZcT2mYkNUC_Bgs9yo=s0"
-            },
-            "productionPlaces": [
-                "Northern Netherlands"
-            ]
+          "key": "Adriaan Rosel",
+          "value": 1
         },
         {
-            "links": {
-                "self": "http://www.rijksmuseum.nl/api/en/collection/NG-MC-91",
-                "web": "http://www.rijksmuseum.nl/en/collection/NG-MC-91"
-            },
-            "id": "en-NG-MC-91",
-            "objectNumber": "NG-MC-91",
-            "title": "Half model of the stern of a 74-gun ship of the line",
-            "hasImage": true,
-            "principalOrFirstMaker": "anonymous",
-            "longTitle": "Half model of the stern of a 74-gun ship of the line, anonymous, c. 1795 - c. 1799",
-            "showImage": true,
-            "permitDownload": true,
-            "webImage": {
-                "guid": "cf6b8963-fa58-41ed-b665-1f73f1cc4edc",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 2500,
-                "height": 1837,
-                "url": "https://lh6.ggpht.com/PMJ5g0OdYiGSSlN1BH09boRFcgk9YSaLk1lBaRSbgSoLBU_DrB61kDYgx0zqHkru_VXl1-IXV7xZqofwjENseQEI-5Na=s0"
-            },
-            "headerImage": {
-                "guid": "8ca800fc-33fe-4492-8881-5aac6dbb580f",
-                "offsetPercentageX": 0,
-                "offsetPercentageY": 0,
-                "width": 1920,
-                "height": 460,
-                "url": "https://lh3.ggpht.com/vjYvOOPh4DDOha2lo2DudihvtcIKWMPgPrH3lG3jb3_8w2SowgsRoNzikVJXPmZnnCXKHPHJfs-G01I7Ir680SfY_g=s0"
-            },
-            "productionPlaces": [
-                "? Amsterdam"
-            ]
+          "key": "Chance Brothers & Co",
+          "value": 1
+        },
+        {
+          "key": "Claudy Jongstra",
+          "value": 1
+        },
+        {
+          "key": "Cornelis over de Linden",
+          "value": 1
+        },
+        {
+          "key": "Enthoven & Co.",
+          "value": 1
+        },
+        {
+          "key": "G.S. Noot",
+          "value": 1
+        },
+        {
+          "key": "Gieterij Nering Bögel",
+          "value": 1
+        },
+        {
+          "key": "Gieterij Prins van Oranje",
+          "value": 1
+        },
+        {
+          "key": "Gilles Vogel",
+          "value": 1
+        },
+        {
+          "key": "H. Essen",
+          "value": 1
+        },
+        {
+          "key": "H.W. Fricke",
+          "value": 1
+        },
+        {
+          "key": "J.C. Vergragt",
+          "value": 1
+        },
+        {
+          "key": "J.L. Nering Bögel & Co.",
+          "value": 1
+        },
+        {
+          "key": "Jacobus Exalto",
+          "value": 1
+        },
+        {
+          "key": "Jan Verbruggen",
+          "value": 1
+        },
+        {
+          "key": "Koninklijke Fabriek P. van Vlissingen & Dudok van Heel",
+          "value": 1
+        },
+        {
+          "key": "Koninklijke Fabriek voor Stoom- en andere Werktuigen",
+          "value": 1
+        },
+        {
+          "key": "Nederlandsche Stoomboot Maatschappij Fijenoord",
+          "value": 1
+        },
+        {
+          "key": "P. Luypen",
+          "value": 1
+        },
+        {
+          "key": "Petrus van der Loo",
+          "value": 1
+        },
+        {
+          "key": "Quirinus Harder",
+          "value": 1
+        },
+        {
+          "key": "Rijkswerf Willemsoord",
+          "value": 1
         }
-    ],
-    "facets": [
+      ]
+    },
+    {
+      "prettyName": 3,
+      "otherTerms": 0,
+      "name": "type",
+      "facets": [
         {
-            "facets": [
-                {
-                    "key": "anonymous",
-                    "value": 69
-                },
-                {
-                    "key": "Rijkswerf Vlissingen",
-                    "value": 13
-                },
-                {
-                    "key": "Rijkswerf Amsterdam",
-                    "value": 4
-                },
-                {
-                    "key": "Willem van den Brink",
-                    "value": 4
-                },
-                {
-                    "key": "Grofsmederij Leiden",
-                    "value": 2
-                },
-                {
-                    "key": "Yvonne Dröge-Wendel",
-                    "value": 2
-                },
-                {
-                    "key": "'s Lands Werf Amsterdam",
-                    "value": 1
-                },
-                {
-                    "key": "'s Lands Werf Hellevoetsluis",
-                    "value": 1
-                },
-                {
-                    "key": "Adriaan Rosel",
-                    "value": 1
-                },
-                {
-                    "key": "Chance Brothers & Co",
-                    "value": 1
-                },
-                {
-                    "key": "Claudy Jongstra",
-                    "value": 1
-                },
-                {
-                    "key": "Cornelis over de Linden",
-                    "value": 1
-                },
-                {
-                    "key": "Enthoven & Co.",
-                    "value": 1
-                },
-                {
-                    "key": "G.S. Noot",
-                    "value": 1
-                },
-                {
-                    "key": "Gieterij Nering Bögel",
-                    "value": 1
-                },
-                {
-                    "key": "Gieterij Prins van Oranje",
-                    "value": 1
-                },
-                {
-                    "key": "Gilles Vogel",
-                    "value": 1
-                },
-                {
-                    "key": "H. Essen",
-                    "value": 1
-                },
-                {
-                    "key": "H.W. Fricke",
-                    "value": 1
-                },
-                {
-                    "key": "J.C. Vergragt",
-                    "value": 1
-                },
-                {
-                    "key": "J.L. Nering Bögel & Co.",
-                    "value": 1
-                },
-                {
-                    "key": "Jacobus Exalto",
-                    "value": 1
-                },
-                {
-                    "key": "Jan Verbruggen",
-                    "value": 1
-                },
-                {
-                    "key": "Koninklijke Fabriek P. van Vlissingen & Dudok van Heel",
-                    "value": 1
-                },
-                {
-                    "key": "Koninklijke Fabriek voor Stoom- en andere Werktuigen",
-                    "value": 1
-                },
-                {
-                    "key": "Nederlandsche Stoomboot Maatschappij Fijenoord",
-                    "value": 1
-                },
-                {
-                    "key": "P. Luypen",
-                    "value": 1
-                },
-                {
-                    "key": "Petrus van der Loo",
-                    "value": 1
-                },
-                {
-                    "key": "Quirinus Harder",
-                    "value": 1
-                },
-                {
-                    "key": "Rijkswerf Willemsoord",
-                    "value": 1
-                }
-            ],
-            "name": "principalMaker",
-            "otherTerms": 120,
-            "prettyName": 10
+          "key": "scale model",
+          "value": 120
         },
         {
-            "facets": [
-                {
-                    "key": "scale model",
-                    "value": 120
-                },
-                {
-                    "key": "demonstration model",
-                    "value": 15
-                },
-                {
-                    "key": "presentation model",
-                    "value": 8
-                },
-                {
-                    "key": "half model",
-                    "value": 6
-                },
-                {
-                    "key": "maquette",
-                    "value": 6
-                },
-                {
-                    "key": "flintlock",
-                    "value": 4
-                },
-                {
-                    "key": "percussion lock",
-                    "value": 4
-                },
-                {
-                    "key": "construction model",
-                    "value": 3
-                },
-                {
-                    "key": "technical model",
-                    "value": 2
-                },
-                {
-                    "key": "gunmodel",
-                    "value": 1
-                },
-                {
-                    "key": "rigging model",
-                    "value": 1
-                },
-                {
-                    "key": "test model",
-                    "value": 1
-                },
-                {
-                    "key": "toy",
-                    "value": 1
-                }
-            ],
-            "name": "type",
-            "otherTerms": 0,
-            "prettyName": 3
+          "key": "demonstration model",
+          "value": 15
         },
         {
-            "facets": [
-                {
-                    "key": "19",
-                    "value": 54
-                },
-                {
-                    "key": "18",
-                    "value": 37
-                },
-                {
-                    "key": "17",
-                    "value": 10
-                },
-                {
-                    "key": "14",
-                    "value": 5
-                },
-                {
-                    "key": "-2",
-                    "value": 4
-                },
-                {
-                    "key": "20",
-                    "value": 4
-                },
-                {
-                    "key": "16",
-                    "value": 3
-                },
-                {
-                    "key": "21",
-                    "value": 3
-                }
-            ],
-            "name": "dating.period",
-            "otherTerms": 0,
-            "prettyName": 4
+          "key": "presentation model",
+          "value": 8
         },
         {
-            "facets": [
-                {
-                    "key": "Netherlands",
-                    "value": 48
-                },
-                {
-                    "key": "Flushing",
-                    "value": 14
-                },
-                {
-                    "key": "Amsterdam",
-                    "value": 13
-                },
-                {
-                    "key": "? Netherlands",
-                    "value": 7
-                },
-                {
-                    "key": "unknown",
-                    "value": 4
-                },
-                {
-                    "key": "France",
-                    "value": 3
-                },
-                {
-                    "key": "Leiden",
-                    "value": 3
-                },
-                {
-                    "key": "Rijkswerf (Willemsoord)",
-                    "value": 3
-                },
-                {
-                    "key": "? Amsterdam",
-                    "value": 2
-                },
-                {
-                    "key": "Birmingham",
-                    "value": 2
-                },
-                {
-                    "key": "Paris",
-                    "value": 2
-                },
-                {
-                    "key": "The Hague",
-                    "value": 2
-                },
-                {
-                    "key": "? Deventer",
-                    "value": 1
-                },
-                {
-                    "key": "? Flushing",
-                    "value": 1
-                },
-                {
-                    "key": "? Northern Netherlands",
-                    "value": 1
-                },
-                {
-                    "key": "? The Hague",
-                    "value": 1
-                },
-                {
-                    "key": "? United Kingdom",
-                    "value": 1
-                },
-                {
-                    "key": "Den Helder",
-                    "value": 1
-                },
-                {
-                    "key": "Deventer",
-                    "value": 1
-                },
-                {
-                    "key": "Hellevoetsluis",
-                    "value": 1
-                },
-                {
-                    "key": "London",
-                    "value": 1
-                },
-                {
-                    "key": "Northern Netherlands",
-                    "value": 1
-                },
-                {
-                    "key": "United Kingdom",
-                    "value": 1
-                },
-                {
-                    "key": "United States of America",
-                    "value": 1
-                }
-            ],
-            "name": "place",
-            "otherTerms": 0,
-            "prettyName": 2
+          "key": "half model",
+          "value": 6
         },
         {
-            "facets": [
-                {
-                    "key": "wood (plant material)",
-                    "value": 92
-                },
-                {
-                    "key": "brass (alloy)",
-                    "value": 45
-                },
-                {
-                    "key": "iron (metal)",
-                    "value": 38
-                },
-                {
-                    "key": "copper (metal)",
-                    "value": 13
-                },
-                {
-                    "key": "rope",
-                    "value": 12
-                },
-                {
-                    "key": "linen (material)",
-                    "value": 10
-                },
-                {
-                    "key": "paint (coating)",
-                    "value": 9
-                },
-                {
-                    "key": "lead (metal)",
-                    "value": 8
-                },
-                {
-                    "key": "oak (wood)",
-                    "value": 7
-                },
-                {
-                    "key": "glass",
-                    "value": 5
-                },
-                {
-                    "key": "pine (wood)",
-                    "value": 4
-                },
-                {
-                    "key": "textile materials",
-                    "value": 4
-                },
-                {
-                    "key": "wax",
-                    "value": 4
-                },
-                {
-                    "key": "hackia",
-                    "value": 3
-                },
-                {
-                    "key": "leather",
-                    "value": 3
-                },
-                {
-                    "key": "mahogany (wood)",
-                    "value": 3
-                },
-                {
-                    "key": "metal",
-                    "value": 3
-                },
-                {
-                    "key": "Perspex (TM)",
-                    "value": 2
-                },
-                {
-                    "key": "beech (wood)",
-                    "value": 2
-                },
-                {
-                    "key": "boxwood",
-                    "value": 2
-                },
-                {
-                    "key": "ivory",
-                    "value": 2
-                },
-                {
-                    "key": "tin (metal)",
-                    "value": 2
-                },
-                {
-                    "key": "Plexiglas (TM)",
-                    "value": 1
-                },
-                {
-                    "key": "bronze (metal)",
-                    "value": 1
-                },
-                {
-                    "key": "hardwood",
-                    "value": 1
-                },
-                {
-                    "key": "mother of pearl",
-                    "value": 1
-                },
-                {
-                    "key": "paper",
-                    "value": 1
-                },
-                {
-                    "key": "plywood",
-                    "value": 1
-                },
-                {
-                    "key": "rubber (material)",
-                    "value": 1
-                },
-                {
-                    "key": "silver (metal)",
-                    "value": 1
-                },
-                {
-                    "key": "zinc alloy",
-                    "value": 1
-                }
-            ],
-            "name": "material",
-            "otherTerms": 0,
-            "prettyName": 5
+          "key": "maquette",
+          "value": 6
         },
         {
-            "facets": [
-                {
-                    "key": "gilding",
-                    "value": 1
-                }
-            ],
-            "name": "technique",
-            "otherTerms": 0,
-            "prettyName": 8
+          "key": "flintlock",
+          "value": 4
         },
         {
-            "facets": [
-                {
-                    "key": " #000000",
-                    "value": 50
-                },
-                {
-                    "key": " #737C84",
-                    "value": 44
-                },
-                {
-                    "key": " #E0CC91",
-                    "value": 26
-                },
-                {
-                    "key": " #B35A1F",
-                    "value": 21
-                },
-                {
-                    "key": "#FBF6E1",
-                    "value": 21
-                },
-                {
-                    "key": " #F6ECF3",
-                    "value": 16
-                },
-                {
-                    "key": "#B5BFCC",
-                    "value": 16
-                },
-                {
-                    "key": " #B5BFCC",
-                    "value": 12
-                },
-                {
-                    "key": "#F6ECF3",
-                    "value": 11
-                },
-                {
-                    "key": " #2F4F4F",
-                    "value": 9
-                },
-                {
-                    "key": " #981313",
-                    "value": 3
-                },
-                {
-                    "key": " #E09714",
-                    "value": 3
-                },
-                {
-                    "key": " #FBF6E1",
-                    "value": 3
-                },
-                {
-                    "key": " #F49B7A",
-                    "value": 2
-                },
-                {
-                    "key": " #DDA5AA",
-                    "value": 1
-                },
-                {
-                    "key": "#B35A1F",
-                    "value": 1
-                },
-                {
-                    "key": "#E09714",
-                    "value": 1
-                },
-                {
-                    "key": "#E0CC91",
-                    "value": 1
-                }
-            ],
-            "name": "normalized32Colors.hex",
-            "otherTerms": 241,
-            "prettyName": 9
+          "key": "percussion lock",
+          "value": 4
+        },
+        {
+          "key": "construction model",
+          "value": 3
+        },
+        {
+          "key": "technical model",
+          "value": 2
+        },
+        {
+          "key": "gunmodel",
+          "value": 1
+        },
+        {
+          "key": "rigging model",
+          "value": 1
+        },
+        {
+          "key": "test model",
+          "value": 1
+        },
+        {
+          "key": "toy",
+          "value": 1
         }
-    ]
+      ]
+    },
+    {
+      "prettyName": 4,
+      "otherTerms": 0,
+      "name": "dating.period",
+      "facets": [
+        {
+          "key": "19",
+          "value": 54
+        },
+        {
+          "key": "18",
+          "value": 37
+        },
+        {
+          "key": "17",
+          "value": 10
+        },
+        {
+          "key": "14",
+          "value": 5
+        },
+        {
+          "key": "-2",
+          "value": 4
+        },
+        {
+          "key": "20",
+          "value": 4
+        },
+        {
+          "key": "16",
+          "value": 3
+        },
+        {
+          "key": "21",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "prettyName": 2,
+      "otherTerms": 0,
+      "name": "place",
+      "facets": [
+        {
+          "key": "Netherlands",
+          "value": 48
+        },
+        {
+          "key": "Flushing",
+          "value": 14
+        },
+        {
+          "key": "Amsterdam",
+          "value": 13
+        },
+        {
+          "key": "? Netherlands",
+          "value": 7
+        },
+        {
+          "key": "unknown",
+          "value": 4
+        },
+        {
+          "key": "France",
+          "value": 3
+        },
+        {
+          "key": "Leiden",
+          "value": 3
+        },
+        {
+          "key": "Rijkswerf (Willemsoord)",
+          "value": 3
+        },
+        {
+          "key": "? Amsterdam",
+          "value": 2
+        },
+        {
+          "key": "Birmingham",
+          "value": 2
+        },
+        {
+          "key": "Paris",
+          "value": 2
+        },
+        {
+          "key": "The Hague",
+          "value": 2
+        },
+        {
+          "key": "? Deventer",
+          "value": 1
+        },
+        {
+          "key": "? Flushing",
+          "value": 1
+        },
+        {
+          "key": "? Northern Netherlands",
+          "value": 1
+        },
+        {
+          "key": "? The Hague",
+          "value": 1
+        },
+        {
+          "key": "? United Kingdom",
+          "value": 1
+        },
+        {
+          "key": "Den Helder",
+          "value": 1
+        },
+        {
+          "key": "Deventer",
+          "value": 1
+        },
+        {
+          "key": "Hellevoetsluis",
+          "value": 1
+        },
+        {
+          "key": "London",
+          "value": 1
+        },
+        {
+          "key": "Northern Netherlands",
+          "value": 1
+        },
+        {
+          "key": "United Kingdom",
+          "value": 1
+        },
+        {
+          "key": "United States of America",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "prettyName": 5,
+      "otherTerms": 0,
+      "name": "material",
+      "facets": [
+        {
+          "key": "wood (plant material)",
+          "value": 92
+        },
+        {
+          "key": "brass (alloy)",
+          "value": 45
+        },
+        {
+          "key": "iron (metal)",
+          "value": 38
+        },
+        {
+          "key": "copper (metal)",
+          "value": 13
+        },
+        {
+          "key": "rope",
+          "value": 12
+        },
+        {
+          "key": "linen (material)",
+          "value": 10
+        },
+        {
+          "key": "paint (coating)",
+          "value": 9
+        },
+        {
+          "key": "lead (metal)",
+          "value": 8
+        },
+        {
+          "key": "oak (wood)",
+          "value": 7
+        },
+        {
+          "key": "glass",
+          "value": 5
+        },
+        {
+          "key": "pine (wood)",
+          "value": 4
+        },
+        {
+          "key": "textile materials",
+          "value": 4
+        },
+        {
+          "key": "wax",
+          "value": 4
+        },
+        {
+          "key": "hackia",
+          "value": 3
+        },
+        {
+          "key": "leather",
+          "value": 3
+        },
+        {
+          "key": "mahogany (wood)",
+          "value": 3
+        },
+        {
+          "key": "metal",
+          "value": 3
+        },
+        {
+          "key": "Perspex (TM)",
+          "value": 2
+        },
+        {
+          "key": "beech (wood)",
+          "value": 2
+        },
+        {
+          "key": "boxwood",
+          "value": 2
+        },
+        {
+          "key": "ivory",
+          "value": 2
+        },
+        {
+          "key": "tin (metal)",
+          "value": 2
+        },
+        {
+          "key": "Plexiglas (TM)",
+          "value": 1
+        },
+        {
+          "key": "bronze (metal)",
+          "value": 1
+        },
+        {
+          "key": "hardwood",
+          "value": 1
+        },
+        {
+          "key": "mother of pearl",
+          "value": 1
+        },
+        {
+          "key": "paper",
+          "value": 1
+        },
+        {
+          "key": "plywood",
+          "value": 1
+        },
+        {
+          "key": "rubber (material)",
+          "value": 1
+        },
+        {
+          "key": "silver (metal)",
+          "value": 1
+        },
+        {
+          "key": "zinc alloy",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "prettyName": 8,
+      "otherTerms": 0,
+      "name": "technique",
+      "facets": [
+        {
+          "key": "gilding",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "prettyName": 9,
+      "otherTerms": 241,
+      "name": "normalized32Colors.hex",
+      "facets": [
+        {
+          "key": " #000000",
+          "value": 50
+        },
+        {
+          "key": " #737C84",
+          "value": 44
+        },
+        {
+          "key": " #E0CC91",
+          "value": 26
+        },
+        {
+          "key": " #B35A1F",
+          "value": 21
+        },
+        {
+          "key": "#FBF6E1",
+          "value": 21
+        },
+        {
+          "key": " #F6ECF3",
+          "value": 16
+        },
+        {
+          "key": "#B5BFCC",
+          "value": 16
+        },
+        {
+          "key": " #B5BFCC",
+          "value": 12
+        },
+        {
+          "key": "#F6ECF3",
+          "value": 11
+        },
+        {
+          "key": " #2F4F4F",
+          "value": 9
+        },
+        {
+          "key": " #981313",
+          "value": 3
+        },
+        {
+          "key": " #E09714",
+          "value": 3
+        },
+        {
+          "key": " #FBF6E1",
+          "value": 3
+        },
+        {
+          "key": " #F49B7A",
+          "value": 2
+        },
+        {
+          "key": " #DDA5AA",
+          "value": 1
+        },
+        {
+          "key": "#B35A1F",
+          "value": 1
+        },
+        {
+          "key": "#E09714",
+          "value": 1
+        },
+        {
+          "key": "#E0CC91",
+          "value": 1
+        }
+      ]
+    }
+  ]
 }

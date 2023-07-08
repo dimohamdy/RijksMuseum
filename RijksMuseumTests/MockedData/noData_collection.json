@@ -1,7 +1,10 @@
 {
-    "elapsedMilliseconds": 0,
-    "count": 0,
-    "countFacets": {},
-    "artObjects": [],
-    "facets": []
+  "countFacets": {
+    "hasimage": 104,
+    "ondisplay": 41
+  },
+  "artObjects": [],
+  "count": 120,
+  "elapsedMilliseconds": 0,
+  "facets": []
 }

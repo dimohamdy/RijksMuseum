@@ -30,11 +30,11 @@ final class UIImageViewDownloadImageTests: XCTestCase {
         imageView.download(from: "https://lh5.ggpht.com/cCbXCT492kqBYGCrK1pvdJ-nGIGzXluy6po3w0UzL8vLl6OR-MYhUcXOZGlfJW-7GFflBuQewQnDbKYxyEFKi-fN1Hk=s0")
         XCTAssertNotNil(imageView.image, "imageView have placeholder")
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             XCTAssertNotEqual(UIImage(named: "place_holder"), self.imageView.image, "imageView have the downloaded image")
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 6)
+        wait(for: [expectation], timeout: 3)
     }
 
     func test_cancelDownloadImage() {

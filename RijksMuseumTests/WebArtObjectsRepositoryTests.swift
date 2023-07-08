@@ -20,48 +20,30 @@ final class WebArtObjectsRepositoryTests: XCTestCase {
     }
 
     func test_GetItems_FromAPI() {
-        let expectation = XCTestExpectation()
+        runAsyncTest { [self] in
 
-        let mockSession = MockURLSession.createMockSession(fromJsonFile: "data_collection", andStatusCode: 200, andError: nil)
-        let mockAPIClient =  APIClient(withSession: mockSession)
-        webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
-        // Act: get data from API .
-        webArtObjectsRepository.artObjects(for: CollectionType.print.rawValue, page: 1) { (result) in
-            switch result {
-            case .success(let data):
-                let artObjects = data.artObjects
-                // Assert: Verify it's have a data.
-                XCTAssertGreaterThan(artObjects.count, 0)
-                XCTAssertEqual(artObjects.count, 10)
-                expectation.fulfill()
-            default:
-                XCTFail("Can't get Data")
-            }
-
+            let mockSession = URLSessionMock.createMockSession(fromJsonFile: "data_collection", andStatusCode: 200, andError: nil)
+            let mockAPIClient =  APIClient(withSession: mockSession)
+            webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
+            // Act: get data from API .
+            let result = try await webArtObjectsRepository.artObjects(page: 1)
+            // Assert: Verify it's have a data.
+            XCTAssertGreaterThan(result.artObjects.count, 0)
+            XCTAssertEqual(result.artObjects.count, 10)
         }
-        wait(for: [expectation], timeout: 2)
     }
 
     func test_NoResult_FromAPI() {
-        let expectation = XCTestExpectation()
+        runAsyncTest { [self] in
 
-        let mockSession = MockURLSession.createMockSession(fromJsonFile: "noData_collection", andStatusCode: 200, andError: nil)
-        let mockAPIClient =  APIClient(withSession: mockSession)
-        webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
-        // Act: get data from API .
-        webArtObjectsRepository.artObjects(for: CollectionType.print.rawValue, page: 1) { (result) in
-            switch result {
-            case .success(let data):
-                let artObjects = data.artObjects
-                // Assert: Verify it's have a data.
-                XCTAssertEqual(artObjects.count, 0)
-                expectation.fulfill()
-            default:
-                XCTFail("Can't get Data")
-            }
-
+            let mockSession = URLSessionMock.createMockSession(fromJsonFile: "noData_collection", andStatusCode: 200, andError: nil)
+            let mockAPIClient =  APIClient(withSession: mockSession)
+            webArtObjectsRepository = WebArtObjectsRepository(client: mockAPIClient)
+            // Act: get data from API .
+            let result = try await webArtObjectsRepository.artObjects(page: 1)
+            let artObjects = result.artObjects
+            // Assert: Verify it's have a data.
+            XCTAssertEqual(artObjects.count, 0)
         }
-        wait(for: [expectation], timeout: 2)
     }
-
 }

@@ -29,6 +29,6 @@ final class UIViewLoadingTests: XCTestCase {
 
     func test_dismissLoading() {
         view.dismissLoadingIndicator()
-        XCTAssertNil(view.viewWithTag(99) )
+        XCTAssertNil(view.viewWithTag(99))
     }
 }
