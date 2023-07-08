@@ -15,7 +15,6 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
-        imageView.tag = 1
         return imageView
     }()
 
@@ -28,7 +27,6 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         NSLayoutConstraint.activate([
             label.heightAnchor.constraint(equalToConstant: 20)
         ])
-        label.tag = 2
         return label
     }()
 
@@ -38,7 +36,6 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         label.textColor = .label
         label.textAlignment = .left
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.tag = 3
         return label
     }()
 
@@ -49,7 +46,6 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         NSLayoutConstraint.activate([
             view.heightAnchor.constraint(equalToConstant: 50)
         ])
-        view.tag = 3
         return view
     }()
 
@@ -60,7 +56,6 @@ final class PhotoCollectionCell: UICollectionViewCell, CellReusable {
         stackView.alignment = .leading
         stackView.spacing = 1.5
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.tag = 4
         return stackView
     }()
 
