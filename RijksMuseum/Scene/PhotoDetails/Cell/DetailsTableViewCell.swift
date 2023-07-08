@@ -18,7 +18,6 @@ final class DetailsTableViewCell: UITableViewCell, CellReusable {
         NSLayoutConstraint.activate([
             label.heightAnchor.constraint(equalToConstant: 20)
         ])
-        label.tag = 1
         return label
     }()
 
@@ -29,7 +28,6 @@ final class DetailsTableViewCell: UITableViewCell, CellReusable {
         label.textAlignment = .left
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.tag = 2
         return label
     }()
 
@@ -40,7 +38,6 @@ final class DetailsTableViewCell: UITableViewCell, CellReusable {
         stackView.alignment = .leading
         stackView.spacing = 1.5
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.tag = 3
         stackView.setContentCompressionResistancePriority(.required, for: .vertical)
         return stackView
     }()
@@ -74,6 +71,7 @@ final class DetailsTableViewCell: UITableViewCell, CellReusable {
     func configCell(photoModel: UIModel) {
         titleLabel.text = photoModel.title
         subtitleLabel.text = photoModel.subTitle
+        subtitleLabel.accessibilityIdentifier = photoModel.accessibilityIdentifier
     }
 }
 
@@ -81,5 +79,6 @@ extension DetailsTableViewCell {
     struct UIModel {
         let title: String
         let subTitle: String
+        let accessibilityIdentifier: String
     }
 }

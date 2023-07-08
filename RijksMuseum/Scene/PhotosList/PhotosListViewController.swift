@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Combine
 
 final class PhotosListViewController: UIViewController {
 
     private(set) var collectionDataSource: PhotosCollectionViewDataSource?
+    private var cancellable = Set<AnyCancellable>()
+    private var reachabilityCancellable: AnyCancellable?
 
     // MARK: Views
     private let photosCollectionView: UICollectionView = {
@@ -27,52 +30,89 @@ final class PhotosListViewController: UIViewController {
                                 forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
                                 withReuseIdentifier: PageHeaderCollectionCell.identifier)
         collectionView.backgroundColor = .systemBackground
-        collectionView.tag = 1
+        collectionView.accessibilityIdentifier = AccessibilityIdentifiers.PhotosListViewController.collectionViewId
         return collectionView
     }()
 
-    private let collectionTypeTabBar: CollectionTypeTabBar = {
-        let collectionTypeTabBar = CollectionTypeTabBar(collectionTypes: CollectionType.allCases)
-        collectionTypeTabBar.translatesAutoresizingMaskIntoConstraints = false
-        return collectionTypeTabBar
-    }()
-
-    var presenter: PhotosListPresenterInput?
-
     // MARK: View lifeCycle
+
+    private let viewModel: PhotosListViewModel
+
+    init(viewModel: PhotosListViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder _: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupBinding()
         configureNavigationBar()
-        presenter?.search()
     }
 
     // MARK: - Setup UI
+
+    private func setupBinding() {
+
+        reachabilityCancellable = Reachability.shared.$isConnectedPublisher.sink(receiveValue: { [unowned viewModel] isConnected in
+            if isConnected {
+                viewModel.search()
+            }
+        })
+
+        viewModel.$state
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.dismissLoadingIndicator()
+                switch state {
+                case .error(let alert):
+                    self?.showAlert(alert: alert)
+                case .loaded(let collectionViewCellType):
+                    self?.updateData(collectionViewCellType: collectionViewCellType)
+                case .loading(let show):
+                    if show {
+                        self?.showLoadingIndicator()
+
+                    } else {
+                        self?.dismissLoadingIndicator()
+                    }
+                case .placeholder(let emptyPlaceHolderType):
+                    self?.emptyState(emptyPlaceHolderType: emptyPlaceHolderType)
+                }
+
+            }.store(in: &cancellable)
+
+        viewModel.$showErrorAlert.compactMap { $0 }.removeDuplicates()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] alert in
+                self?.dismissLoadingIndicator()
+                self?.showAlert(alert: alert)
+            }.store(in: &cancellable)
+
+        viewModel.$title.sink { [weak self] title in
+            self?.navigationItem.title = title
+        }.store(in: &cancellable)
+    }
+
     private func setupUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(photosCollectionView)
-        view.addSubview(collectionTypeTabBar)
-
         NSLayoutConstraint.activate([
-            collectionTypeTabBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionTypeTabBar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            collectionTypeTabBar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            collectionTypeTabBar.heightAnchor.constraint(equalToConstant: 50)
-        ])
-
-        NSLayoutConstraint.activate([
-            photosCollectionView.topAnchor.constraint(equalTo: collectionTypeTabBar.bottomAnchor),
+            photosCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             photosCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: UIView.padding10),
             photosCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -UIView.padding10),
             photosCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
-
-        collectionTypeTabBar.delegate = self
     }
 
     private func configureNavigationBar() {
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
-        navigationItem.title = Strings.rijksMuseumTitle.localized()
+        navigationItem.title = Strings.rijksMuseumTitle.localized
         let appearance = UINavigationBarAppearance()
         appearance.backgroundColor = UIColor.systemBackground
         appearance.titleTextAttributes = [.foregroundColor: UIColor.label]
@@ -87,26 +127,27 @@ final class PhotosListViewController: UIViewController {
     }
 }
 
-// MARK: - PhotosListPresenterOutput
-extension PhotosListViewController: PhotosListPresenterOutput {
+// MARK: - PhotosListViewModelOutput
+extension PhotosListViewController {
 
+    @MainActor
     func clearCollection() {
-        DispatchQueue.main.async {
-            self.collectionDataSource = nil
-            self.photosCollectionView.setContentOffset(.zero, animated: false)
-            self.photosCollectionView.dataSource = nil
-            self.photosCollectionView.dataSource = nil
-            self.photosCollectionView.reloadData()
-        }
+        collectionDataSource = nil
+        photosCollectionView.setContentOffset(.zero, animated: false)
+        photosCollectionView.dataSource = nil
+        photosCollectionView.dataSource = nil
+        photosCollectionView.reloadData()
     }
 
+    @MainActor
     func emptyState(emptyPlaceHolderType: EmptyPlaceHolderType) {
         clearCollection()
         photosCollectionView.setEmptyView(emptyPlaceHolderType: emptyPlaceHolderType, completionBlock: { [weak self] in
-            self?.presenter?.search()
+            self?.viewModel.search()
         })
     }
 
+    @MainActor
     func updateData(error: Error) {
         switch error as? RijksMuseumError {
         case .noResults:
@@ -118,39 +159,30 @@ extension PhotosListViewController: PhotosListPresenterOutput {
         }
     }
 
+    @MainActor
     func updateData(collectionViewCellType: ItemCollectionViewCellType) {
-        DispatchQueue.main.async {
-            //Clear any placeholder view from collectionView
-            self.photosCollectionView.restore()
+        // Clear any placeholder view from collectionView
+        photosCollectionView.restore()
 
-            // Reload the collectionView
-            if self.collectionDataSource == nil {
-                self.collectionDataSource = PhotosCollectionViewDataSource(presenterInput: self.presenter, collectionViewCellTypes: [collectionViewCellType])
-                self.photosCollectionView.dataSource = self.collectionDataSource
-                self.photosCollectionView.delegate = self.collectionDataSource
-                self.photosCollectionView.reloadData()
-            } else {
+        // Reload the collectionView
+        if collectionDataSource == nil {
+            collectionDataSource = PhotosCollectionViewDataSource(viewModelInput: viewModel, collectionViewCellTypes: [collectionViewCellType])
+            photosCollectionView.dataSource = collectionDataSource
+            photosCollectionView.delegate = collectionDataSource
+            photosCollectionView.reloadData()
+        } else {
 
-                // Reload only the updated cells
+            // Reload only the updated cells
 
-                //Get the inserted section
-                let fromIndex = self.collectionDataSource?.collectionViewCellTypes.count ?? 0
-                let indexSet = IndexSet(integer: fromIndex)
+            // Get the inserted section
+            let fromIndex = collectionDataSource?.collectionViewCellTypes.count ?? 0
+            let indexSet = IndexSet(integer: fromIndex)
 
-                self.collectionDataSource?.collectionViewCellTypes.append(collectionViewCellType)
-                self.photosCollectionView.performBatchUpdates {
-                    self.photosCollectionView.insertSections(indexSet)
-                }
+            collectionDataSource?.collectionViewCellTypes.append(collectionViewCellType)
+            photosCollectionView.performBatchUpdates {
+                photosCollectionView.insertSections(indexSet)
             }
-
         }
-
     }
-}
 
-extension PhotosListViewController: CollectionTypeTabBarDelegate {
-
-    func collectionTypeTabBar(_ tabBar: CollectionTypeTabBar, didSelectItem collectionType: CollectionType, at index: Int) {
-        presenter?.collectionType = collectionType
-    }
 }

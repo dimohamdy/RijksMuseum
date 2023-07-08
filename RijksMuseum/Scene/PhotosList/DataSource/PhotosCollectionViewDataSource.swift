@@ -10,15 +10,15 @@ import UIKit
 final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var collectionViewCellTypes: [ItemCollectionViewCellType?] = []
 
-    weak var presenterInput: PhotosListPresenterInput?
+    weak var viewModelInput: PhotosListViewModelInput?
 
     private struct CellHeightConstant {
         static let heightOfPhotoCell: CGFloat = 120
     }
 
-    init(presenterInput: PhotosListPresenterInput?, collectionViewCellTypes: [ItemCollectionViewCellType?]) {
+    init(viewModelInput: PhotosListViewModelInput?, collectionViewCellTypes: [ItemCollectionViewCellType?]) {
         self.collectionViewCellTypes = collectionViewCellTypes
-        self.presenterInput = presenterInput
+        self.viewModelInput = viewModelInput
     }
 
     // MARK: - Collection view data source
@@ -40,6 +40,7 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
         }
         let artObject = photos[indexPath.row]
         if let cell: PhotoCollectionCell = collectionView.dequeueReusableCell(for: indexPath) {
+            cell.accessibilityIdentifier = "\(AccessibilityIdentifiers.PhotosListViewController.cellId).\(indexPath.row)"
             cell.configCell(model: PhotoCollectionCell.UIModel(artObject: artObject))
             return cell
         }
@@ -67,7 +68,7 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
                 return headerView
             }
         }
-        assert(false, "Unexpected element kind")
+        return UICollectionReusableView()
     }
 
     private func getPhotoCellSize(collectionView: UICollectionView) -> CGSize {
@@ -78,14 +79,14 @@ final class PhotosCollectionViewDataSource: NSObject, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if case let .section(_, photos) = collectionViewCellTypes[indexPath.section] {
             let artObject = photos[indexPath.row]
-            presenterInput?.showDetails(artObject: artObject)
+            viewModelInput?.showDetails(artObject: artObject)
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        if case let .section(section: _, photos: photos) = collectionViewCellTypes[indexPath.section], indexPath.row == photos.count - 2 {
+        if case let .section(section: _, photos: photos) = collectionViewCellTypes[indexPath.section], indexPath.row == photos.count - 10 {
             let pageToGet = indexPath.section + 1
-            presenterInput?.loadMoreData(pageToGet)
+            viewModelInput?.loadMoreData(pageToGet)
         }
     }
 

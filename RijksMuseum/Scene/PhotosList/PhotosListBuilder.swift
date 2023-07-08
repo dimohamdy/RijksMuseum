@@ -9,13 +9,16 @@ import UIKit
 
 struct PhotosListBuilder {
 
-    static func viewController() -> PhotosListViewController {
-        let viewController: PhotosListViewController = PhotosListViewController()
-        let presenter = PhotosListPresenter(output: viewController)
-        viewController.presenter = presenter
+    static func viewController(artObjectsRepository: ArtObjectsRepository = WebArtObjectsRepository(), reachable: Reachable = Reachability.shared) -> PhotosListViewController {
+        let logger = ProxyLogger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: PhotosListUseCase.self))
+        let photosRepository = artObjectsRepository
+        let photosListUseCase = PhotosListUseCase(photosRepository: photosRepository, reachable: reachable, logger: logger)
+        let viewModel = PhotosListViewModel(photosListUseCase: photosListUseCase)
+
+        let viewController: PhotosListViewController = PhotosListViewController(viewModel: viewModel)
 
         let router = PhotoListRouter(viewController: viewController)
-        presenter.router = router
+        viewModel.router = router
 
         return viewController
     }
