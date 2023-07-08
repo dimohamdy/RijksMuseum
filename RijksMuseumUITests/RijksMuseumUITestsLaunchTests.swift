@@ -7,7 +7,7 @@
 
 import XCTest
 
-class RijksMuseumUITestsLaunchTests: XCTestCase {
+ class RijksMuseumUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
@@ -29,4 +29,4 @@ class RijksMuseumUITestsLaunchTests: XCTestCase {
         attachment.lifetime = .keepAlways
         add(attachment)
     }
-}
+ }
