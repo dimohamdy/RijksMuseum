@@ -9,10 +9,13 @@ import UIKit
 
 struct PhotoDetailsBuilder {
 
-    static func viewController(photo: ArtObject) -> PhotoDetailsViewController {
-        let presenter = PhotoDetailsPresenter(artObject: photo)
-        let viewController = PhotoDetailsViewController(presenter: presenter)
-        presenter.photoDetailsPresenterOutput = viewController
+    static func viewController(photo: ArtObject,
+                               artObjectsRepository: ArtObjectsRepository = WebArtObjectsRepository(),
+                               reachable: Reachable = Reachability.shared) -> PhotoDetailsViewController {
+        let logger = ProxyLogger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: PhotoDetailsUseCase.self))
+        let photoDetailsUseCase = PhotoDetailsUseCase(photosRepository: artObjectsRepository, reachable: reachable, logger: logger)
+        let viewModel = PhotoDetailsViewModel(artObject: photo, photoDetailsUseCase: photoDetailsUseCase)
+        let viewController = PhotoDetailsViewController(viewModel: viewModel)
         return viewController
     }
 }

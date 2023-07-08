@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import Combine
 
 final class PhotoDetailsViewController: UIViewController {
 
-    private var presenter: PhotoDetailsPresenterInput?
+    private let viewModel: PhotoDetailsViewModel
+    private var cancellable = Set<AnyCancellable>()
+    private var reachabilityCancellable: AnyCancellable?
 
     private(set) var tableViewDataSource: PhotoDetailsTableViewDataSource!
 
@@ -31,22 +34,36 @@ final class PhotoDetailsViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    init(presenter: PhotoDetailsPresenter) {
-        self.presenter = presenter
+    init(viewModel: PhotoDetailsViewModel) {
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-    }
-
-    override func loadView() {
-        setupUI()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = .systemBackground
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
-        navigationController?.navigationBar.tintColor = UIColor.label
-        resultTableView.backgroundColor = .systemBackground
-        presenter?.getData()
+        setupUI()
+        setupBinding()
+        viewModel.getArtObjectDetails()
+    }
+
+    private func setupBinding() {
+
+        viewModel.$state
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] state in
+                self?.handle(state: state)
+            }.store(in: &cancellable)
+
+        viewModel.$showErrorAlert.compactMap { $0 }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] alert in
+                self?.dismissLoadingIndicator()
+                self?.showAlert(alert: alert)
+            }.store(in: &cancellable)
+
+        viewModel.$title.sink { [weak self] title in
+            self?.navigationItem.title = title
+        }.store(in: &cancellable)
     }
 
     private func setupUI() {
@@ -60,19 +77,37 @@ final class PhotoDetailsViewController: UIViewController {
             resultTableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             resultTableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: UIView.padding10)
         ])
+
+        navigationController?.navigationBar.barTintColor = .systemBackground
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
+        navigationController?.navigationBar.tintColor = UIColor.label
+        resultTableView.backgroundColor = .systemBackground
     }
 }
 
-// MARK: PhotoDetailsPresenterOutput
+// MARK: PhotoDetailsViewModelOutput
 
-extension PhotoDetailsViewController: PhotoDetailsPresenterOutput {
+extension PhotoDetailsViewController {
 
+    @MainActor
     func updateData(photoTableViewCellTypes: [PhotoTableViewCellType]) {
         tableViewDataSource = PhotoDetailsTableViewDataSource(photoTableViewCellTypes: photoTableViewCellTypes)
-        DispatchQueue.main.async {
-            self.resultTableView.dataSource = self.tableViewDataSource
-            self.resultTableView.delegate = self.tableViewDataSource
-            self.resultTableView.reloadData()
+        resultTableView.dataSource = tableViewDataSource
+        resultTableView.delegate = tableViewDataSource
+        resultTableView.reloadData()
+    }
+
+    private func handle(state: ListViewModelState<[PhotoTableViewCellType]>) {
+        dismissLoadingIndicator()
+        switch state {
+        case .error(let alert):
+            showAlert(alert: alert)
+        case .loaded(let photoTableViewCellTypes):
+            updateData(photoTableViewCellTypes: photoTableViewCellTypes)
+        case .loading:
+            showLoadingIndicator()
+        default:
+            break
         }
     }
 }
