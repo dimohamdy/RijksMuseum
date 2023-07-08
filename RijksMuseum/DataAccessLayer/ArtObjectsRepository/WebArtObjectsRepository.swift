@@ -14,39 +14,20 @@ final class WebArtObjectsRepository: ArtObjectsRepository {
         self.client =  client
     }
 
-    func artObjects(for type: String, page: Int, completion: @escaping (Result<ArtObjectCollectionResult, RijksMuseumError>) -> Void) {
-        guard let encodedText = type.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
-            completion(.failure(.wrongURL))
-            return
+    func artObjects(page: Int) async throws -> ArtObjectCollectionResult {
+        guard let encodedText = "painting".addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else {
+            throw RijksMuseumError.wrongURL
         }
-        let path = APILinksFactory.API.search(type: encodedText, perPage: Constant.pageSize, page: page).path
-        guard let url = URL(string: path) else {
-            completion(.failure(.wrongURL))
-            return
+        guard let url = APILinksFactory.API.search(type: encodedText, perPage: Constant.pageSize, page: page).url else {
+            throw RijksMuseumError.wrongURL
         }
-        client.loadData(from: url) { (result: Result<ArtObjectCollectionResult, RijksMuseumError>) in
-            switch result {
-            case .success(let data):
-                completion(.success(data))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        return try await client.loadData(from: url)
     }
 
-    func artObjectDetails(for artObjectId: String, completion: @escaping (Result<ArtObjectDetailsResult, RijksMuseumError>) -> Void) {
-        let path = APILinksFactory.API.details(artObjectId: artObjectId).path
-        guard let url = URL(string: path) else {
-            completion(.failure(.wrongURL))
-            return
+    func artObjectDetails(for artObjectId: String) async throws -> ArtObjectDetailsResult {
+        guard let url = APILinksFactory.API.details(artObjectId: artObjectId).url else {
+            throw RijksMuseumError.wrongURL
         }
-        client.loadData(from: url) { (result: Result<ArtObjectDetailsResult, RijksMuseumError>) in
-            switch result {
-            case .success(let data):
-                completion(.success(data))
-            case .failure(let error):
-                completion(.failure(error))
-            }
-        }
+        return try await client.loadData(from: url)
     }
 }

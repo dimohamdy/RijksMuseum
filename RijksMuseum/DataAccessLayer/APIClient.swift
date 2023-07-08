@@ -1,55 +1,42 @@
 //
 //  APIClient.swift
-//  RijksMuseum
+//  PostsList
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by Dimo Abdelaziz on 09/03/2023.
 //
 
 import Foundation
 import UIKit
 
-// MARK: - DataTask
-protocol URLSessionDataTaskProtocol {
-    func resume()
-}
-
-extension URLSessionDataTask: URLSessionDataTaskProtocol {}
-
 // MARK: - URLSession
 protocol URLSessionProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol
+    func data(with url: URL) async throws -> (Data, URLResponse)
 }
 
 extension URLSession: URLSessionProtocol {
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        return (dataTask(with: url, completionHandler: completionHandler) as URLSessionDataTask) as URLSessionDataTaskProtocol
+    func data(with url: URL) async throws -> (Data, URLResponse) {
+        try await data(from: url)
     }
 }
 
 final class APIClient {
-    private var session: URLSessionProtocol
-    init(withSession session: URLSessionProtocol = URLSession.shared) {
-        self.session = session
+
+    private let session: URLSessionProtocol
+    private let decoder: JSONDecoder
+
+    init(withSession session: URLSessionProtocol? = nil, decoder: JSONDecoder = JSONDecoder()) {
+        let config = URLSessionConfiguration.default
+        config.waitsForConnectivity = true
+        self.session = session ?? URLSession(configuration: config)
+        self.decoder = decoder
     }
 
-    func loadData<T: Decodable>(from url: URL,
-                                completion: @escaping (Result<T, RijksMuseumError>) -> Void) {
-        let dataTask =  session.dataTask(with: url, completionHandler: { data, _, _ in
-            do {
-                guard let data = data else {
-                    completion(.failure(.noResults))
-                    return
-                }
-
-                let decoder = JSONDecoder()
-                let result = try decoder.decode(T.self, from: data)
-                completion(.success(result))
-
-            } catch {
-                completion(.failure(.parseError))
-            }
-        })
-
-        dataTask.resume()
+    func loadData<T: Decodable>(from url: URL) async throws -> T {
+        let (data, response) = try await session.data(with: url)
+        guard let httpResponse = response as? HTTPURLResponse,
+            httpResponse.statusCode == 200 else {
+            throw RijksMuseumError.invalidServerResponse
+        }
+        return try decoder.decode(T.self, from: data)
     }
 }
