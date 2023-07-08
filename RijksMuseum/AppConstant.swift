@@ -8,5 +8,5 @@
 import Foundation
 
 struct Constant {
-    static let pageSize = 10
+    static let pageSize = 50
 }
