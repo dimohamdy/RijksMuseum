@@ -20,6 +20,20 @@
                ReferencedContainer = "container:RijksMuseum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "04E101F027E4D18B00966779"
+               BuildableName = "RijksMuseumUITests.xctest"
+               BlueprintName = "RijksMuseumUITests"
+               ReferencedContainer = "container:RijksMuseum.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

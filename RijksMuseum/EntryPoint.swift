@@ -13,5 +13,4 @@ struct EntryPoint {
         window.rootViewController = UINavigationController(rootViewController: PhotosListBuilder.viewController())
         window.makeKeyAndVisible()
     }
-
 }

@@ -1,6 +1,6 @@
 //
 //  APIClient.swift
-//  PostsList
+//  RijksMuseum
 //
 //  Created by Dimo Abdelaziz on 09/03/2023.
 //
