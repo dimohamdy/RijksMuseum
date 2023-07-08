@@ -41,7 +41,7 @@ enum Strings: String {
 
     case page = "Page"
 
-    func localized() -> String {
+    var localized: String {
         return NSLocalizedString(self.rawValue, comment: "")
     }
 }
