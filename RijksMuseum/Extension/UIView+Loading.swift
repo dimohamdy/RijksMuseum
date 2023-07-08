@@ -54,21 +54,20 @@ extension UIView {
     }
 
     func dismissLoadingIndicator(tag: Tags.Loading =  Tags.Loading.defaultLoadingIndicator) {
-
-        DispatchQueue.main.async {
-            while self.viewWithTag(tag.rawValue) != nil {
-                self.viewWithTag(tag.rawValue)?.removeFromSuperview()
-            }
+        while self.viewWithTag(tag.rawValue) != nil {
+            self.viewWithTag(tag.rawValue)?.removeFromSuperview()
         }
     }
 }
 
 extension UIViewController {
 
+    @MainActor
     func showLoadingIndicator() {
         view.showLoadingIndicator()
     }
 
+    @MainActor
     func dismissLoadingIndicator() {
         view.dismissLoadingIndicator()
     }
