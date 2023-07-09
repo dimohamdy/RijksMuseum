@@ -18,9 +18,9 @@ class Reachability: Reachable {
     lazy var isConnected: CurrentValueSubject<Bool, Never> = .init(networkStatus == .satisfied)
 
     private var cancellables = Set<AnyCancellable>()
-     private let monitorQueue = DispatchQueue(label: "monitor")
+    private let monitorQueue = DispatchQueue(label: "monitor")
 
-     @Published var networkStatus: NWPath.Status = .satisfied
+    @Published var networkStatus: NWPath.Status = .satisfied
 
     static let shared = Reachability()
     private let monitor = NWPathMonitor()
@@ -31,20 +31,17 @@ class Reachability: Reachable {
 
     func startNetworkReachabilityObserver() {
         NWPathMonitor()
-             .publisher(queue: monitorQueue)
-             .receive(on: DispatchQueue.main)
-             .sink { [weak self] status in
-                 self?.networkStatus = status
-             }
-             .store(in: &cancellables)
-
-        monitor.pathUpdateHandler = { path in
-            if path.status == .satisfied {
-                NotificationCenter.default.post(name: Notifications.Reachability.connected.name, object: nil)
-            } else if path.status == .unsatisfied {
-                NotificationCenter.default.post(name: Notifications.Reachability.notConnected.name, object: nil)
+            .publisher(queue: monitorQueue)
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] status in
+                self?.networkStatus = status
+                self?.isConnected.send(status == .satisfied)
+                if status == .satisfied {
+                    NotificationCenter.default.post(name: Notifications.Reachability.connected.name, object: nil)
+                } else if status == .unsatisfied {
+                    NotificationCenter.default.post(name: Notifications.Reachability.notConnected.name, object: nil)
+                }
             }
-        }
-        monitor.start(queue: .main)
+            .store(in: &cancellables)
     }
 }

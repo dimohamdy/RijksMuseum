@@ -113,6 +113,8 @@ extension PhotosListViewModel {
         }
         if error ==  RijksMuseumError.noResults {
             state = .placeholder(emptyPlaceHolderType: .noResults)
+        } else if error ==  RijksMuseumError.noInternetConnection {
+            state = .placeholder(emptyPlaceHolderType: .noInternetConnection)
         } else {
             state = .placeholder(emptyPlaceHolderType: .error(message: error.localizedDescription))
         }

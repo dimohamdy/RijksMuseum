@@ -20,20 +20,19 @@ final class PhotosListViewControllerSnapshotTests: XCTestCase {
 
     func test_snapshot_get_onlinePhotos_success() {
         setVC(internetConnectionState: .satisfied)
-        assertSnapshot(matching: photosListViewController, as: .wait(for: 5, on: .image))
+        assertSnapshot(matching: photosListViewController.view, as: .wait(for: 5, on: .image))
     }
 
     func test_snapshot_noResult() {
         let connectToInternet = MockReachability(internetConnectionState: .satisfied)
         let dataProvider: ArtObjectsRepository =  MockNoDataPhotosRepository()
         photosListViewController = PhotosListBuilder.viewController(artObjectsRepository: dataProvider, reachable: connectToInternet)
-        let view = photosListViewController.view
-        assertSnapshot(matching: photosListViewController, as: .wait(for: 5, on: .image))
+        assertSnapshot(matching: photosListViewController.view, as: .wait(for: 5, on: .image))
     }
 
     func test_snapshot_noInternet_NoOfflinePhotos() {
         setVC(internetConnectionState: .unsatisfied)
-        assertSnapshot(matching: photosListViewController, as: .wait(for: 5, on: .image))
+        assertSnapshot(matching: photosListViewController.view, as: .wait(for: 5, on: .image))
     }
 }
 
@@ -44,6 +43,5 @@ extension PhotosListViewControllerSnapshotTests {
         let dataProvider: ArtObjectsRepository =  internetConnectionState == .satisfied ? MockDataPhotosRepository() : MockNoDataPhotosRepository()
         photosListViewController = PhotosListBuilder.viewController(artObjectsRepository: dataProvider, reachable: connectToInternet)
         photosListViewController.overrideUserInterfaceStyle = .light
-        let view = photosListViewController.view
     }
 }
