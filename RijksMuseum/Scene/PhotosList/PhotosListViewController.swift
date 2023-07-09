@@ -12,7 +12,6 @@ final class PhotosListViewController: UIViewController {
 
     private(set) var collectionDataSource: PhotosCollectionViewDataSource?
     private var cancellable = Set<AnyCancellable>()
-    private var reachabilityCancellable: AnyCancellable?
 
     // MARK: Views
     private let photosCollectionView: UICollectionView = {
@@ -58,12 +57,6 @@ final class PhotosListViewController: UIViewController {
     // MARK: - Setup UI
 
     private func setupBinding() {
-
-        reachabilityCancellable = Reachability.shared.$isConnectedPublisher.sink(receiveValue: { [unowned viewModel] isConnected in
-            if isConnected {
-                viewModel.search()
-            }
-        })
 
         viewModel.$state
             .receive(on: DispatchQueue.main)

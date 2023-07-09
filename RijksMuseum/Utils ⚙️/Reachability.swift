@@ -10,27 +10,23 @@ import Network
 import Combine
 
 protocol Reachable {
-    var isConnected: Bool { get }
+    var isConnected: CurrentValueSubject<Bool, Never> { get }
     func startNetworkReachabilityObserver()
 }
 
 class Reachability: Reachable {
+    lazy var isConnected: CurrentValueSubject<Bool, Never> = .init(networkStatus == .satisfied)
 
     private var cancellables = Set<AnyCancellable>()
      private let monitorQueue = DispatchQueue(label: "monitor")
 
      @Published var networkStatus: NWPath.Status = .satisfied
-     @Published var isConnectedPublisher: Bool = true
 
     static let shared = Reachability()
     private let monitor = NWPathMonitor()
 
     private init() {
 
-    }
-
-    var isConnected: Bool {
-        networkStatus == .satisfied
     }
 
     func startNetworkReachabilityObserver() {

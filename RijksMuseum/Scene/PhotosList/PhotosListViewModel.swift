@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Combine
 
 protocol PhotosListViewModelInput: AnyObject {
     func showDetails(artObject: ArtObject)
     func loadMoreData(_ page: Int)
 }
+
 final class PhotosListViewModel {
 
     // MARK: Injections
@@ -23,14 +25,21 @@ final class PhotosListViewModel {
     @Published private(set) var state: ListViewModelState<ItemCollectionViewCellType> = .loading(show: true)
     @Published private(set) var showErrorAlert: RijksMuseumAlert?
 
+    private var reachabilityCancellable: AnyCancellable?
+
     // MARK: LifeCycle
-    init(photosListUseCase: PhotosListUseCaseProtocol) {
+    init(photosListUseCase: PhotosListUseCaseProtocol, reachable: Reachable = Reachability.shared) {
         self.photosListUseCase = photosListUseCase
         [Notifications.Reachability.connected.name,
          Notifications.Reachability.notConnected.name].forEach { (notification) in
             NotificationCenter.default.addObserver(self, selector: #selector(changeInternetConnection), name: notification, object: nil)
         }
 
+        reachabilityCancellable = reachable.isConnected.sink(receiveValue: { [weak self] isConnected in
+            if isConnected {
+                self?.search()
+            }
+        })
     }
 
     @objc

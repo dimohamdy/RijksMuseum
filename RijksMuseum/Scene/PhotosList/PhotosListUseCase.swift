@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 protocol PhotosListUseCaseProtocol {
     func search() async throws -> [ArtObject]
@@ -47,7 +48,7 @@ class PhotosListUseCase: PhotosListUseCaseProtocol {
     }
 
     func loadMoreArtObjects(_ page: Int) async throws -> [ArtObject] {
-        guard reachable.isConnected && (self.page <= page && canLoadMore == true) else {
+        guard reachable.isConnected.value && (self.page <= page && canLoadMore == true) else {
             throw RijksMuseumError.canNotLoadMore
         }
 
@@ -57,7 +58,7 @@ class PhotosListUseCase: PhotosListUseCaseProtocol {
 
     private func getData() async throws -> [ArtObject] {
 
-        guard reachable.isConnected else {
+        guard reachable.isConnected.value else {
             throw RijksMuseumError.noInternetConnection
         }
         canLoadMore = false
