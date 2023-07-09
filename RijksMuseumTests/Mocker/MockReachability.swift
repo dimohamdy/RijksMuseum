@@ -2,23 +2,26 @@
 //  MockReachability.swift
 //  RijksMuseumTests
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by Dimo Abdelaziz on 06/10/2022.
 //
 
-import Network
 import Foundation
 @testable import RijksMuseum
+import Network
 
-final class MockReachability: Reachability {
+final class MockReachability: Reachable {
 
     let internetConnectionState: NWPath.Status
 
-    override var isConnected: Bool {
-        return internetConnectionState == .satisfied
+    var isConnected: Bool {
+        internetConnectionState == .satisfied
     }
 
     init(internetConnectionState: NWPath.Status) {
-        self.internetConnectionState  = internetConnectionState
-        super.init()
+        self.internetConnectionState = internetConnectionState
+    }
+
+    func startNetworkReachabilityObserver() {
+
     }
 }

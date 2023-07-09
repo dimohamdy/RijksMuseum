@@ -2,41 +2,41 @@
 //  NetworkMock.swift
 //  RijksMuseumTests
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by Dimo Abdelaziz on 06/10/2022.
 //
 
-import UIKit
 @testable import RijksMuseum
+import UIKit
 
-final class MockURLSessionDataTask: URLSessionDataTaskProtocol {
-    func resume() {}
-}
+class URLSessionMock: URLSessionProtocol {
+    // Properties that enable us to set exactly what data or error
+    // we want our mocked URLSession to return for any request.
 
-final class MockURLSession: URLSessionProtocol {
-    var dataTask = MockURLSessionDataTask()
-
-    private let completionHandler: (Data?, URLResponse?, Error?)
+    var completionHandler: (data: Data?, response: URLResponse?, error: Error?)
 
     init(completionHandler: (Data?, URLResponse?, Error?)) {
         self.completionHandler = completionHandler
     }
 
-    func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTaskProtocol {
-        completionHandler(self.completionHandler.0,
-                          self.completionHandler.1,
-                          self.completionHandler.2)
-
-        return dataTask
+    func data(with url: URL) async throws -> (Data, URLResponse) {
+        let data = completionHandler.data
+        let response = completionHandler.response
+        if let error = completionHandler.error {
+            throw error
+        }
+        if let data, let response {
+            return (data, response)
+        }
+        throw RijksMuseumError.runtimeError("Missed Data")
     }
 
     static func createMockSession(fromJsonFile file: String,
                                   andStatusCode code: Int,
-                                  andError error: Error?) -> MockURLSession {
+                                  andError error: Error?) -> URLSessionMock {
 
         let data = DataLoader().loadJsonData(file: file)
-
         let response = HTTPURLResponse(url: URL(string: "TestUrl")!, statusCode: code, httpVersion: nil, headerFields: nil)
 
-        return MockURLSession(completionHandler: (data, response, error))
+        return URLSessionMock(completionHandler: (data, response, error))
     }
 }
