@@ -32,7 +32,7 @@ final class PhotosListViewModelTests: XCTestCase {
     func test_loadMore_success() throws {
         let expectation = XCTestExpectation()
         let viewModel = getPhotosListViewModel(fromJsonFile: "data_collection")
-        viewModel.loadMoreData(1)
+        viewModel.loadMoreData(2)
         viewModel.$state.receive(on: DispatchQueue.main).sink { state in
             if case let .loaded(.section(section , photos)) = state {
                 XCTAssertEqual(section,  "\(Strings.page.localized) 2")
@@ -60,7 +60,6 @@ final class PhotosListViewModelTests: XCTestCase {
     func test_search_noInternetConnection() throws {
         let expectation = XCTestExpectation()
         let viewModel = getPhotosListViewModel(fromJsonFile: "noData_collection")
-        viewModel.search()
         viewModel.$state.receive(on: DispatchQueue.main).sink { state in
             if case let .placeholder(placeholder) = state {
                 XCTAssertEqual(placeholder, EmptyPlaceHolderType.noResults)
@@ -76,11 +75,11 @@ final class PhotosListViewModelTests: XCTestCase {
         return WebArtObjectsRepository(client: mockAPIClient)
     }
 
-    private func getPhotosListViewModel(fromJsonFile file: String) -> PhotosListViewModel {
+    private func getPhotosListViewModel(fromJsonFile file: String, reachable: Reachable = Reachability.shared) -> PhotosListViewModel {
         let mockSession = URLSessionMock.createMockSession(fromJsonFile: file, andStatusCode: 200, andError: nil)
         let repository = getMockWebArtObjectsRepository(mockSession: mockSession)
         let logger = ProxyLogger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: PhotosListUseCase.self))
         let photosListUseCase = PhotosListUseCase(photosRepository: repository,  logger: logger)
-        return PhotosListViewModel(photosListUseCase: photosListUseCase)
+        return PhotosListViewModel(photosListUseCase: photosListUseCase, reachable: reachable)
     }
 }

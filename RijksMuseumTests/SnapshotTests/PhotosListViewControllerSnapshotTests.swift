@@ -43,6 +43,7 @@ extension PhotosListViewControllerSnapshotTests {
         let connectToInternet = MockReachability(internetConnectionState: internetConnectionState)
         let dataProvider: ArtObjectsRepository =  internetConnectionState == .satisfied ? MockDataPhotosRepository() : MockNoDataPhotosRepository()
         photosListViewController = PhotosListBuilder.viewController(artObjectsRepository: dataProvider, reachable: connectToInternet)
+        photosListViewController.overrideUserInterfaceStyle = .light
         let view = photosListViewController.view
     }
 }

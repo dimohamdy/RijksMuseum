@@ -38,6 +38,8 @@ extension PhotoDetailsViewControllerSnapshotTests {
         let artObjectData = DataLoader().loadJsonData(file: "ArtObject")!
         let artObject = try! JSONDecoder().decode(ArtObject.self, from: artObjectData)
         photoDetailsViewController = PhotoDetailsBuilder.viewController(photo: artObject, artObjectsRepository: dataProvider, reachable: connectToInternet)
+        photoDetailsViewController.overrideUserInterfaceStyle = .light
+
         let view = photoDetailsViewController.view
     }
 }

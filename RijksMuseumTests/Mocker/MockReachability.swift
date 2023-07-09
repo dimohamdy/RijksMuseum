@@ -6,16 +6,15 @@
 //
 
 import Foundation
-@testable import RijksMuseum
 import Network
+import Combine
+@testable import RijksMuseum
 
 final class MockReachability: Reachable {
 
-    let internetConnectionState: NWPath.Status
+    lazy var isConnected: CurrentValueSubject<Bool, Never> = .init(internetConnectionState == .satisfied)
 
-    var isConnected: Bool {
-        internetConnectionState == .satisfied
-    }
+    let internetConnectionState: NWPath.Status
 
     init(internetConnectionState: NWPath.Status) {
         self.internetConnectionState = internetConnectionState

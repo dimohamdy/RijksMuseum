@@ -279,11 +279,11 @@
 			isa = PBXGroup;
 			children = (
 				336821872A54A0F10077993A /* XCTestCase+AsyncTest.swift */,
+				04E1022A27E4F7B100966779 /* WebArtObjectsRepositoryTests.swift */,
+				04E103A527E8B5F600966779 /* PhotoTests.swift */,
 				04E103BA27E8CFA500966779 /* MockedData */,
 				04E1022C27E4F7B100966779 /* DataLoader */,
 				04E1022727E4F7B000966779 /* Mocker */,
-				04E1022A27E4F7B100966779 /* WebArtObjectsRepositoryTests.swift */,
-				04E103A527E8B5F600966779 /* PhotoTests.swift */,
 				04E103B127E8C9AD00966779 /* PhotosListTests */,
 				04E103B327E8CA9700966779 /* PhotoDetailsTests */,
 				04E103B227E8C9C300966779 /* ViewsTests */,
