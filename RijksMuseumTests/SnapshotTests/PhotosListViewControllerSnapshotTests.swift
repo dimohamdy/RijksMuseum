@@ -14,10 +14,6 @@ import Network
 final class PhotosListViewControllerSnapshotTests: XCTestCase {
     var photosListViewController: PhotosListViewController!
 
-    override func setUp() {
-        super.setUp()
-    }
-
     override func tearDown() {
         photosListViewController = nil
     }

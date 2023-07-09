@@ -95,6 +95,7 @@
 		336E37B22A52282D00132FD7 /* PhotoDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336E37B12A52282D00132FD7 /* PhotoDetailsUseCase.swift */; };
 		33A87C852A5A3AED00FAF432 /* NetworkMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A87C832A5A3AED00FAF432 /* NetworkMock.swift */; };
 		33A87C862A5A3AED00FAF432 /* MockReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A87C842A5A3AED00FAF432 /* MockReachability.swift */; };
+		33A87C882A5A467C00FAF432 /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A87C872A5A467C00FAF432 /* Springboard.swift */; };
 		33BC40712A54F56C00142514 /* noData_ArtObjectDetailsResult.json in Resources */ = {isa = PBXBuildFile; fileRef = 33BC40702A54F56C00142514 /* noData_ArtObjectDetailsResult.json */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +198,7 @@
 		336E37B12A52282D00132FD7 /* PhotoDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsUseCase.swift; sourceTree = "<group>"; };
 		33A87C832A5A3AED00FAF432 /* NetworkMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkMock.swift; path = RijksMuseumTests/Mocker/NetworkMock.swift; sourceTree = SOURCE_ROOT; };
 		33A87C842A5A3AED00FAF432 /* MockReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MockReachability.swift; path = RijksMuseumTests/Mocker/MockReachability.swift; sourceTree = SOURCE_ROOT; };
+		33A87C872A5A467C00FAF432 /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		33BC40702A54F56C00142514 /* noData_ArtObjectDetailsResult.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = noData_ArtObjectDetailsResult.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -295,6 +297,7 @@
 			children = (
 				336E378E2A5103BC00132FD7 /* Extensions.swift */,
 				3349C9A92A4E0D35005A244A /* RijksMuseumUITests.swift */,
+				33A87C872A5A467C00FAF432 /* Springboard.swift */,
 				3349C9AB2A4E0D35005A244A /* NativeMockServer.swift */,
 				04E101F727E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift */,
 			);
@@ -802,6 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				336E37902A5103BC00132FD7 /* Extensions.swift in Sources */,
+				33A87C882A5A467C00FAF432 /* Springboard.swift in Sources */,
 				04E101F827E4D18B00966779 /* RijksMuseumUITestsLaunchTests.swift in Sources */,
 				3349C9AF2A4E0D35005A244A /* NativeMockServer.swift in Sources */,
 				336E37B02A51E70D00132FD7 /* AccessibilityIdentifiers.swift in Sources */,

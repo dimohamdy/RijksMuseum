@@ -2,12 +2,13 @@
 //  EmptyPlaceHolderView.swift
 //  RijksMuseum
 //
-//  Created by BinaryBoy on 3/18/22.
+//  Created by Dimo Abdelaziz on 25/05/2023.
 //
 
 import UIKit
+import SwiftUI
 
-enum EmptyPlaceHolderType {
+enum EmptyPlaceHolderType: Equatable {
     case noInternetConnection
     case noResults
     case error(message: String)
@@ -15,34 +16,71 @@ enum EmptyPlaceHolderType {
 
 final class EmptyPlaceHolderView: UIView {
 
+    // Replace Conditional with Polymorphism https://refactoring.guru/replace-conditional-with-polymorphism
     var emptyPlaceHolderType: EmptyPlaceHolderType = .noInternetConnection {
         didSet {
             switch emptyPlaceHolderType {
             case .noInternetConnection:
-                titleLabel.text = Strings.noInternetConnectionTitle.localized()
-                detailsLabel.text = Strings.noInternetConnectionSubtitle.localized()
+                titleLabel.text = Strings.noInternetConnectionTitle.localized
+                detailsLabel.text = Strings.noInternetConnectionSubtitle.localized
                 logoImageView.image = UIImage(named: "refresh")?.withTintColor(.secondarySystemBackground, renderingMode: .alwaysOriginal)
+                actionButton.isHidden = false
+                actionButton.backgroundColor = .green
             case .noResults:
-                titleLabel.text = Strings.noPhotosErrorTitle.localized()
-                detailsLabel.text = Strings.noPhotosErrorSubtitle.localized()
-                logoImageView.image = UIImage(named: "refresh")?.withTintColor(.secondarySystemBackground, renderingMode: .alwaysOriginal)
+                titleLabel.text = Strings.noPhotosErrorTitle.localized
+                detailsLabel.text = Strings.noPhotosErrorSubtitle.localized
+                logoImageView.image = UIImage(named: "no-result")?.withTintColor(.secondarySystemBackground, renderingMode: .alwaysOriginal)
+                actionButton.isHidden = false
             case .error(let message):
-                titleLabel.text = Strings.commonGeneralError.localized()
+                titleLabel.text = Strings.commonGeneralError.localized
                 detailsLabel.text = message
                 logoImageView.image = UIImage(named: "refresh")?.withTintColor(.secondarySystemBackground, renderingMode: .alwaysOriginal)
+                actionButton.isHidden = false
             }
         }
     }
+
+    private let actionButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .clear
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle(Strings.tryAction.localized, for: .normal)
+        button.setTitleColor(.secondaryLabel, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
+        button.tag = 1
+        button.accessibilityIdentifier = AccessibilityIdentifiers.EmptyPlaceHolderView.actionButtonId
+        NSLayoutConstraint.activate([
+            button.heightAnchor.constraint(equalToConstant: 40),
+            button.widthAnchor.constraint(equalToConstant: 120)
+        ])
+        return button
+    }()
 
     private let logoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            imageView.heightAnchor.constraint(equalToConstant: 40)
+            imageView.heightAnchor.constraint(equalToConstant: 40),
+            imageView.widthAnchor.constraint(equalToConstant: 60)
         ])
-        imageView.tag = 1
+        imageView.accessibilityIdentifier = AccessibilityIdentifiers.EmptyPlaceHolderView.logoImageViewId
         return imageView
+    }()
+
+    private lazy var contentStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.distribution = .fillProportionally
+        stackView.alignment = .fill
+        stackView.spacing = 5
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addArrangedSubview(logoImageView)
+        stackView.addArrangedSubview(titleLabel)
+        stackView.addArrangedSubview(detailsLabel)
+        stackView.setCustomSpacing(30, after: detailsLabel)
+        stackView.addArrangedSubview(actionButton)
+        return stackView
     }()
 
     private let titleLabel: UILabel = {
@@ -55,6 +93,7 @@ final class EmptyPlaceHolderView: UIView {
             label.heightAnchor.constraint(equalToConstant: 20)
         ])
         label.tag = 2
+        label.accessibilityIdentifier = AccessibilityIdentifiers.EmptyPlaceHolderView.titleLabelId
         return label
     }()
 
@@ -64,40 +103,12 @@ final class EmptyPlaceHolderView: UIView {
         label.textColor = .secondaryLabel
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.setContentCompressionResistancePriority(.required, for: .vertical)
-        label.numberOfLines = 0
-        label.tag = 3
-        return label
-    }()
-
-    private let actionButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .clear
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(Strings.tryAction.localized(), for: .normal)
-        button.setTitleColor(.secondaryLabel, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 14, weight: .bold)
-        button.tag = 4
         NSLayoutConstraint.activate([
-            button.heightAnchor.constraint(equalToConstant: 50)
+            label.heightAnchor.constraint(equalToConstant: 20)
         ])
-        return button
-    }()
-
-    private lazy var contentStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        stackView.alignment = .fill
-        stackView.spacing =  5
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.addArrangedSubview(logoImageView)
-        stackView.addArrangedSubview(titleLabel)
-        stackView.addArrangedSubview(detailsLabel)
-        stackView.setCustomSpacing(30, after: detailsLabel)
-        stackView.addArrangedSubview(actionButton)
-        stackView.setContentCompressionResistancePriority(.required, for: .vertical)
-        return stackView
+        label.tag = 3
+        label.accessibilityIdentifier = AccessibilityIdentifiers.EmptyPlaceHolderView.detailsLabelId
+        return label
     }()
 
     var completionBlock: (() -> Void)? {

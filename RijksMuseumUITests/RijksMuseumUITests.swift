@@ -13,13 +13,14 @@ class RijksMuseumUITests: XCTestCase {
     private var server = NativeMockServer()
 
     override func setUp() {
+        XCUIDevice.shared.orientation = .portrait
         server.start()
-        app.launchArguments = ["MOCK_SERVER", "UITesting"]
-        app.launch()
+        app.launchArguments = ["UITesting"]
     }
 
     /// CLear all things before unit-test
     override func tearDown() {
+        XCUIDevice.shared.orientation = .portrait
         server.stop()
         app.launchArguments.removeAll()
     }
@@ -27,6 +28,7 @@ class RijksMuseumUITests: XCTestCase {
     func test_numberOfCells_PhotosListView() throws {
         let response = server.readData(fromFile: "data_collection")
         server.update(collectionResponse: .ok(.json(response)))
+        app.launch()
 
         let collectionView = app.collectionViews[AccessibilityIdentifiers.PhotosListViewController.collectionViewId]
 
@@ -40,6 +42,7 @@ class RijksMuseumUITests: XCTestCase {
     func test_placeholder_PhotosListView() throws {
         let response = server.readData(fromFile: "noData_collection")
         server.update(collectionResponse: .ok(.json(response)))
+        app.launch()
 
         let titleLabel = app.staticTexts[AccessibilityIdentifiers.EmptyPlaceHolderView.titleLabelId].label
         let detailsLabel = app.staticTexts[AccessibilityIdentifiers.EmptyPlaceHolderView.detailsLabelId].label
@@ -51,6 +54,7 @@ class RijksMuseumUITests: XCTestCase {
     }
 
     func test_PhotoDetails() {
+        app.launch()
 
         let collectionView = app.collectionViews[AccessibilityIdentifiers.PhotosListViewController.collectionViewId]
         collectionView.cells["\(AccessibilityIdentifiers.PhotosListViewController.cellId).1"].tap()

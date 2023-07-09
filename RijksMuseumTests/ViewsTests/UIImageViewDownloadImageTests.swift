@@ -27,7 +27,7 @@ final class UIImageViewDownloadImageTests: XCTestCase {
         let expectation = XCTestExpectation()
 
         XCTAssertNil(imageView.image)
-        imageView.download(from: "https://lh5.ggpht.com/cCbXCT492kqBYGCrK1pvdJ-nGIGzXluy6po3w0UzL8vLl6OR-MYhUcXOZGlfJW-7GFflBuQewQnDbKYxyEFKi-fN1Hk=s0")
+        imageView.download(from: "https://picsum.photos/200/300?grayscale")
         XCTAssertNotNil(imageView.image, "imageView have placeholder")
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
@@ -38,7 +38,7 @@ final class UIImageViewDownloadImageTests: XCTestCase {
     }
 
     func test_cancelDownloadImage() {
-        imageView.download(from: "https://lh5.ggpht.com/cCbXCT492kqBYGCrK1pvdJ-nGIGzXluy6po3w0UzL8vLl6OR-MYhUcXOZGlfJW-7GFflBuQewQnDbKYxyEFKi-fN1Hk=s0")
+        imageView.download(from: "https://picsum.photos/200")
         XCTAssertNotNil( imageView.kf.taskIdentifier)
         imageView.kf.cancelDownloadTask()
         XCTAssertNil(imageView.kf.taskIdentifier)
