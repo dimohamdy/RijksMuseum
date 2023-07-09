@@ -25,7 +25,6 @@ final class EmptyPlaceHolderView: UIView {
                 detailsLabel.text = Strings.noInternetConnectionSubtitle.localized
                 logoImageView.image = UIImage(named: "refresh")?.withTintColor(.secondarySystemBackground, renderingMode: .alwaysOriginal)
                 actionButton.isHidden = false
-                actionButton.backgroundColor = .green
             case .noResults:
                 titleLabel.text = Strings.noPhotosErrorTitle.localized
                 detailsLabel.text = Strings.noPhotosErrorSubtitle.localized
